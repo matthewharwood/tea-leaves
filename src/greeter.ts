@@ -1,4 +1,5 @@
-
+const module =  angular.module('tealeaves', []);
+console.log(module);
 export class Greeter {
   constructor(public greeting: string) {
   }
