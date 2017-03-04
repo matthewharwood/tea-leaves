@@ -1,5 +1,5 @@
-var CopyWebpackPlugin = require('copy-webpack-plugin');
-var path = require('path');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
+const path = require('path');
 
 module.exports = {
   devServer: {
