@@ -1,6 +1,8 @@
-import fastDom from "FastDom";
+/// <reference path="../types/fastdom/index.d.ts" />
 
-console.log(fastDom);
+import * as fastdom from 'FastDom';
+
+console.log(fastdom.mutate());
 export class Greeter {
   constructor(public greeting: string) {
   }
