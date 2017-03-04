@@ -6,6 +6,7 @@ declare module 'fastdom' {
   interface FastDom {
     measure(): any;
     mutate(): any;
+    clear(): any;
   }
 
   const FastDom: FastDom;
