@@ -3,3 +3,5 @@ coverage
 dist
 .idea
 .vscode
+src/public/*html
+src/assets/styles/*css

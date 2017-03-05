@@ -28,7 +28,16 @@ module.exports = {
     filename: 'bundle.js'
   },
   plugins: [
-    new CopyWebpackPlugin([{ from: 'src/public' }])],
+    new CopyWebpackPlugin(
+        [{ from: 'src' }],
+        {
+      ignore: [
+        // Doesn't copy any files with a txt extension
+        '**/*.pug',
+        '**/*.scss',
+        '**/*.ts',
+      ],
+    })],
   resolve: {
     extensions: ['.ts']
   }

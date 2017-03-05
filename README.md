@@ -2,19 +2,22 @@
 
 ## Fetch dependencies
 ```
-npm install
+npm run bootstrap
 ```
 
-## Run Webpack
-```
-npm run build
-```
 
-## Start http-server
+
+## Start localtouch gulpfile.js Development
 ```
 npm start
 http://localhost:8080/
 ```
+
+## Make Production Bundle
+```
+npm run build
+```
+
 ## Testing
 ```
 npm run test
@@ -35,6 +38,10 @@ fastdom.mutate(function() { element.clientWidth; }); // throws
 fastdom.measure(function() { element.clientWidth; }); // does not throw
 ```
 
+**Using Pug for all HTML templating.**
+```
+src/public/*.pug
+```
 
 **Using PostCSS for all CSS.**
 ```
