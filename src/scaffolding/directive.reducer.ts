@@ -3,14 +3,14 @@
  */
 import {EDirective} from './directive.actions';
 
-export function directiveReducer(state = [], action) {
+export const directiveReducer = (state = [], action) => {
   switch (action.type) {
     case EDirective.Add:
-      state.push(action.payload);
-      return state;
+      return state.concat(action.payload);
     case EDirective.Remove:
-      return state.pop();
+
+      return state.filter(i => i.selector !== action.payload);
     default:
       return state;
   }
-}
+};

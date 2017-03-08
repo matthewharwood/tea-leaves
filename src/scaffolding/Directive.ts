@@ -1,7 +1,7 @@
 /**
  * Created by matty on 3/7/17.
  */
-import {appState} from './AppStore';
+import {appState} from './appState';
 
 import {add} from './directive.actions';
 
@@ -13,6 +13,5 @@ export function Directive(meta: any) {
     console.log(appState.getState());
     // Return target
     return target;
-
   };
 }

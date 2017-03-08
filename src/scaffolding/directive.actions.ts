@@ -8,7 +8,6 @@ export enum EDirective {
   Remove
 }
 
-
 export const add = (payload) => {
  return {
    type:EDirective.Add, payload

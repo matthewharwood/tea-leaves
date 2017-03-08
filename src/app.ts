@@ -1,4 +1,7 @@
 import { Directive } from './scaffolding/directive';
+import {appState} from './scaffolding/appState';
+
+import {remove} from './scaffolding/directive.actions';
 
 @Directive({selector: 'app'})
 class App{}
@@ -16,4 +19,6 @@ const x = new App();
 const x1 = new El1();
 const x2 = new El2();
 const x3 = new El3();
+appState.dispatch(remove('app'));
+console.log(appState.getState());
 
