@@ -1,18 +1,16 @@
 /**
  * Created by matty on 3/7/17.
  */
-import {createStore} from 'redux';
-import {directiveReducer} from './directive.reducer';
+import {appState} from './AppStore';
+
 import {add} from './directive.actions';
 
 export function Directive(meta: any) {
-  const store = createStore(directiveReducer);
-
   return function register(target: any) {
-    store.dispatch(add(meta));
+    appState.dispatch(add(meta));
     // Add metadata
     target.__meta = meta;
-    console.log(store.getState());
+    console.log(appState.getState());
     // Return target
     return target;
 
