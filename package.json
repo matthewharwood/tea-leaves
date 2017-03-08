@@ -4,8 +4,8 @@
   "description": "tealeaves-rudd",
   "main": "index.js",
   "scripts": {
-    "bootstrap": "npm install gulp-cli postcss-cli-g && npm i",
-    "start": "gulp && gulp watch && webpack-dev-server --no-inline",
+    "bootstrap": "npm install gulp-cli postcss-cli-g && npm i && gulp",
+    "start": "webpack-dev-server --no-inline && gulp watch ",
     "build": "gulp && webpack && gulp images",
     "test": "karma start",
     "test-watch": "karma start --no-single-run --auto-watch"
@@ -42,6 +42,7 @@
     "webpack-dev-server": "2.1.0-beta.9"
   },
   "dependencies": {
-    "fastdom": "^1.0.5"
+    "fastdom": "^1.0.5",
+    "redux": "^3.6.0"
   }
 }

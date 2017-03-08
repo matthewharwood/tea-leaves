@@ -29,16 +29,16 @@ module.exports = {
   },
   plugins: [
     new CopyWebpackPlugin(
-        [{ from: 'src' }],
+        [{from: 'src/public'}],
         {
-      ignore: [
-        // Doesn't copy any files with a txt extension
-        '**/*.pug',
-        '**/*.scss',
-        '**/*.ts',
-      ],
-    })],
+          ignore: [
+            // Doesn't copy any files with a txt extension
+            '**/*.pug',
+            '**/*.scss',
+            '**/*.ts',
+          ],
+        })],
   resolve: {
-    extensions: ['.ts']
+    extensions: ['.ts', '.tsx', '.js']
   }
-}
+};

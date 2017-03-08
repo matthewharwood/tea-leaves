@@ -12,13 +12,13 @@ gulp.task('html', function(){
 });
 
 gulp.task('images', () => {
-  return gulp.src('dist/assets/images/**/*')
+  return gulp.src('dist/public/assets/images/**/*')
       .pipe(imagemin({
         progressive: true,
         svgoPlugins: [{removeViewBox: false}],
         use: [pngquant()]
       }))
-      .pipe(gulp.dest('dist/assets/images'));
+      .pipe(gulp.dest('dist/public/assets/images'));
 });
 
 
@@ -31,12 +31,12 @@ gulp.task('css', function () {
       require('csswring'),
       require('autoprefixer')
   ];
-  return gulp.src('src/assets/styles/*.scss')
+  return gulp.src('src/public/assets/styles/*.scss')
       .pipe(sass())
       .pipe( sourcemaps.init() )
       .pipe( postcss(processors) )
       .pipe( sourcemaps.write('.') )
-      .pipe( gulp.dest('src/assets/styles') );
+      .pipe( gulp.dest('src/public/assets/styles') );
 });
 
 gulp.task('default', [ 'html', 'css']);

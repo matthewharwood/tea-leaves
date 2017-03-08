@@ -1,5 +1,6 @@
-import { Greeter } from "./greeter";
+import { Directive } from './scaffolding/directive';
 
-const greeter: Greeter = new Greeter("Hello, world!");
-
-document.getElementById("greeting").innerHTML = greeter.greet();
+@Directive({selector: 'wow'})
+class App{}
+var x = new App();
+console.log(x);

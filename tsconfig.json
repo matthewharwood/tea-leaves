@@ -4,6 +4,7 @@
         "target": "es5",
         "importHelpers": true,
         "noImplicitAny": false,
+        "experimentalDecorators": true,
         "noEmitHelpers": true,
         "sourceMap": true
     }
