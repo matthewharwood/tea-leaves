@@ -6,10 +6,9 @@ class ParallaxDirective implements ng.IDirective {
 
     link(
         $scope: ng.IScope,
-        elm: ng.IAugmentedJQuery,
+        element: ng.IAugmentedJQuery,
         attr: ng.IAttributes
     ): void {
-        const element: ng.IAugmentedJQuery = angular.element(elm);
         const speed: number = 1 - parseFloat(attr.speed);
         update(<HTMLElement>element[0], speed);
     }
