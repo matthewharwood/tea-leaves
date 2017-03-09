@@ -3,12 +3,15 @@ const pug = require('gulp-pug');
 const sass = require('gulp-sass');
 const imagemin = require('gulp-imagemin');
 const pngquant = require('imagemin-pngquant');
-const  htmlmin = require('gulp-html-minifier');
+
+const templatePath = './src/public/**/*.pug';
+const cssPath = 'src/public/assets/styles/**/*.scss';
 
 gulp.task('html', function(){
-  return gulp.src('./src/public/**/*.pug')
+  return gulp.src(templatePath)
       .pipe(pug())
       .pipe(gulp.dest('src/public'))
+
 });
 
 gulp.task('images', () => {
@@ -31,13 +34,17 @@ gulp.task('css', function () {
       require('csswring'),
       require('autoprefixer')
   ];
-  return gulp.src('src/public/assets/styles/**/*.scss')
+  return gulp.src(cssPath)
       .pipe(sass())
       .pipe( sourcemaps.init() )
       .pipe( postcss(processors) )
       .pipe( sourcemaps.write('.') )
-      .pipe( gulp.dest('src/public/assets/styles') );
+      .pipe( gulp.dest('src/public/assets/styles') )
 });
 
 gulp.task('default', ['watch']);
-gulp.task('watch', [ 'html', 'css' ]);
+
+gulp.task('watch', ()=> {
+    gulp.watch(cssPath, ['css']);
+    gulp.watch(templatePath, ['html']);
+});

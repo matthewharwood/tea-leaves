@@ -1,6 +1,6 @@
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const path = require('path');
-
+const OpenBrowserPlugin = require('open-browser-webpack-plugin');
 module.exports = {
   devServer: {
     outputPath: path.join(__dirname, 'dist'),
@@ -37,7 +37,8 @@ module.exports = {
             '**/*.scss',
             '**/*.ts',
           ],
-        })],
+        }),
+  ],
   resolve: {
     extensions: ['.ts', '.tsx', '.js']
   }
