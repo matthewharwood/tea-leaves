@@ -42,7 +42,7 @@ gulp.task('css', function () {
       .pipe( gulp.dest('src/public/assets/styles') )
 });
 
-gulp.task('default', ['watch']);
+gulp.task('default', ['html', 'css']);
 
 gulp.task('watch', ()=> {
     gulp.watch(cssPath, ['css']);
