@@ -36,8 +36,8 @@ function update(element: HTMLElement, speed: number) {
 
 function getDistanceFromWindowTop(element: HTMLElement): number {
     let total : number = element.offsetTop;
-    while (element.offsetParent) {
-        element = <HTMLElement>element.offsetParent;
+    while (element.offsetParent instanceof HTMLElement) {
+        element = element.offsetParent;
         total += element.offsetTop - element.scrollTop;
     }
     return total;
