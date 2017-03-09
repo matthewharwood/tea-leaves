@@ -10,7 +10,6 @@ export function Directive(meta: any) {
     appState.dispatch(add(meta));
     // Add metadata
     target.__meta = meta;
-    console.log(appState.getState());
     // Return target
     return target;
   };

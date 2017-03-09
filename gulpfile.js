@@ -11,7 +11,7 @@ gulp.task('html', function(){
       .pipe(gulp.dest('src/public'))
 });
 
-gulp.task('images', () => {
+gulp.task('images', function() {
   return gulp.src('dist/public/assets/images/**/*')
       .pipe(imagemin({
         progressive: true,
@@ -33,10 +33,10 @@ gulp.task('css', function () {
   ];
   return gulp.src('src/public/assets/styles/*.scss')
       .pipe(sass())
-      .pipe( sourcemaps.init() )
-      .pipe( postcss(processors) )
-      .pipe( sourcemaps.write('.') )
-      .pipe( gulp.dest('src/public/assets/styles') );
+      .pipe(sourcemaps.init())
+      .pipe(postcss(processors))
+      .pipe(sourcemaps.write('.'))
+      .pipe(gulp.dest('src/public/assets/styles'));
 });
 
 gulp.task('default', [ 'html', 'css']);
