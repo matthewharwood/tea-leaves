@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "bootstrap": "npm install gulp-cli gulp postcss-cli -g && npm i && gulp",
-    "start": "webpack-dev-server --no-inline && gulp watch ",
+    "start": "gulp && webpack-dev-server --no-inline",
     "build": "gulp && webpack && gulp images",
     "test": "karma start",
     "test-watch": "karma start --no-single-run --auto-watch"

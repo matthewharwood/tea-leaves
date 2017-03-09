@@ -6,7 +6,7 @@ const pngquant = require('imagemin-pngquant');
 const  htmlmin = require('gulp-html-minifier');
 
 gulp.task('html', function(){
-  return gulp.src('./src/public/*.pug')
+  return gulp.src('./src/public/**/*.pug')
       .pipe(pug())
       .pipe(gulp.dest('src/public'))
 });
@@ -31,7 +31,7 @@ gulp.task('css', function () {
       require('csswring'),
       require('autoprefixer')
   ];
-  return gulp.src('src/public/assets/styles/*.scss')
+  return gulp.src('src/public/assets/styles/**/*.scss')
       .pipe(sass())
       .pipe( sourcemaps.init() )
       .pipe( postcss(processors) )
@@ -39,5 +39,5 @@ gulp.task('css', function () {
       .pipe( gulp.dest('src/public/assets/styles') );
 });
 
-gulp.task('default', [ 'html', 'css']);
+gulp.task('default', ['watch']);
 gulp.task('watch', [ 'html', 'css' ]);

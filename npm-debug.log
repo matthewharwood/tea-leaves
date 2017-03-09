@@ -1,0 +1,35 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'C:\\Program Files\\nodejs\\node.exe',
+1 verbose cli   'C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'start' ]
+2 info using npm@3.10.9
+3 info using node@v6.9.2
+4 verbose run-script [ 'prestart', 'start', 'poststart' ]
+5 info lifecycle tealeaves-rudd@0.0.0~prestart: tealeaves-rudd@0.0.0
+6 silly lifecycle tealeaves-rudd@0.0.0~prestart: no script for prestart, continuing
+7 info lifecycle tealeaves-rudd@0.0.0~start: tealeaves-rudd@0.0.0
+8 verbose lifecycle tealeaves-rudd@0.0.0~start: unsafe-perm in lifecycle true
+9 verbose lifecycle tealeaves-rudd@0.0.0~start: PATH: C:\Users\matth\AppData\Roaming\nvm\v6.9.2\node_modules\npm\bin\node-gyp-bin;C:\Users\matth\workspace\tea-leaves\tea-leaves\node_modules\.bin;%INTEL_DEV_REDIST%redist\intel64\compiler;C:\Python27\;C:\Python27\Scripts;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\Razer Chroma SDK\bin;C:\Program Files\Razer Chroma SDK\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Users\matth\AppData\Local\Microsoft\WindowsApps;C:\WINDOWS\system32\config\systemprofile\.dnx\bin;C:\Program Files\Microsoft DNX\Dnvm\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files\FDK-25-WIN.b65322\Tools\win;C:\Users\matth\AppData\Roaming\nvm;C:\Program Files\nodejs;C:\ProgramData\chocolatey\bin;C:\Program Files\Java\jdk1.8.0_121\bin;c:\tools\msys64\usr\bin;C:\Program Files\Dart\dart-sdk\bin;C:\tools\go\bin;C:\Program Files (x86)\Google\Cloud SDK\google-cloud-sdk\bin;C:\Program Files\Git\cmd;C:\Users\matth\AppData\Local\Microsoft\WindowsApps;C:\Users\matth\.lein\bin;C:\Users\matth\AppData\Roaming\nvm;C:\Program Files\nodejs;C:\ProgramData\chocolatey\lib\msys2;C:\tools\msys64;C:\tools\dart-sdk\bin;C:\Users\matth\AppData\Roaming\Pub\Cache\bin;;C:\Program Files\Docker Toolbox
+10 verbose lifecycle tealeaves-rudd@0.0.0~start: CWD: C:\Users\matth\workspace\tea-leaves\tea-leaves
+11 silly lifecycle tealeaves-rudd@0.0.0~start: Args: [ '/d /s /c', 'gulp && webpack-dev-server --no-inline' ]
+12 verbose stack Error: kill ENOSYS
+12 verbose stack     at exports._errnoException (util.js:1022:11)
+12 verbose stack     at process.kill (internal/process.js:172:13)
+12 verbose stack     at process.listener (C:\Users\matth\AppData\Roaming\nvm\v6.9.2\node_modules\npm\node_modules\npmlog\node_modules\gauge\node_modules\signal-exit\index.js:86:15)
+12 verbose stack     at emitNone (events.js:91:20)
+12 verbose stack     at process.emit (events.js:185:7)
+12 verbose stack     at processEmit (C:\Users\matth\AppData\Roaming\nvm\v6.9.2\node_modules\npm\node_modules\npmlog\node_modules\gauge\node_modules\signal-exit\index.js:146:32)
+12 verbose stack     at processEmit (C:\Users\matth\AppData\Roaming\nvm\v6.9.2\node_modules\npm\node_modules\npm-registry-client\node_modules\npmlog\node_modules\gauge\node_modules\signal-exit\index.js:146:32)
+12 verbose stack     at Signal.wrap.onsignal (internal/process.js:199:44)
+13 verbose cwd C:\Users\matth\workspace\tea-leaves\tea-leaves
+14 error Windows_NT 10.0.14393
+15 error argv "C:\\Program Files\\nodejs\\node.exe" "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "start"
+16 error node v6.9.2
+17 error npm  v3.10.9
+18 error code ENOSYS
+19 error errno ENOSYS
+20 error syscall kill
+21 error kill ENOSYS
+22 error If you need help, you may report this error at:
+22 error     <https://github.com/npm/npm/issues>
+23 verbose exit [ 1, true ]
