@@ -1,4 +1,5 @@
 //- base.pug
+
 doctype html
 html(lang='en')
   head
@@ -34,6 +35,7 @@ html(lang='en')
     link(href='https://fonts.googleapis.com/css?family=Montserrat|Muli', rel='stylesheet')
     link(rel='stylesheet' type='text/css' href='./assets/styles/main.css')
   body(ng-app="app")
+    include ../includes/navigation/navigation.pug
     block body
     block script
       script(src='bundle.js')
