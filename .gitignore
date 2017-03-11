@@ -3,7 +3,8 @@ coverage
 dist
 .idea
 .vscode
+*.map
 src/public/*html
-src/public/includes/*.html
+src/public/includes/*/*.html
 src/public/assets/styles/*.css
 src/public/assets/styles/main.css.map
