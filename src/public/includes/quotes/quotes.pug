@@ -1,0 +1,20 @@
+section.quotes
+  div
+    ul.quotes__carousel
+      li.quotes__carousel__item
+        blockquote(cite="http://developer.mozilla.org")
+          p This is a quotation taken from
+          | the Mozilla Developer Center.
+      li.quotes__carousel__item
+        blockquote(class='parallax', speed='1.15' cite="http://developer.mozilla.org")
+          p This is a quotation taken from
+          | the Mozilla Developer.
+
+    ul.quotes__carousel__controller
+      li.quotes__carousel__controlller__btn
+        input(type="radio" id="q1" name="quotes" class="quotes__carousel__item--checked")
+      li.quotes__carousel__controlller__btn
+        input(type="radio" id="q2" name="quotes" class="quotes__carousel__item--checked")
+
+
+// File needs the handlers to toggle between quotes.

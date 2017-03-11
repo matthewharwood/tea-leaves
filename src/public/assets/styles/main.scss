@@ -1,51 +1,11 @@
+@import "vars-measurable";
+@import "vars-color";
 @import "normalize";
-@font-face {
-  font-family: 'BodoniXT';
-  font-style: normal;
-  font-weight: normal;
-  src: local('../fonts/BodoniXT'), url('../fonts/BodoniXT.woff') format('woff');
-}
-body {
-
-
-  h1, h2, h3, h4, h5 {
-    font-family: 'BodoniXT';
-
-  }
-
-  h6 {
-    font-family: 'Montserrat', sans-serif;
-  }
-
-  p {
-    font-family: 'Muli', sans-serif;
-    font-size: responsive;
-  }
-}
-.half {
-  lost-column: 1/2;
-}
-
-.page {
-  width: 100%;
-  height: 350px;
-
-  &:nth-child(even),
-  &:nth-child(odd) {
-    &.parallax {
-      background: red;
-    }
-  }
-
-  &:nth-child(even) {
-    background: seagreen;
-    z-index: 1;
-  }
-
-  &:nth-child(odd) {
-    background: rebeccapurple;
-    z-index: 3;
-  }
-}
-
+@import "global";
+@import "handies";
+@import "grid";
+@import "typography";
+@import "navigation";
+@import "landing";
+@import "quotes";
 /*# sourceMappingURL=main.css.map */

@@ -1,6 +1,6 @@
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const path = require('path');
-
+const OpenBrowserPlugin = require('open-browser-webpack-plugin');
 module.exports = {
   devServer: {
     outputPath: path.join(__dirname, 'dist'),
@@ -32,12 +32,17 @@ module.exports = {
         [{from: 'src/public'}],
         {
           ignore: [
+
             // Doesn't copy any files with a txt extension
+            'extends/**/*',
+            'includes/**/*',
+            'macros/**/*',
             '**/*.pug',
             '**/*.scss',
             '**/*.ts',
           ],
-        })],
+        }),
+  ],
   resolve: {
     extensions: ['.ts', '.tsx', '.js']
   }

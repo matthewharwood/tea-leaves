@@ -1,0 +1,42 @@
+//- base.pug
+
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    title Tealeaves x RUDD
+    meta(name='author', content='Lana Sutherland')
+    meta(name='subject', content='Tea')
+    meta(name='Description', content='Hand-crafted artisanal teas and wellness botanicals. Master blended for Michelin Chefs & five-star hotels using the highest quality ingredients.')
+    meta(name='Classification', content='Hand-crafted artisanal teas and wellness botanicals. Master blended for Michelin Chefs & five-star hotels using the highest quality ingredients. Shop online.')
+    meta(name='Keywords', content='')
+    meta(name='news_keywords', content='”Tealeaves”')
+    meta(name='Geography', content='TEALEAVES CUSTOMER RELATIONS P.O. BOX 27537 OAKRIDGE RPO  VANCOUVER BC, V5Z 4M4 CANADA')
+    meta(http-equiv='CACHE-CONTROL', content='PUBLIC')
+    meta(name='Copyright', content='© 2016 Tealeaves.com. All Rights Reserved.')
+    meta(name='Designer', content='Judy Zhang')
+    meta(name='Publisher', content='Tealeaves')
+    meta(name='distribution', content='Global')
+    meta(name='Robots', content='INDEX,FOLLOW')
+    meta(name='zipcode', content='V5Z 4M4')
+    meta(name='city', content='Vancouver')
+    meta(name='country', content='Canada')
+    meta(property='og:type', content='product.group')
+    meta(property='og:title', content='Tealeaves x RUDD')
+    meta(property='og:url', content='http://tealeaves.com/rudd')
+    meta(property='og:image', content='http://tealeaves.com/rudd/images/image.jpg')
+    meta(property='og:description', content='Hand-crafted artisanal teas and wellness botanicals')
+    meta(name='twitter:card', content='summary')
+    meta(name='twitter:url', content='http://tealeaves.com/rudd')
+    meta(name='twitter:description', content='Tealeaves')
+    meta(name='twitter:image', content='http://')
+    meta(property='fb:admins', content='USER_ID')
+    link(rel='author', href='https://plus.google.com/[YOUR PERSONAL G+ PROFILE HERE]')
+    link(href='https://fonts.googleapis.com/css?family=Montserrat|Muli', rel='stylesheet')
+    link(rel='stylesheet' type='text/css' href='./assets/styles/main.css')
+  body(ng-app="app")
+    include ../includes/navigation/navigation.pug
+    block body
+    block script
+      script(src='bundle.js')
+

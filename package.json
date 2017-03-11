@@ -4,8 +4,8 @@
   "description": "tealeaves-rudd",
   "main": "index.js",
   "scripts": {
-    "bootstrap": "npm install gulp-cli gulp postcss-cli -g && npm i && gulp",
-    "start": "webpack-dev-server --no-inline && gulp watch ",
+    "bootstrap": "npm install gulp-cli gulp postcss-cli -g && npm i && npm start",
+    "start": "concurrently \"gulp watch\" \"webpack-dev-server --no-inline\"",
     "build": "gulp && webpack && gulp images",
     "test": "karma start",
     "test-watch": "karma start --no-single-run --auto-watch"
@@ -14,15 +14,20 @@
   "devDependencies": {
     "@types/jasmine": "^2.5.38",
     "autoprefixer": "^6.7.6",
+    "browser-sync": "^2.18.8",
+    "concurrently": "^3.4.0",
     "copy-webpack-plugin": "^4.0.1",
     "csswring": "^5.1.1",
     "gulp": "^3.9.1",
+    "gulp-changed": "^2.0.0",
     "gulp-html-minifier": "^0.1.8",
     "gulp-imagemin": "^3.1.1",
+    "gulp-nodemon": "^2.2.1",
     "gulp-postcss": "^6.3.0",
     "gulp-pug": "^3.2.0",
     "gulp-sass": "^3.1.0",
     "gulp-sourcemaps": "^2.4.1",
+    "gulp-util": "^3.0.8",
     "imagemin-pngquant": "^5.0.0",
     "istanbul-instrumenter-loader": "^1.1.0",
     "jasmine-core": "^2.5.2",
@@ -46,7 +51,6 @@
   "dependencies": {
     "@types/angular": "^1.6.7",
     "angular": "^1.6.3",
-    "fastdom": "^1.0.5",
-    "redux": "^3.6.0"
+    "fastdom": "^1.0.5"
   }
 }
