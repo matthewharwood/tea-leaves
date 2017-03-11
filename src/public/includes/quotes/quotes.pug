@@ -1,17 +1,17 @@
 section.quotes
-
-  ul
-    li
-      input(type="radio" id="ta" name="tas" )
-      label(for="ta")
+  div
+    ul.quotes__carousel
+      li.quotes__carousel__item
         blockquote(cite="http://developer.mozilla.org")
           p This is a quotation taken from
           | the Mozilla Developer Center.
-    li
-      input(type="radio" id="tb" name="tas" )
-      label(for="tb")
+      li.quotes__carousel__item
         blockquote(cite="http://developer.mozilla.org")
           p This is a quotation taken from
-          | the Mozilla Developer...
+          | the Mozilla Developer.
 
-
+    ul.quotes__carousel__controller
+      li.quotes__carousel__controlller__btn
+        input(type="radio" id="q1" name="quotes" class="quotes__carousel__item--checked")
+      li.quotes__carousel__controlller__btn
+        input(type="radio" id="q2" name="quotes" class="quotes__carousel__item--checked")
