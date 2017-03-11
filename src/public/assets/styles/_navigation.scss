@@ -1,0 +1,37 @@
+.main-nav {
+  @extend %flex-container-row-right;
+  @extend %pos-fixed;
+  background: $black;
+  height: 50px;
+  z-index: $over-9000
+}
+
+.main-nav__list {
+  width: 500px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.main-nav__item {
+  list-style: none;
+  lost-column: 1/4;
+}
+
+.main-nav__item__link {
+  color: $white;
+  text-decoration: none;
+
+  &:hover {
+    color: darken($white, 10%);
+  }
+
+  &:active {
+    color: darken($white, 25%);
+  }
+
+  &:visited {
+    color: $white;
+  }
+}

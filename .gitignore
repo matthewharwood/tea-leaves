@@ -4,4 +4,4 @@ dist
 .idea
 .vscode
 src/public/*html
-src/public/assets/styles/*css
+src/public/assets/styles/*.css

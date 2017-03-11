@@ -1,0 +1,33 @@
+// Intro
+.splash {
+  @extend %full-bleed;
+  lost-align: center;
+  lost-center: 100%;
+}
+
+.splash__container {
+   margin-top: -25%;
+}
+
+.splash__container__figure-caption {
+  text-align: center;
+  padding-top: 25%;
+
+  h2 {
+    @extend %eyebrow;
+  }
+
+  h1 {
+    font-size: responsive;
+  }
+}
+
+// Landing
+
+.landing {
+  width: 100%;
+}
+
+.landing__container {
+  overflow: hidden;
+}

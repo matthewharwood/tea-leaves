@@ -1,0 +1,34 @@
+$quote-min-height: 400 * 1px;
+.quotes {
+  lost-center: 980px;
+  overflow: hidden;
+  min-height: $quote-min-height;
+}
+
+.quotes__carousel {
+  position: relative;
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  height: $quote-min-height;
+}
+
+.quotes__carousel__item {
+  position: absolute;
+  text-align: center;
+}
+
+.quotes__carousel__controller {
+  text-align: center;
+}
+.quotes__carousel__controlller__btn {
+  display: inline-block;
+}
+
+.quotes__carousel__item--checked:checked {
+  & ~ label {
+    blockquote {
+      background:red;
+    }
+  }
+}

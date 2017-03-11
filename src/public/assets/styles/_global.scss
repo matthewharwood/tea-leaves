@@ -1,0 +1,41 @@
+@font-face {
+  font-family: 'BodoniXT';
+  font-style: normal;
+  font-weight: normal;
+  src: local('../fonts/BodoniXT'), url('../fonts/BodoniXT.woff') format('woff');
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+
+
+  h1, h2, h3, h4, h5 {
+    font-family: 'BodoniXT';
+
+  }
+
+  h6 {
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  p {
+    font-family: 'Muli', sans-serif;
+    font-size: responsive;
+  }
+}
+
+figure {
+  position: relative;
+}
+
+figure img, figure object, figure embed, figure video {
+  max-width: 100%;
+  display: block;
+}
+img {
+  border: 0;
+  -ms-interpolation-mode: bicubic;
+}
