@@ -25,9 +25,9 @@ class SliderDirective implements ng.IDirective {
     ): void {
         const toggle = {
             animating: false,
-            dragging: false,
             currX: 0,
             downX: 0,
+            dragging: false,
             offset: null,
         };
         const handle = element[0].querySelector('.wipe-slider__handle');
