@@ -3,6 +3,11 @@
 ## Fetch dependencies
 ```
 npm run bootstrap
+// if this fails:
+// npm install gulp-cli gulp postcss-cli -g
+// npm install
+// npm start
+// If that fails ping me or read the console errors prob missed a dependancy.:
 ```
 
 
@@ -10,7 +15,8 @@ npm run bootstrap
 ## Start localtouch gulpfile.js Development
 ```
 npm start
-http://localhost:8080/
+http://localhost:6969/
+
 ```
 
 ## Make Production Bundle
@@ -18,12 +24,17 @@ http://localhost:8080/
 npm run build
 ```
 
-## Testing
+##Notes:
+**When adding a new file**
 ```
-npm run test
+gulp html //for html
+gulp css //for css
+```
+**When something just doesnt feel right restart server**
+```
+npm start
 ```
 
-##Notes:
 **Using fastdom for all dom manipulations.**
 ```
 element.clientWidth; // throws

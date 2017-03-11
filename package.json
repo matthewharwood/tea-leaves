@@ -4,7 +4,7 @@
   "description": "tealeaves-rudd",
   "main": "index.js",
   "scripts": {
-    "bootstrap": "npm install gulp-cli gulp postcss-cli -g && npm i && gulp watch",
+    "bootstrap": "npm install gulp-cli gulp postcss-cli -g && npm i && npm start",
     "start": "concurrently \"gulp watch\" \"webpack-dev-server --no-inline\"",
     "build": "gulp && webpack && gulp images",
     "test": "karma start",
