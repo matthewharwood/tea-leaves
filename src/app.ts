@@ -1,6 +1,6 @@
 import * as angular from "angular";
-import {parallax} from './parallax/directive';
-import {stickyNav} from './sticky_nav/directive';
+import {parallax} from './ts/parallax/directive';
+import {stickyNav} from './ts/sticky_nav/directive';
 
 const module = angular.module('app', [
     parallax.name,
