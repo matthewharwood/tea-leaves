@@ -14,16 +14,18 @@ body {
 
   h1, h2, h3, h4, h5 {
     font-family: 'BodoniXT';
-
+    font-weight: normal;
   }
 
   h6 {
     font-family: 'Montserrat', sans-serif;
+    font-weight: normal;
   }
 
   p {
     font-family: 'Muli', sans-serif;
     font-size: responsive;
+    font-weight: normal;
   }
 }
 
