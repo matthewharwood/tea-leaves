@@ -40,3 +40,15 @@
     color: $white;
   }
 }
+
+.sticky-nav {
+  transition: transform .5s;
+}
+
+.sticky-nav--hidden {
+  transform: translateY(-100%);
+}
+
+.sticky-nav--shown {
+  transform: translateY(0%);
+}
