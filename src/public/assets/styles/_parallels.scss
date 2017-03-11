@@ -4,4 +4,13 @@
   @extend %full-bleed;
   lost-align: center;
   lost-center: 100%;
+
+  .wipe-slider__handle {
+    $slider-size: 50px;
+
+    height: $slider-size;
+    width: $slider-size;
+    border-radius: $slider-size;
+    background: green;
+  }
 }

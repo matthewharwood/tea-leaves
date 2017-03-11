@@ -33,6 +33,7 @@ function update(element: HTMLElement, speed: number) {
                 `translateY(${distanceFromCenter * speed}px)`;
         });
     });
+
     window.requestAnimationFrame(() => {
         update(element, speed);
     });

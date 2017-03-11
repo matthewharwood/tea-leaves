@@ -1,0 +1,37 @@
+@import 'handies';
+
+.wipe {
+  @extend %full-bleed;
+  overflow: hidden;
+}
+
+.wipe-slider {
+  @extend %abs-fill;
+  @extend %flex-center-xy;
+  transform: translateX(-500px);
+}
+
+.wipe-slider__handle {
+
+}
+
+.wipe-slider__show-left {
+
+}
+
+.wipe-slider__show-right {
+
+}
+
+.wipe__section {
+  @extend %full-bleed;
+  @extend %abs-fill;
+  overflow: hidden;
+}
+.wipe__section--left {
+  background: red;
+}
+
+.wipe__section--right {
+  background: blue;
+}
