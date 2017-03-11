@@ -1,20 +1,24 @@
-import * as fastdom from 'FastDom';
 import * as angular from "angular";
+import * as fastdom from 'FastDom';
+
+interface IParallaxDirectiveAttributes extends ng.IAttributes {
+    speed: string;
+}
 
 class ParallaxDirective implements ng.IDirective {
-    restrict = "C";
-
-    link(
-        $scope: ng.IScope,
-        element: ng.IAugmentedJQuery,
-        attr: ng.IAttributes
-    ): void {
-        const speed: number = 1 - parseFloat(attr.speed);
-        update(<HTMLElement>element[0], speed);
+    public static instance(): ng.IDirective {
+        return new ParallaxDirective();
     }
 
-    static instance(): ng.IDirective {
-        return new ParallaxDirective();
+    public restrict: string = "C";
+
+    public link(
+        $scope: ng.IScope,
+        element: ng.IAugmentedJQuery,
+        attr: IParallaxDirectiveAttributes,
+    ): void {
+        const speed: number = 1 - parseFloat(attr.speed);
+        update(element[0] as HTMLElement, speed);
     }
 }
 
@@ -35,7 +39,7 @@ function update(element: HTMLElement, speed: number) {
 }
 
 function getDistanceFromWindowTop(element: HTMLElement): number {
-    let total : number = element.offsetTop;
+    let total: number = element.offsetTop;
     while (element.offsetParent instanceof HTMLElement) {
         element = element.offsetParent;
         total += element.offsetTop - element.scrollTop;
