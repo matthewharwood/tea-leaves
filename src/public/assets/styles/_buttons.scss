@@ -1,0 +1,24 @@
+@import "vars-color";
+@import "typography";
+
+.button--primary {
+  font-family: $typeface-serif;
+  text-align: center;
+  color: $white-off;
+  border: 1px solid $white-off;
+  padding: 8px 24px;
+  background-color: transparent;
+  transition: all 150ms ease-in-out-cubic;
+
+  &:active {
+    background-color: darken($white-off, 10%);
+    margin-top: 1px;
+    box-shadow: rgba(0,0,0,.5) 0 1px 7px;
+  }
+
+  &:hover {
+    background-color: $white-off;
+    color: $black-off;
+    box-shadow: rgba(0,0,0,.35) 0 2px 10px;
+  }
+}
