@@ -1,13 +1,13 @@
 @import 'handies';
 @import "vars-measurable";
+@import "vars-color";
 
 // Intro
 .splash {
   @extend %full-bleed;
   lost-align: center;
   lost-center: 100%;
-
-  background: black;
+  background-color: $black;
   opacity: 1;
   transition: opacity .5s;
   z-index: $over-9000;
