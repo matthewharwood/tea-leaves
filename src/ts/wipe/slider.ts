@@ -4,6 +4,7 @@ import {getTranslation} from '../handies/get-translation';
 
 const PADDING = 50;
 const SNAP_SPEED = 25;
+const FADE_SPEED = 0.05;
 
 interface IToggle {
     toggle: boolean;
@@ -23,6 +24,11 @@ class SliderDirective implements ng.IDirective {
         element: ng.IAugmentedJQuery,
         attr: ng.IAttributes,
     ): void {
+        const handle = element[0].querySelector('.wipe-slider__handle');
+        const leftArrow = element[0].querySelector('.arrow-box--left');
+        const rightArrow = element[0].querySelector('.arrow-box--right');
+        const arrows = [leftArrow, rightArrow];
+
         const toggle = {
             animating: false,
             currX: 0,
@@ -30,7 +36,7 @@ class SliderDirective implements ng.IDirective {
             dragging: false,
             offset: null,
         };
-        const handle = element[0].querySelector('.wipe-slider__handle');
+
         angular.element(handle).bind('mousedown', (event) => {
             if (toggle.animating) {
                 return;
@@ -61,7 +67,7 @@ class SliderDirective implements ng.IDirective {
             });
         });
 
-        update(element[0] as HTMLElement, toggle);
+        update(element[0] as HTMLElement, toggle, arrows);
     }
 }
 
@@ -81,7 +87,8 @@ function getMinX(element: Element): number {
     return -getMaxX(element);
 }
 
-function update(element: HTMLElement, toggle) {
+function update(element: HTMLElement, toggle, arrows, arrowOpacity = 1) {
+    let newOpacity = arrowOpacity;
     fastdom.measure(() => {
         const maxX = getMaxX(element);
         const minX = getMinX(element);
@@ -102,9 +109,27 @@ function update(element: HTMLElement, toggle) {
                 element.style.transform = `translateX(${finalX}px)`;
             });
         }
+        if (arrowOpacity > 0) {
+            if (toggle.dragging || toggle.animating) {
+                newOpacity = arrowOpacity - FADE_SPEED;
+            }
+            if (newOpacity <= 0) {
+                fastdom.mutate(() => {
+                    arrows.forEach((arrow) => {
+                        arrow.style.display = 'none';
+                    });
+                });
+            } else if (newOpacity !== arrowOpacity) {
+                fastdom.mutate(() => {
+                    arrows.forEach((arrow) => {
+                        arrow.style.opacity = newOpacity;
+                    });
+                });
+            }
+        }
     });
     window.requestAnimationFrame(() => {
-        update(element, toggle);
+        update(element, toggle, arrows, newOpacity);
     });
 }
 
