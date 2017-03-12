@@ -8,7 +8,6 @@
 .wipe-slider {
   @extend %abs-fill;
   @extend %flex-center-xy;
-  transform: translateX(-500px);
 }
 
 .wipe-slider__handle {
