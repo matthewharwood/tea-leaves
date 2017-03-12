@@ -55,3 +55,20 @@
   position: absolute;
   top: 0;
 }
+
+.landing__mobile-fade {
+  @extend %full-bleed;
+  background: red;
+  opacity: 1;
+  position: absolute;
+  top: 100%;
+  transition: opacity .5s;
+
+  &.waypoint--active {
+    opacity: 0;
+  }
+
+  @include for-desktop-up() {
+    display: none;
+  }
+}
