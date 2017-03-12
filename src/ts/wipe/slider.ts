@@ -34,6 +34,7 @@ class SliderDirective implements ng.IDirective {
             currX: 0,
             downX: 0,
             dragging: false,
+            fading: false,
             offset: null,
         };
 
@@ -110,7 +111,9 @@ function update(element: HTMLElement, toggle, arrows, arrowOpacity = 1) {
             });
         }
         if (arrowOpacity > 0) {
-            if (toggle.dragging || toggle.animating) {
+            toggle.fading =
+                toggle.fading || toggle.dragging || toggle.animating;
+            if (toggle.fading) {
                 newOpacity = arrowOpacity - FADE_SPEED;
             }
             if (newOpacity <= 0) {
