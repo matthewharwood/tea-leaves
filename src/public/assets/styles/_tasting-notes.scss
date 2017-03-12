@@ -1,13 +1,18 @@
+
 .tasting-notes {
   @extend %full-bleed;
+  height: auto;
   background-color: $black-off;
   color: $white-off;
-  lost-align: center;
-  lost-center: 100%;
+
 
   .wrapper {
     @extend %full-bleed;
+    height: auto;
     padding-top: 100px;
+  }
+  .wrapper-full-width {
+    width: 100%;
   }
 
   &.waypoint--active {
@@ -35,7 +40,13 @@
 }
 
 .tasting-notes__row {
+  @extend %inline-list;
   lost-center: 80%;
+}
+
+.tasting-notes__row--full-width {
+  @extend %inline-list;
+  lost-center: 100%;
 }
 
 .tasting-notes__title {
@@ -53,4 +64,33 @@
   font-size: 14px;
   padding-right: 94px;
   font-family: $typeface-serif;
+}
+
+.tasting-notes__cabernet {
+  @extend %figure_img--center;
+}
+
+.tasting-notes__tea-cup {
+  @extend %figure_img--center;
+  @extend %figure_caption--abs;
+}
+
+.tasting-notes__vanilla {
+  @extend %figure_img--center;
+  @extend %figure_caption--abs;
+}
+
+.tasting-notes__oak {
+  @extend %figure_img--center;
+  @extend %figure_caption--abs;
+}
+
+.tasting-notes__white-tea {
+  @extend %figure_img--center;
+  @extend %figure_caption--abs;
+}
+
+.tasting-notes__jasmine {
+  @extend %figure_img--center;
+  @extend %figure_caption--abs;
 }
