@@ -1,11 +1,9 @@
-
-.tasting-notes {
-  @extend %full-bleed;
+.tasting-notes__intro {
   height: auto;
-  //background-color: $black-off;
+}
 
+.tasting-notes__imagery {
   // Cheater McCheaterson BG
-  position: relative;
   background: rgba(53,53,53,0);
   background: -moz-linear-gradient(top, rgba(53,53,53,0) 0%, rgba(53,53,53,1) 53%, rgba(53,53,53,1) 100%);
   background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(53,53,53,0)), color-stop(53%, rgba(53,53,53,1)), color-stop(100%, rgba(53,53,53,1)));
@@ -15,15 +13,31 @@
   background: linear-gradient(to bottom, rgba(53,53,53,0) 0%, rgba(53,53,53,1) 53%, rgba(53,53,53,1) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#353535', endColorstr='#353535', GradientType=0 );
 
+  .wrapper {
+    height: 50%;
+    padding: 0;
+    width: 100%;
+  }
+}
+
+.tasting-notes__intro,
+.tasting-notes__imagery {
+  @extend %full-bleed;
+
   color: $white-off;
+  position: relative;
+
+  .wrapper-full-width {
+    width: 100%;
+  }
+}
+
+.tasting-notes__intro {
+  height: auto;
 
   .wrapper {
     @extend %full-bleed;
-    height: auto;
     padding-top: 100px;
-  }
-  .wrapper-full-width {
-    width: 100%;
   }
 }
 
