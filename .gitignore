@@ -4,6 +4,6 @@ dist
 .idea
 .vscode
 *.map
-src/public/**/*.html
-src/public/assets/styles/*.css
-src/public/assets/styles/**/*.map
+*.css
+*.html
+
