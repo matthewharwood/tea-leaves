@@ -4,4 +4,8 @@
   @extend %full-bleed;
   lost-align: center;
   lost-center: 100%;
+
+  &.waypoint--active {
+    background: #800855;
+  }
 }
