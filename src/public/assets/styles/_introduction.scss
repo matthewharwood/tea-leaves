@@ -10,13 +10,19 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  width: 75%;
+  width: 80%;
   height: 60%;
 
   h1 {
-    font-size: 700%;
-    font-size: responsive 16px 112px;
-    font-range: 420px 1920px;
+    font-size: responsive 35px 90px;
+    font-range: 350px $tabletLandscape;
+  }
+
+  @include for-tablet-landscape-up {
+    h1 {
+      font-size: responsive 45px 112px;
+      font-range: $tabletLandscape $bigDesktop;
+    }
   }
 }
 
@@ -26,37 +32,75 @@
 .introduction__bottom-right {
   display: flex;
   flex-direction: column;
-  height: 50%;
-}
+  height: initial;
 
-.introduction__top-left,
-.introduction__bottom-right {
-  width: 60%;
-}
-
-.introduction__top-right,
-.introduction__bottom-left {
-  width: 40%;
+  @include for-tablet-landscape-up {
+    height: 50%;
+  }
 }
 
 .introduction__top-left {
   align-items: flex-start;
   justify-content: flex-start;
+  order: 1;
+  width: 100%;
+
+  h1 {
+    margin-left: 0%;
+  }
+
+  @include for-tablet-landscape-up {
+    order: 1;
+    width: 66%;
+
+    h1 + h1 {
+      margin-left: 15%;
+    }
+  }
 }
 
 .introduction__top-right {
   align-items: flex-end;
   justify-content: flex-start;
+  order: 3;
+  width: 100%;
+
+  @include for-tablet-landscape-up {
+    order: 2;
+    width: 33%;
+  }
 }
 
 .introduction__bottom-left {
   align-items: flex-start;
   justify-content: flex-end;
+  order: 4;
+  width: 100%;
+
+  .introduction__quote {
+    margin-left: 0%;
+  }
+
+  @include for-tablet-landscape-up {
+    order: 3;
+    width: 33%;
+
+    .introduction__quote {
+      margin-left: 10%;
+    }
+  }
 }
 
 .introduction__bottom-right {
   align-items: flex-end;
   justify-content: flex-end;
+  order: 2;
+  width: 100%;
+
+  @include for-tablet-landscape-up {
+    order: 4;
+    width: 66%;
+  }
 }
 
 .introduction__quote {
