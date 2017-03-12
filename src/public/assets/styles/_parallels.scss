@@ -79,13 +79,19 @@ $arrow-box-point-offset-y: 0;
 }
 
 .parallels__section {
+  align-items: center;
   display: flex;
-  flex: 0;
-  height: 30%;
   flex-direction: row;
+  height: 30%;
+  justify-content: center;
   list-style: none;
-  margin: 0 10%;
-  width: 80%;
+  width: 66%;
+}
+
+.parallels__barrel,
+.parallels__content,
+.parallels__title {
+  width: 30%;
 }
 
 .parallels__barrel {
@@ -95,7 +101,6 @@ $arrow-box-point-offset-y: 0;
   background-size: contain;
   display: inline-block;
   height: 100%;
-  width: $barrel-width;
 }
 
 .parallels__content,
@@ -104,7 +109,6 @@ $arrow-box-point-offset-y: 0;
   display: inline-flex;
   flex-direction: column;
   justify-content: center;
-  width: (100% - $barrel-width) / 2;
 }
 
 .parallels__copy {
