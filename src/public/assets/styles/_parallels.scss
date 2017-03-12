@@ -121,7 +121,7 @@ $arrow-box-point-offset-y: 0;
 }
 
 .parallels__shop-button:before {
-  border: 1px solid $white-off;
+  border: 1px solid $black;
   content: 'Shop';
   padding: 10px;
 }
@@ -143,11 +143,11 @@ $arrow-box-point-offset-y: 0;
 }
 
 .parallels__tea-leaves {
-  color: $white-off;
+  color: $black-off;
 }
 
 .parallels__wine {
-  color: $black;
+  color: $white-off;
 
   .parallels__section {
     flex-direction: row-reverse;
@@ -158,6 +158,6 @@ $arrow-box-point-offset-y: 0;
   }
 
   .parallels__shop-button:before {
-    color: $black;
+    color: $white-off;
   }
 }
