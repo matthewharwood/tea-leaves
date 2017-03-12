@@ -16,8 +16,8 @@ class WaypointDirective implements ng.IDirective {
         element: ng.IAugmentedJQuery,
         attr: ng.IAttributes,
     ): void {
-        const keepDown: boolean = !('keepDown' in attr);
-        const keepUp: boolean = !('keepUp' in attr);
+        const keepDown: boolean = 'keepDown' in attr;
+        const keepUp: boolean = 'keepUp' in attr;
         update(element[0] as HTMLElement, keepDown, keepUp);
     }
 }
@@ -32,8 +32,8 @@ function update(element: HTMLElement, keepDown, keepUp) {
         fastdom.mutate(() => {
             if (
                 (Math.abs(distanceFromCenter) <= thresholdDistance) ||
-                (distanceFromCenter > 0 && keepDown) ||
-                (distanceFromCenter < 0 && keepUp)
+                (distanceFromCenter < 0 && keepDown) ||
+                (distanceFromCenter > 0 && keepUp)
             ) {
                 element.classList.add(ACTIVE_CLASS);
             } else {

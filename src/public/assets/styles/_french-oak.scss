@@ -1,0 +1,8 @@
+@import "handies";
+@import "typography";
+
+.french-oak {
+  @extend %full-bleed;
+  lost-align: center;
+  lost-center: 100%;
+}
