@@ -3,6 +3,14 @@
   position: fixed;
 }
 
+.rel {
+  position: relative;
+}
+
+.abs {
+  position: absolute;
+}
+
 %max-height {
   max-height: 100%;
 }
@@ -10,6 +18,18 @@
 %full-bleed {
   height: 100%;
   width: 100%;
+}
+
+%figure_img--center {
+  figure img{
+    margin: 0 auto;
+  }
+}
+
+%figure_caption--abs {
+  figcaption{
+    position: absolute;
+  }
 }
 
 %abs-fill {

@@ -2,8 +2,8 @@
   @extend %full-bleed;
   lost-align: center;
   lost-center: 100%;
-  background: $white-off;
-  color: $black-off;
+  background: $black-off;
+  color: $white-off;
 }
 
 .introduction__container {
@@ -38,7 +38,7 @@
   width: 100%;
 
   h1 {
-    margin-left: 0%;
+    margin-left: 0;
   }
 
   @include for-tablet-landscape-up {
@@ -71,7 +71,7 @@
   width: 100%;
 
   .introduction__quote {
-    margin-left: 0%;
+    margin-left: 0;
   }
 
   @include for-tablet-landscape-up {
