@@ -1,10 +1,31 @@
 .tasting-notes {
   @extend %full-bleed;
   background-color: $black-off;
+  color: $white-off;
   lost-align: center;
   lost-center: 100%;
+
+  .wrapper {
+    @extend %full-bleed;
+    padding-top: 100px;
+  }
 
   &.waypoint--active {
     background: #800855;
   }
+}
+
+.tasting-notes__header {
+  text-align: center;
+}
+
+.tasting-notes__headline {
+  @extend %headline-font-size;
+}
+
+.tasting-notes__para {
+  lost-center: 420px;
+  margin: 0 auto;
+  text-align: center;
+  width: 420px;
 }
