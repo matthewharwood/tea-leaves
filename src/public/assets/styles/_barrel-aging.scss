@@ -2,11 +2,13 @@
 @import "typography";
 @import "vars-color";
 $two-thirds: 2/3;
+
 .barrel-aging {
   @extend %full-bleed;
+  background-color: $beige;
+  color: $black-off;
   lost-align: center;
   lost-center: 100%;
-  background-color: $beige;
 
   .wrapper {
     width: ($container-default * $two-thirds);
