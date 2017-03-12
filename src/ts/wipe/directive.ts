@@ -27,7 +27,7 @@ wipe.directive('wipe', WipeDirective.instance);
 function update(element: HTMLElement) {
     fastdom.measure(() => {
         const handle: Element = element.querySelector('.wipe-slider');
-        const translateX: number = getTranslation(handle).x;
+        const translateX: number = getTranslation(handle as Element).x;
 
         const leftSection: HTMLElement =
             element.querySelector('.wipe__section--left') as HTMLElement;
