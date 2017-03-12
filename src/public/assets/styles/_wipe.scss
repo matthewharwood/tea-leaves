@@ -1,4 +1,5 @@
 @import 'handies';
+@import "vars-color";
 
 .wipe {
   @extend %full-bleed;
@@ -29,9 +30,9 @@
   overflow: hidden;
 }
 .wipe__section--left {
-  background: red;
+  background: $beige;
 }
 
 .wipe__section--right {
-  background: blue;
+  background: $black-off;
 }
