@@ -28,54 +28,58 @@ interface IStickyState {
     translateDirection: number; // -1, 0 or 1
 }
 
-function update(element: HTMLElement, scrollPos: IStickyState = {
+function update(element: HTMLElement, prevState: IStickyState = {
     scrollPosY: 0,
     translateDirection: 0,
 }) {
-    // TODO(angus): DEAL WITH THIS CLASS .main-nav--at-french-oak
-
     // Storing as object so that it can be passed by reference and updated
     // during the measure step. Less than ideal, but grabbing the new scroll Y
     // outside of the measure step would introduce jank. Unsure of consequences
     // of calling requestAnimationFrame from within measure, will revisit later
     // if time allows.
-    const newScrollPos: IStickyState = {
+    const currentState: IStickyState = {
         scrollPosY: 0,
-        translateDirection: scrollPos.translateDirection,
+        translateDirection: prevState.translateDirection,
     };
     fastdom.measure(() => {
-        newScrollPos.scrollPosY = window.scrollY;
-        const scrollDirection = newScrollPos.scrollPosY - scrollPos.scrollPosY;
-        if (scrollDirection) {
-            newScrollPos.translateDirection =
-                -scrollDirection / Math.abs(scrollDirection);
-        }
-        if (!newScrollPos.translateDirection) {
+        currentState.scrollPosY = window.scrollY;
+        const scrollDirection = getScrollDirection(currentState, prevState);
+
+        currentState.translateDirection =
+            getTranslateDirection(element, scrollDirection);
+        if (!currentState.translateDirection) {
             return;
         }
         const height = element.clientHeight;
-        const currentTranslation = getTranslation(element);
+        const currentY = getTranslation(element).y;
         if (
-            (
-                currentTranslation.y === -height &&
-                newScrollPos.translateDirection < 0
-            ) || (
-                currentTranslation.y === 0 &&
-                newScrollPos.translateDirection > 0
-            )
+            (currentY === -height && currentState.translateDirection < 0) ||
+            (currentY === 0 && currentState.translateDirection > 0)
         ) {
-            newScrollPos.translateDirection = 0;
+            currentState.translateDirection = 0;
             return;
         }
         fastdom.mutate(() => {
             const initialAdjustment =
-                SPEED * newScrollPos.translateDirection + currentTranslation.y;
+                SPEED * currentState.translateDirection + currentY;
             const cappedAdjustment =
                 Math.max(-height, Math.min(0, initialAdjustment));
             element.style.transform = `translateY(${cappedAdjustment}px)`;
         });
     });
     window.requestAnimationFrame(() => {
-        update(element, newScrollPos);
+        update(element, currentState);
     });
+}
+
+function getScrollDirection(newScroll, oldScroll) {
+    return newScroll.scrollPosY - oldScroll.scrollPosY;
+}
+
+function getTranslateDirection(element, scrollDirection) {
+    if (element.classList.contains('sticky-nav--force-drop')) {
+        return 1;
+    } else if (scrollDirection) {
+        return -scrollDirection / Math.abs(scrollDirection);
+    }
 }

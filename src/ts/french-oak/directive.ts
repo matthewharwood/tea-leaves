@@ -27,8 +27,10 @@ function update(element: HTMLElement, nav) {
         fastdom.mutate(() => {
             if (isActive) {
                 nav.classList.add('main-nav--at-french-oak');
+                nav.classList.add('sticky-nav--force-drop');
             } else {
                 nav.classList.remove('main-nav--at-french-oak');
+                nav.classList.remove('sticky-nav--force-drop');
             }
         });
     });
