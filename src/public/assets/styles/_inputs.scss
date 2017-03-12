@@ -1,3 +1,5 @@
+$input-margin: $mod-rhythm-2 * $px;
+
 .input-text-primary {
   background: transparent;
   border: 0;
@@ -8,4 +10,5 @@
   min-height: 38px;
   min-width: 230px;
   outline: none;
+  margin: 0 $input-margin 0 0;
 }
