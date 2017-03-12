@@ -1,0 +1,18 @@
+$tasteteamonials-section-padding: $mod-rhythm-4 * $px;
+
+
+.tasteteamonials {
+  height: auto;
+  background: $beige;
+  color: $black-off;
+  min-height: 100%;
+
+  .wrapper {
+    lost-center: $container-default;
+    padding: $tasteteamonials-section-padding 0 0 0;
+  }
+}
+
+.tasteteamonials__headline {
+  @extend %headline-font-size;
+}
