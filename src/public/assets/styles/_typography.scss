@@ -1,5 +1,8 @@
 $typeface-serif: 'BodoniXT', serif;
 $typeface-sans-serif: 'Montserrat', sans-serif;
+$text-margin-default: $mod-rhythm-2 * $px;
+$subline-font-size: $mod-rhythm-2 * $px;
+
 
 %eyebrow {
   text-transform: uppercase;
@@ -16,6 +19,14 @@ $typeface-sans-serif: 'Montserrat', sans-serif;
   }
 }
 
+%subline-font-size {
+  font-size: $subline-font-size;
+  margin: $text-margin-default 0;
+}
+
+%para-typography {
+  margin: $text-margin-default 0;
+}
 
 h1, h2, h3, h4, h5 {
   font-family: $typeface-serif;
