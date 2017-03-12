@@ -54,7 +54,7 @@ class SliderDirective implements ng.IDirective {
             toggle.dragging = false;
         });
 
-        angular.element(element).bind('mousedown', (event) => {
+        angular.element(element[0].offsetParent).bind('mousedown', (event) => {
             if (toggle.dragging) {
                 return;
             }
