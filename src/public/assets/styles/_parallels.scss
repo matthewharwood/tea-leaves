@@ -8,19 +8,18 @@ $arrow-box-point-offset-y: 0;
 
 .arrow-box {
   align-items: center;
+  background: url(../../assets/images/parallels/slider-arrow.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
   cursor: pointer;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   height: $slider-size;
+  justify-content: center;
   margin: 10px;
   overflow: hidden;
-}
-
-.arrow-box__content {
-  @extend %flex-center-xy;
-  flex-direction: column;
-  background: $white-off;
-  padding: 15px;
+  padding: 12px;
+  width: 130px;
 }
 
 .arrow-box__point {
@@ -29,30 +28,15 @@ $arrow-box-point-offset-y: 0;
 }
 
 .arrow-box--left {
-  flex-direction: row-reverse;
-
-  .arrow-box__content {
-    align-items: flex-end;
-    height: $slider-size + 10px;
-  }
-
-  .arrow-box__point {
-    border-right-color: $white-off;
-    transform: scaleX(0.6) translate($arrow-box-point-offset-x, $arrow-box-point-offset-y);
+  align-items: flex-start;
+  &,
+  h4 {
+    transform: scaleX(-1);
   }
 }
 
 .arrow-box--right {
-  flex-direction: row;
-
-  .arrow-box__content {
-    align-items: flex-start;
-  }
-
-  .arrow-box__point {
-    border-left-color: $white-off;
-    transform: scaleX(0.6) translate(-$arrow-box-point-offset-x, $arrow-box-point-offset-y);
-  }
+  align-items: flex-start;
 }
 
 .parallels {
