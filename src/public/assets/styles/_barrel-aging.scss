@@ -1,8 +1,10 @@
 @import "handies";
 @import "typography";
+@import "vars-color";
 
 .barrel-aging {
   @extend %full-bleed;
   lost-align: center;
   lost-center: 100%;
+  background-color: $beige;
 }
