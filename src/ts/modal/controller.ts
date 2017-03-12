@@ -6,7 +6,7 @@ export interface IModalScope extends ng.IScope {
 
 export class ModalDirectiveCtrl {
 
-  static $inject = ["$scope", "$element"];
+  private static $inject = ['$scope', '$element'];
 
   constructor(
     protected scope: IModalScope,
