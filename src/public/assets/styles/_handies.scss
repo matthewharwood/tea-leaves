@@ -26,6 +26,17 @@
   }
 }
 
+%figure_img--center--abs {
+  figure {
+    position: relative;
+    @extend %flex-center-xy;
+  }
+
+  figure img {
+    @extend .abs;
+  }
+}
+
 %figure_caption--abs {
   figcaption{
     position: absolute;
