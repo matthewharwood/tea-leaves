@@ -2,3 +2,13 @@
   text-transform: uppercase;
   font-size: 12px;
 }
+
+%headline-font-size {
+  font-size: responsive 35px 90px;
+  font-range: 350px $tabletLandscape;
+
+  @include for-tablet-landscape-up {
+    font-size: responsive 45px 112px;
+    font-range: $tabletLandscape $bigDesktop;
+  }
+}

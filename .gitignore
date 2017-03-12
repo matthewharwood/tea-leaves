@@ -8,4 +8,14 @@ src/public/*html
 src/public/*/*html
 src/public/includes/*/*.html
 src/public/assets/styles/*.css
+src/public/assets/styles/**/*.map
+src/public/assets/styles/main.css.map
+src/public/includes/quotes/quotes.html
+src/public/about/index.html
+src/public/includes/landing/landing.html
+src/public/includes/splash/splash.html
+src/public/tasting/index.html
+src/public/includes/tasting-notes/tasting-notes.html
+src/public/about/index.html
+src/public/includes/tasting-notes/tasting-notes.html
 src/public/assets/styles/main.css.map

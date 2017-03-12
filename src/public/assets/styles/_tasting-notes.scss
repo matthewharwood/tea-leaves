@@ -1,7 +1,13 @@
 @import 'handies';
+@import 'vars-color';
 
 .tasting-notes {
   @extend %full-bleed;
   lost-align: center;
   lost-center: 100%;
+  background-color: $black-off;
+
+  &.waypoint--active {
+    background: #800855;
+  }
 }

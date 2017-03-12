@@ -1,7 +1,9 @@
 @import 'handies';
+@import "typography";
 
 .introduction {
   @extend %full-bleed;
+
   lost-align: center;
   lost-center: 100%;
 }
@@ -14,15 +16,7 @@
   height: 60%;
 
   h1 {
-    font-size: responsive 35px 90px;
-    font-range: 350px $tabletLandscape;
-  }
-
-  @include for-tablet-landscape-up {
-    h1 {
-      font-size: responsive 45px 112px;
-      font-range: $tabletLandscape $bigDesktop;
-    }
+    @extend %headline-font-size;
   }
 }
 
