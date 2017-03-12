@@ -62,7 +62,7 @@
 
 .tasting-notes__row {
   @extend %inline-list;
-  lost-center: 80%;
+  lost-center: $container-default;
 }
 
 .tasting-notes__row--full-width {
