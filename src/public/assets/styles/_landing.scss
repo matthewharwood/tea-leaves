@@ -9,6 +9,7 @@
   lost-center: 100%;
   background-color: $black;
   opacity: 1;
+  position: fixed;
   transition: opacity .5s;
   z-index: $over-9000;
 }

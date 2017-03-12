@@ -8,6 +8,7 @@ body.de-activated {
   @extend %abs-fill;
   position: fixed;
   transition: transform .5s;
+  z-index: $over-9000 - 1;
 }
 
 .hero--animated {
