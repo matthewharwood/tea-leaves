@@ -25,3 +25,15 @@
   align-items: center;
   justify-content: center;
 }
+
+%center-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+%inline-list {
+  > li {
+    display: inline-block;
+  }
+}

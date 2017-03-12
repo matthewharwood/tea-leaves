@@ -1,0 +1,34 @@
+.glass-pairing {
+  @extend %full-bleed;
+
+  background-color: $beige;
+  lost-align: center;
+  lost-center: 100%;
+}
+
+.explore-bar {
+  background-color: $black-off;
+  height: 10%;
+  width: 100%;
+  text-align: right;
+  color: $white-off;
+  display: flex;
+
+  .wrapper {
+    @extend %center-content;
+    lost-center: 50%;
+  }
+}
+
+.explore-bar__list {
+  @extend %inline-list;
+  @extend %center-content;
+}
+
+.explore-bar__item {
+  @extend %inline-list;
+}
+
+.explore-bar__btn {
+
+}
