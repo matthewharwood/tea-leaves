@@ -1,13 +1,24 @@
+$glass-pairing-section-padding: $mod-rhythm-4 * $px;
+
 .glass-pairing {
-  @extend %full-bleed;
+  height: auto;
+  overflow: hidden;
   background-color: $beige;
   color: $black-off;
-  lost-align: center;
-  lost-center: 100%;
+
+  .wrapper {
+    lost-center: $container-default;
+    padding: $glass-pairing-section-padding 0 0 0;
+  }
 }
 
 .glass-pairing__headline {
   @extend %headline-font-size;
+  padding-bottom: $glass-pairing-section-padding;
+}
+.glass-pairing__wine {
+  bottom: -160px;
+  right: -50%;
 }
 
 .explore-bar {

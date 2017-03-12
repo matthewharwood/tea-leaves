@@ -24,3 +24,18 @@ $two-thirds: 2/3;
     margin: 0 $text-margin-default 0 0;
   }
 }
+.barrel-aging__animation {
+  @extend %figure_img--center--abs;
+}
+
+.barrel-aging__animation--bg {
+  z-index: 1;
+}
+
+.barrel-aging__animation--fg {
+  z-index: 3;
+}
+
+.barrel-aging__animation--md {
+  z-index: 2;
+}

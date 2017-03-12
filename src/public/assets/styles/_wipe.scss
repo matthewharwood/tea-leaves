@@ -6,10 +6,11 @@
 .wipe-slider {
   @extend %abs-fill;
   @extend %flex-center-xy;
+  pointer-events: none;
 }
 
 .wipe-slider__handle {
-
+  pointer-events: all;
 }
 
 .wipe-slider__show-left {
