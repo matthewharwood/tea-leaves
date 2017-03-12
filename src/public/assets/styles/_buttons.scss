@@ -6,9 +6,14 @@
   text-align: center;
   color: $white-off;
   border: 1px solid $white-off;
-  padding: 8px 24px;
+  padding: 8px 16px;
   background-color: transparent;
   transition: all 150ms ease-in-out-cubic;
+
+  @include for-tablet-portrait-up(){
+    padding: 8px 24px;
+
+  }
 
   &:active {
     background-color: darken($white-off, 10%);

@@ -1,17 +1,29 @@
-%row {
+.row, .wrapper {
   lost-utility: clearfix;
 }
 
 %quarter {
   lost-column: 1/4 0;
 }
+.col-2 {
+  lost-column: 2/12 0;
+}
+.col-4 {
+  lost-column: 4/12 0;
+}
 
-%half {
+.col-6 {
   lost-column: 1/2 0;
 }
+
+.col-8 {
+  lost-column: 8/12 0;
+}
+
 
 %flex-container-row-right {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
 }
+

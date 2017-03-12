@@ -4,29 +4,41 @@
   background-color: $beige;
   lost-align: center;
   lost-center: 100%;
+
+  .wrapper {
+    width: $container-default;
+  }
+}
+
+.glass-pairing__headline {
+  @extend %headline-font-size;
 }
 
 .explore-bar {
   background-color: $black-off;
-  height: 10%;
-  width: 100%;
-  text-align: right;
   color: $white-off;
   display: flex;
+  padding: 16px 0;
+  text-align: right;
+  width: 100%;
 
   .wrapper {
-    @extend %center-content;
+    @extend %flex-center-xy;
     lost-center: 50%;
   }
 }
 
 .explore-bar__list {
   @extend %inline-list;
-  @extend %center-content;
+  @extend %flex-center-xy;
 }
 
-.explore-bar__item {
-  @extend %inline-list;
+.explore-bar__item:first-child {
+  lost-column: 7/8;
+}
+
+.explore-bar__item:last-child {
+  lost-column: 1/8;
 }
 
 .explore-bar__btn {
