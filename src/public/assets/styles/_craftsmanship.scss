@@ -1,9 +1,14 @@
 .craftsmanship {
   @extend %full-bleed;
-  lost-align: center;
-  lost-center: 100%;
   background: $beige;
   color: $black-off;
+  position: relative;
+}
+
+.craftsmanship__content {
+  @extend %full-bleed;
+  lost-align: center;
+  lost-center: 100%;
 }
 
 .craftsmanship__headline {
@@ -16,4 +21,10 @@
 
 .craftsmanship__modal {
 
+}
+
+.craftsmanship__modal-content {
+  @extend %full-bleed;
+  lost-align: center;
+  lost-center: 60%;
 }

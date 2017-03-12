@@ -1,0 +1,28 @@
+.tea-modal__container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: $grey;
+}
+
+.tea-modal {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.tea-modal__close-btn {
+  position: absolute;
+  top: 25px;
+  right: 40px;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.tea-modal__content {
+  @extend %full-bleed;
+}
