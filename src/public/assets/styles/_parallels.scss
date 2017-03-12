@@ -1,3 +1,7 @@
+@import 'typography';
+
+$barrel-width: 20%;
+
 .parallels {
   @extend %full-bleed;
   lost-align: center;
@@ -10,5 +14,89 @@
     width: $slider-size;
     border-radius: $slider-size;
     background: green;
+  }
+}
+
+.parallels__section {
+  display: flex;
+  flex: 0;
+  height: 30%;
+  flex-direction: row;
+  list-style: none;
+  margin: 0 10%;
+  width: 80%;
+}
+
+.parallels__barrel {
+  background-image: url(../../assets/images/parallels/beige/Wine-barrel-beige-beige.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: inline-block;
+  height: 100%;
+  width: $barrel-width;
+}
+
+.parallels__content,
+.parallels__title {
+  align-items: center;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  width: (100% - $barrel-width) / 2;
+}
+
+.parallels__copy {
+  font-family: $typeface-serif;
+}
+
+.parallels__product,
+.parallels__shop-button {
+  display: inline-block;
+}
+
+.parallels__shop-button {
+  margin-right: 12px;
+}
+
+.parallels__shop-button:before {
+  border: 1px solid $white-off;
+  content: 'Shop';
+  padding: 10px;
+}
+
+.parallels__product:before {
+  content: 'TEALEAVES ';
+}
+
+.parallels__tea-leaves,
+.parallels__wine {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.parallels__cta {
+  margin-top: 25px;
+  width: 100%;
+}
+
+.parallels__tea-leaves {
+  color: $white-off;
+}
+
+.parallels__wine {
+  color: $black;
+
+  .parallels__section {
+    flex-direction: row-reverse;
+  }
+
+  .parallels__barrel {
+    background-image: url(../../assets/images/parallels/black/Wine-barrel-black.png);
+  }
+
+  .parallels__shop-button:before {
+    color: $black;
   }
 }

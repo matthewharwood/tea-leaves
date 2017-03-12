@@ -1,5 +1,6 @@
 $typeface-serif: 'BodoniXT', serif;
 $typeface-sans-serif: 'Montserrat', sans-serif;
+$typeface-body: 'Muli', sans-serif;
 
 %eyebrow {
   text-transform: uppercase;
@@ -20,6 +21,20 @@ $typeface-sans-serif: 'Montserrat', sans-serif;
 h1, h2, h3, h4, h5 {
   font-family: $typeface-serif;
   font-weight: normal;
+}
+
+h3 {
+  font-size: 24px;
+  letter-spacing: 1.5px;
+  line-height: 74px;
+}
+
+h4 {
+  font-family: $typeface-sans-serif;
+  font-size: 12px;
+  letter-spacing: 2px;
+  line-height: 20px;
+  text-transform: uppercase;
 }
 
 h6 {

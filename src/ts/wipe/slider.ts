@@ -82,20 +82,27 @@ function getMinX(element: Element): number {
 }
 
 function update(element: HTMLElement, toggle) {
-    if (toggle.dragging) {
-        fastdom.measure(() => {
+    fastdom.measure(() => {
+        const maxX = getMaxX(element);
+        const minX = getMinX(element);
+        const currentX = getTranslation(element as Element).x;
+
+        let finalX;
+        if (toggle.dragging) {
             if (toggle.offset == null) {
                 toggle.offset = getOffset(toggle.downX, element);
             }
-            const maxX = getMaxX(element);
-            const minX = getMinX(element);
-            const finalX =
+            finalX =
                 Math.max(minX, Math.min(maxX, toggle.currX - toggle.offset));
+        } else {
+            finalX = Math.max(minX, Math.min(maxX, currentX));
+        }
+        if (currentX !== finalX) {
             fastdom.mutate(() => {
                 element.style.transform = `translateX(${finalX}px)`;
             });
-        });
-    }
+        }
+    });
     window.requestAnimationFrame(() => {
         update(element, toggle);
     });
