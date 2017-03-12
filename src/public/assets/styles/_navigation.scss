@@ -35,23 +35,3 @@
     color: $white;
   }
 }
-
-.main-nav--at-french-oak {
-  transform: translateY(0%);
-}
-
-.sticky-nav {
-  transition: transform .5s;
-}
-
-.sticky-nav--hidden {
-  transform: translateY(-100%);
-
-  &.main-nav--at-french-oak {
-    transform: translateY(0%);
-  }
-}
-
-.sticky-nav--shown {
-  transform: translateY(0%);
-}

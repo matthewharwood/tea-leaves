@@ -17,7 +17,6 @@ class SplashDirective implements ng.IDirective {
     ): void {
 
         function eatEvent(event) {
-            console.log('ATE', event);
             event.preventDefault();
         }
         const scrollEvents = [

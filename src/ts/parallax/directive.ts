@@ -7,6 +7,12 @@ interface IParallaxDirectiveAttributes extends ng.IAttributes {
     up: string;
 }
 
+enum Target {
+    Top = 1,
+    Center,
+    Bottom,
+}
+
 class ParallaxDirective implements ng.IDirective {
     public static instance(): ng.IDirective {
         return new ParallaxDirective();
@@ -20,26 +26,47 @@ class ParallaxDirective implements ng.IDirective {
         attr: IParallaxDirectiveAttributes,
     ): void {
         const speed: number = 1 - parseFloat(attr.speed);
-        const isDown: boolean = !('stopDown' in attr);
-        const isUp: boolean = !('stopUp' in attr);
-        update(element[0] as HTMLElement, speed, isDown, isUp);
+        const stopBefore: boolean = !('stopBefore' in attr);
+        const stopAfter: boolean = !('stopAfter' in attr);
+        let from: Target = Target.Center;
+        if ('fromTop' in attr) {
+            from = Target.Top;
+        } else if ('fromBottom' in attr) {
+            from = Target.Bottom;
+        }
+        update(element[0] as HTMLElement, speed, stopBefore, stopAfter, from);
     }
 }
 
 export const parallax = angular.module('parallax', []);
 parallax.directive('parallax', ParallaxDirective.instance);
 
-function update(element: HTMLElement, speed: number, down: boolean = true, up: boolean = true) {
+function update(
+    element: HTMLElement, speed: number, stopBefore: boolean = false,
+    stopAfter: boolean = false, target: Target = Target.Center) {
     fastdom.measure(() => {
-        const distanceFromCenter = getDistanceFromWindowCenter(element);
+        let distance;
+        switch (target) {
+            case Target.Top:
+                distance = getDistanceFromWindowTop(element);
+                break;
+            case Target.Center:
+                distance = getDistanceFromWindowCenter(element);
+                break;
+            case Target.Bottom:
+                distance = getDistanceFromWindowBottom(element);
+                break;
+            default:
+                throw new Error('No valid target');
+        }
         let translateY;
         if (
-            (distanceFromCenter < 0 && !down) ||
-            (distanceFromCenter > 0 && !up)
+            (distance > 0 && !stopBefore) ||
+            (distance < 0 && !stopAfter)
         ) {
             translateY = 0;
         } else {
-            translateY = distanceFromCenter * speed;
+            translateY = distance * speed;
         }
 
         fastdom.mutate(() => {
@@ -48,7 +75,7 @@ function update(element: HTMLElement, speed: number, down: boolean = true, up: b
     });
 
     window.requestAnimationFrame(() => {
-        update(element, speed, down, up);
+        update(element, speed, stopBefore, stopAfter, target);
     });
 }
 
@@ -64,4 +91,9 @@ function getDistanceFromWindowTop(element: HTMLElement): number {
 function getDistanceFromWindowCenter(element: HTMLElement): number {
     return getDistanceFromWindowTop(element) - (window.innerHeight / 2) +
         (element.clientHeight / 2);
+}
+
+function getDistanceFromWindowBottom(element: HTMLElement): number {
+    return getDistanceFromWindowTop(element) - window.innerHeight +
+        element.clientHeight;
 }
