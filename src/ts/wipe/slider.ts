@@ -3,7 +3,7 @@ import * as fastdom from 'FastDom';
 import {getTranslation} from '../handies/get-translation';
 
 const PADDING = 50;
-const SNAP_SPEED = 25;
+const SNAP_SPEED = 50;
 const FADE_SPEED = 0.05;
 
 interface IToggle {
