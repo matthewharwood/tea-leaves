@@ -1,6 +1,24 @@
+$mod-rhythm-2: 24;
+$px: 1px;
+$text-margin-default: $mod-rhythm-2 * $px;
+$subline-font-size: $mod-rhythm-2 * $px;
+
 .french-oak {
   @extend %full-bleed;
+  background: linear-gradient(135deg, $gray-light, $gray-dark);
+  color: $white-off;
   lost-align: center;
   lost-center: 100%;
-  background: linear-gradient(135deg, $gray-light, $gray-dark);
+}
+
+.french-oak__headline {
+  @extend %headline-font-size;
+}
+
+.french-oak__subline {
+  @extend %subline-font-size;
+}
+
+.french-oak__para {
+  @extend %para-typography;
 }

@@ -1,10 +1,29 @@
 @import "handies";
 @import "typography";
 @import "vars-color";
+$two-thirds: 2/3;
 
 .barrel-aging {
   @extend %full-bleed;
+  background-color: $beige;
+  color: $black-off;
   lost-align: center;
   lost-center: 100%;
-  background-color: $beige;
+
+  .wrapper {
+    width: ($container-default * $two-thirds);
+  }
+}
+
+.barrel-aging__headline {
+  @extend %headline-font-size;
+}
+
+.barrel-aging__para {
+  @extend %para-typography;
+  column-count: 2;
+
+  p:first-child {
+    margin: 0 $text-margin-default 0 0;
+  }
 }

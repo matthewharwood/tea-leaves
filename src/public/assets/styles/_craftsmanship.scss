@@ -3,4 +3,17 @@
   lost-align: center;
   lost-center: 100%;
   background: $beige;
+  color: $black-off;
+}
+
+.craftsmanship__headline {
+  @extend %headline-font-size;
+}
+
+.craftsmanship__para {
+  @extend %para-typography;
+}
+
+.craftsmanship__modal {
+
 }

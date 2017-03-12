@@ -15,6 +15,7 @@ gulp.task('html', function(){
   return gulp.src(templatePath)
       .pipe(pug())
       .pipe(gulp.dest('src/public'))
+      .pipe(browserSync.stream())
       .on("data", function() { nDes+=1;})
       .on("finish", function() {
           util.log("Results: src/public/**/*.pug");
@@ -59,13 +60,14 @@ gulp.task('css', function () {
       .pipe( postcss(processors) )
       .pipe( sourcemaps.write('.') )
       .pipe( gulp.dest('src/public/assets/styles'))
+      .pipe(browserSync.stream())
       .on("data", function() { nDes+=1;})
       .on("finish", function() {
           util.log("Results for app/**/*.js");
           util.log("# src files: ", nSrc);
           util.log("# dest files:", nDes);
-      })
-      .pipe(browserSync.stream());
+      });
+
 });
 
 gulp.task('default', ['html', 'css']);
@@ -78,7 +80,7 @@ gulp.task('browser-sync', ()=> {
     });
 });
 
-gulp.task('watch', ['browser-sync'], ()=> {
+gulp.task('watch', ['css', 'html', 'browser-sync'], ()=> {
     gulp.watch(cssPath, ['css']).on('change', browserSync.reload);
     gulp.watch(templatePath, ['html']).on('change', browserSync.reload);
 });
