@@ -1,33 +1,47 @@
 // Intro
 .splash {
-  @extend %full-bleed;
-  lost-align: center;
-  lost-center: 100%;
+  //lost-align: center;
+  //lost-center: 100%;
   background-color: $black;
+  color: $white-off;
   opacity: 1;
   position: fixed;
   transition: opacity .5s;
   z-index: $over-9000;
 }
 
+.splash__logo {
+  width: 33%;
+}
+
 .splash.splash--invisible {
   opacity: 0;
 }
 
+.splash,
+.splash__header,
 .splash__container {
-   margin-top: -25%;
+  @extend %full-bleed;
+  @extend %flex-center-xy;
+  flex-direction: column;
+}
+
+.splash__header {
+  margin-top: -15vh;
 }
 
 .splash__container__figure-caption {
   text-align: center;
-  padding-top: 25%;
+  padding-top: 15vh;
 
-  h2 {
-    @extend %eyebrow;
+  h4 {
+    font-size: 18px;
+    line-height: 80px;
   }
 
   h1 {
-    font-size: responsive;
+    font-size: 50px;
+    letter-spacing: 1px;
   }
 }
 
