@@ -1,0 +1,15 @@
+@import 'handies';
+
+body.de-activated {
+  overflow: hidden;
+}
+
+.hero {
+  @extend %abs-fill;
+  position: fixed;
+  transition: transform .5s;
+}
+
+.hero--animated {
+    transform: translateY(-100%);
+}

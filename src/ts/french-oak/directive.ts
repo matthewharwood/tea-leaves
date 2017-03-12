@@ -24,7 +24,6 @@ frenchOak.directive('frenchOak', FrenchOakDirective.instance);
 function update(element: HTMLElement, nav) {
     fastdom.measure(() => {
         const isActive = element.classList.contains('waypoint--active');
-        console.log(element.classList);
         fastdom.mutate(() => {
             if (isActive) {
                 nav.classList.add('main-nav--at-french-oak');
