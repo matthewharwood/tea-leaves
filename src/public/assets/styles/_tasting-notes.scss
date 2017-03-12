@@ -2,9 +2,20 @@
 .tasting-notes {
   @extend %full-bleed;
   height: auto;
-  background-color: $black-off;
-  color: $white-off;
+  //background-color: $black-off;
 
+  // Cheater McCheaterson BG
+  position: relative;
+  background: rgba(53,53,53,0);
+  background: -moz-linear-gradient(top, rgba(53,53,53,0) 0%, rgba(53,53,53,1) 53%, rgba(53,53,53,1) 100%);
+  background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(53,53,53,0)), color-stop(53%, rgba(53,53,53,1)), color-stop(100%, rgba(53,53,53,1)));
+  background: -webkit-linear-gradient(top, rgba(53,53,53,0) 0%, rgba(53,53,53,1) 53%, rgba(53,53,53,1) 100%);
+  background: -o-linear-gradient(top, rgba(53,53,53,0) 0%, rgba(53,53,53,1) 53%, rgba(53,53,53,1) 100%);
+  background: -ms-linear-gradient(top, rgba(53,53,53,0) 0%, rgba(53,53,53,1) 53%, rgba(53,53,53,1) 100%);
+  background: linear-gradient(to bottom, rgba(53,53,53,0) 0%, rgba(53,53,53,1) 53%, rgba(53,53,53,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#353535', endColorstr='#353535', GradientType=0 );
+
+  color: $white-off;
 
   .wrapper {
     @extend %full-bleed;
