@@ -4,3 +4,15 @@
   lost-center: 100%;
   background: $beige;
 }
+
+.craftsmanship__headline {
+  @extend %headline-font-size;
+}
+
+.craftsmanship__para {
+  @extend %para-typography;
+}
+
+.craftsmanship__modal {
+
+}
