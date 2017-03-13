@@ -22,6 +22,14 @@ $tasteteamonials-section-padding: $mod-rhythm-4 * $px;
   @extend %headline-font-size;
 }
 
+.tasteteamonials__headline--highlighted {
+  color: $gray-dark;
+}
+
+.tasteteamonials__blurb {
+  margin-top: 30px;
+}
+
 .tasteteamonials__content {
   lost-center: 100%;
   margin-bottom: 80px;
