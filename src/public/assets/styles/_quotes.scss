@@ -14,14 +14,8 @@ $quote-min-height: 400 * 1px;
   flex-direction: column;
   height: auto;
   justify-content: space-between;
-  opacity: 0;
   position: relative;
-  transition: opacity 1s;
   width: 100%;
-
-  &.waypoint--active {
-    opacity: 1;
-  }
 }
 
 .quotes__carousel-item {
@@ -54,14 +48,8 @@ $quote-min-height: 400 * 1px;
 .quotes__carousel-controller {
   flex: 1;
   font-size: 20px;
-  opacity: 0;
   position: relative;
   text-align: center;
-  transition: opacity 0.5s;
-
-  &.waypoint--active {
-    opacity: 1;
-  }
 }
 
 .quotes__carousel-controlller-btn {
