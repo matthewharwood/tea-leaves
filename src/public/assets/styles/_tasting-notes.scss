@@ -22,7 +22,7 @@
 
 .tasting-notes__intro,
 .tasting-notes__imagery {
-  @extend %full-bleed;
+  height: auto;
 
   color: $white-off;
   position: relative;
@@ -57,7 +57,7 @@
 }
 
 .tasting-notes__body {
-  margin: $text-margin-default 0 0 0;
+  margin: 72px 0 0 0;
 }
 
 .tasting-notes__row {
