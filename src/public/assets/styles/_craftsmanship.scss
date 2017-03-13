@@ -20,11 +20,23 @@
 }
 
 .craftsmanship__modal {
-
 }
 
 .craftsmanship__modal-content {
-  @extend %full-bleed;
-  lost-align: center;
-  lost-center: 60%;
+  column-count: 1;
+  column-gap: 5em;
+  width: 86%;
+
+  p + p {
+    @extend %para-typography;
+  }
+
+  @include for-tablet-landscape-up {
+    column-count: 2;
+    width: 76%;
+  }
+
+  @include for-desktop-up {
+    width: 66%;
+  }
 }

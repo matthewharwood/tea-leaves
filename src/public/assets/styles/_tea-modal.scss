@@ -4,7 +4,8 @@
   right: 0;
   bottom: 0;
   left: 0;
-  background-color: $grey;
+  background-color: $black-off;
+  color: $white-off;
 }
 
 .tea-modal {
@@ -15,14 +16,26 @@
 
 .tea-modal__close-btn {
   position: absolute;
-  top: 25px;
-  right: 40px;
+  top: 35px;
+  right: 55px;
+  z-index: 10;
+
+  svg {
+    fill: $white-off;
+  }
 
   &:hover {
     cursor: pointer;
+
+    svg {
+      fill: darken($white-off, 10%);
+    }
   }
 }
 
 .tea-modal__content {
   @extend %full-bleed;
+
+  lost-align: center;
+  lost-center: 100%;
 }
