@@ -4,9 +4,9 @@ import * as fastdom from 'FastDom';
 const WAYPOINT_ACTIVE_CLASS = 'waypoint--active';
 const DEFAULT_SPEED = 0.1;
 
-class fadeDirective implements ng.IDirective {
+class FadeDirective implements ng.IDirective {
     public static instance(): ng.IDirective {
-        return new fadeDirective();
+        return new FadeDirective();
     }
 
     public restrict: string = "C";
@@ -23,7 +23,7 @@ class fadeDirective implements ng.IDirective {
 }
 
 export const fade = angular.module('fade', []);
-fade.directive('fade', fadeDirective.instance);
+fade.directive('fade', FadeDirective.instance);
 
 function update(element: HTMLElement, fadeSpeed: number) {
     fastdom.measure(() => {
