@@ -4,7 +4,8 @@ section.barrel-aging
     div.barrel-aging__animation
       figure
         img(src=imgsrc + "barrel-bg.png" class="barrel-aging__animation--bg")
-        img(src=imgsrc + "leaves.png" class="barrel-aging__animation--md")
+        img(src=imgsrc + "leaves.png" active-after threshold=0.7 class="barrel-aging__animation--md waypoint")
+        div.barrel-aging__animation--fg-bg
         img(src=imgsrc + "barrel-fg.png" class="barrel-aging__animation--fg")
     header.barrel-aging__header.cf
       div.col-4-5th

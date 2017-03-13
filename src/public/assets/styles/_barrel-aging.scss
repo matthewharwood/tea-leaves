@@ -29,13 +29,31 @@ $two-thirds: 2/3;
 }
 
 .barrel-aging__animation--bg {
-  z-index: 1;
+  z-index: -3;
 }
 
+.barrel-aging__animation--fg-bg,
 .barrel-aging__animation--fg {
-  z-index: 3;
+  z-index: -1;
+}
+
+.barrel-aging__animation--fg-bg {
+  position: absolute;
+  background: $beige;
+  height: 140px;
+  margin-top: 1px;
+  width: 100%;
 }
 
 .barrel-aging__animation--md {
-  z-index: 2;
+  opacity: 0;
+  transform: translateY(-240%);
+  transition: transform 0s, opacity 0s;
+  z-index: -2;
+
+  &.waypoint--active {
+    opacity: 1;
+    transform: translateY(0);
+    transition: transform 3s, opacity 0.5s;
+  }
 }

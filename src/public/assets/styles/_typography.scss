@@ -17,6 +17,7 @@ $subline-font-size: $mod-rhythm-2 * $px;
   @include for-tablet-landscape-up {
     font-size: responsive 45px 112px;
     font-range: $tabletLandscape $bigDesktop;
+    line-height: 105px;
   }
 }
 
