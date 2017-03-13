@@ -28,6 +28,35 @@ section.tasteteamonials
         h4.tasteteamonial__name Frederick Ammons
         p.tasteteamonial__quote “I don’t get a lot of the toastyness from the oak which I think is good. Tea naturally has a smoky character to it, so I think the two fit really well together.”
         img.tasteteamonial__cta(src='../assets/images/tasteamonials/cta.svg')
-    section.tasteteamonials__content
-      div.tasteteamonials__see-more See more
-    section.tasteteamonials__more-content
+    section.tasteteamonials__content(ng-init="seeMoreTasteamonials = false" ng-show='!seeMoreTasteamonials' ng-click='seeMoreTasteamonials = true')
+      div.tasteteamonials__see-more
+        p See more
+        img.down-chevron(src='../assets/images/tasteamonials/down-chevron.svg')
+    section.tasteteamonials__content(ng-show='seeMoreTasteamonials')
+      div.tasteteamonial
+        div.tasteteamonial__icons
+          img(src='../assets/images/tasteamonials/logos/mandarin-oriental.svg')
+          img(src='../assets/images/tasteamonials/logos/court-of-master-sommeliers.png')
+        h4.tasteteamonial__title Master Sommelier
+        h4.tasteteamonial__name Will Costello
+        p.tasteteamonial__quote “It’s very, very pretty. High toned and flowery is the dominant characteristic of this tea.”
+        img.tasteteamonial__cta(src='../assets/images/tasteamonials/cta.svg')
+      div.tasteteamonial
+        div.tasteteamonial__icons
+          img(src='../assets/images/tasteamonials/logos/shaun-hergatt.png')
+          img(src='../assets/images/tasteamonials/logos/shaun-hergatt.png')
+        h4.tasteteamonial__title 2-Star Michelin Executive Chef
+        h4.tasteteamonial__name Shaun Hergatt
+        p.tasteteamonial__quote “It’s extremely balanced and has a refined flavor profile. There is a certain terroir you can taste that is given from the barrels.”
+        img.tasteteamonial__cta(src='../assets/images/tasteamonials/cta.svg')
+      div.tasteteamonial
+        div.tasteteamonial__icons
+          img(src='../assets/images/tasteamonials/logos/mandarin-oriental.svg')
+        h4.tasteteamonial__title Winemaker
+        h4.tasteteamonial__name Frederick Ammons
+        p.tasteteamonial__quote “I don’t get a lot of the toastyness from the oak which I think is good. Tea naturally has a smoky character to it, so I think the two fit really well together.”
+        img.tasteteamonial__cta(src='../assets/images/tasteamonials/cta.svg')
+    section.tasteteamonials__content(ng-show='seeMoreTasteamonials' ng-click='seeMoreTasteamonials = false')
+      div.tasteteamonials__see-less
+        p See less
+        img.down-chevron(src='../assets/images/tasteamonials/down-chevron.svg')
