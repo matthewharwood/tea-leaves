@@ -1,20 +1,17 @@
 section.quotes
-  div
-    ul.quotes__carousel
-      li.quotes__carousel__item
-        blockquote(cite="http://developer.mozilla.org")
-          p This is a quotation taken from
-          | the Mozilla Developer Center.
-      li.quotes__carousel__item
-        blockquote(cite="http://developer.mozilla.org")
-          p This is a quotation taken from
-          | the Mozilla Developer.
+  ul.quotes__carousel.parallax.waypoint(threshold=0.45 stop-after active-after speed=1.2)
+    li.quotes__carousel-item(ng-init="selectedQuote = 1" ng-show="selectedQuote == 1")
+      blockquote
+        p “It’s very, very pretty. High toned and flowery is the dominant characteristic of this tea.”
+        p - Will Costello, Mandarin Oriental Las Vegas, Master Sommelier
+    li.quotes__carousel-item(ng-show="selectedQuote == 2")
+      blockquote
+        p “There is a certain terroir that you can taste that is given from the barrels.”
+        p - Executive Chef Shaun Hergatt, 2-Star Michelin
 
-    ul.quotes__carousel__controller
-      li.quotes__carousel__controlller__btn
-        input(type="radio" id="q1" name="quotes" class="quotes__carousel__item--checked")
-      li.quotes__carousel__controlller__btn
-        input(type="radio" id="q2" name="quotes" class="quotes__carousel__item--checked")
+  ul.quotes__carousel-controller.waypoint(threshold=0.4)
+    li.quotes__carousel-controlller-btn(ng-class="{active: selectedQuote == 1}" ng-click="selectedQuote = 1") ●
+    li.quotes__carousel-controlller-btn(ng-class="{active: selectedQuote == 2}" ng-click="selectedQuote = 2") ●
 
 
 // File needs the handlers to toggle between quotes.
