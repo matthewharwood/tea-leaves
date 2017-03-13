@@ -79,12 +79,12 @@ $arrow-box-point-offset-y: 0;
 }
 
 .parallels__barrel {
-  background-image: url(../../assets/images/parallels/beige/Wine-barrel-beige-beige.png);
+  background-image: url(../../assets/images/parallels/barrel-light.svg);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: contain;
   display: inline-block;
-  height: 100%;
+  height: 60%;
 }
 
 .parallels__content,
@@ -128,6 +128,9 @@ $arrow-box-point-offset-y: 0;
 .parallels__cta {
   margin-top: 25px;
   width: 100%;
+  .button--primary--dark {
+    margin-right: 10px;
+  }
 }
 
 .parallels__tea-leaves {
@@ -142,7 +145,7 @@ $arrow-box-point-offset-y: 0;
   }
 
   .parallels__barrel {
-    background-image: url(../../assets/images/parallels/black/Wine-barrel-black.png);
+    background-image: url(../../assets/images/parallels/barrel.svg);
   }
 
   .parallels__shop-button:before {
