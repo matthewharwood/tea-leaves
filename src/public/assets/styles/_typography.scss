@@ -1,4 +1,4 @@
-$typeface-serif: 'BodoniXT', serif;
+$typeface-serif: serif;
 $typeface-sans-serif: 'Montserrat', sans-serif;
 $typeface-body: 'Muli', sans-serif;
 $text-margin-default: $mod-rhythm-2 * $px;
@@ -13,6 +13,7 @@ $subline-font-size: $mod-rhythm-2 * $px;
 %headline-font-size {
   font-size: responsive 35px 90px;
   font-range: 350px $tabletLandscape;
+  line-height: 1;
 
   @include for-tablet-landscape-up {
     font-size: responsive 45px 112px;

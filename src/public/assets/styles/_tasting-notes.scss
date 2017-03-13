@@ -79,7 +79,12 @@
   margin-top: -8px;
 
 }
-
+.tasting-notes__figcaption--pos{
+  figcaption{
+    left: 60%;
+    top: 60%;
+  }
+}
 .tasting-notes__copy {
   lost-column: 3/15 0;
   font-size: 14px;
@@ -89,31 +94,60 @@
 
 .tasting-notes__cabernet {
   @extend %figure_img--center;
+  @extend %figure_caption--abs;
+  @extend .tasting-notes__figcaption--pos;
+
+  figcaption {
+    width: 170px;
+  }
 }
 
 .tasting-notes__tea-cup {
   @extend %figure_img--center;
   @extend %figure_caption--abs;
+  @extend .tasting-notes__figcaption--pos;
+
+  figcaption {
+    width: 170px;
+  }
 }
 
 .tasting-notes__vanilla {
   @extend %figure_img--center;
   @extend %figure_caption--abs;
+  @extend .tasting-notes__figcaption--pos;
+  figcaption {
+    width: 170px;
+  }
 }
 
 .tasting-notes__oak {
   @extend %figure_img--center;
   @extend %figure_caption--abs;
+  @extend .tasting-notes__figcaption--pos;
+  figcaption {
+    width: 170px;
+    top: 33%;
+  }
 }
 
 .tasting-notes__white-tea {
   @extend %figure_img--center;
   @extend %figure_caption--abs;
+  @extend .tasting-notes__figcaption--pos;
+  figcaption {
+    left: 71%;
+    width: 140px;
+  }
 }
 
 .tasting-notes__jasmine {
   @extend %figure_img--center;
   @extend %figure_caption--abs;
+  @extend .tasting-notes__figcaption--pos;
+  figcaption {
+    width: 170px;
+  }
 }
 
 .tasting-notes__note-image {

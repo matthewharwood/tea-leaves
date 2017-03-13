@@ -15,11 +15,6 @@
   max-height: 100%;
 }
 
-%full-bleed {
-  height: 100%;
-  width: 100%;
-}
-
 %figure_img--center {
   figure img{
     margin: 0 auto;
@@ -61,4 +56,13 @@
   li {
     display: inline-block;
   }
+}
+
+
+
+// Full Bleed
+
+%full-bleed {
+    height: 100%;
+    width: 100%;
 }

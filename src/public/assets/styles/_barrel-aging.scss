@@ -1,14 +1,19 @@
 $two-thirds: 2/3;
 
 .barrel-aging {
-  @extend %full-bleed;
+  @include full-bleed();
+  @include section-center();
   background-color: $beige;
   color: $black-off;
-  lost-align: center;
-  lost-center: 100%;
+
 
   .wrapper {
-    width: ($container-default * $two-thirds);
+    width: 90%;
+    margin: 24px auto;
+
+    @include for-tablet-landscape-up(){
+      width: ($container-default * $two-thirds);
+    }
   }
 }
 
@@ -18,7 +23,9 @@ $two-thirds: 2/3;
 
 .barrel-aging__para {
   @extend %para-typography;
-  column-count: 2;
+  @include for-tablet-landscape-up() {
+    column-count: 2;
+  }
 
   p:first-child {
     margin: 0 $text-margin-default 0 0;
