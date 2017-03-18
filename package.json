@@ -51,6 +51,7 @@
   "dependencies": {
     "@types/angular": "^1.6.7",
     "angular": "^1.6.3",
+    "angular-touch": "^1.6.3",
     "fastdom": "^1.0.5"
   }
 }

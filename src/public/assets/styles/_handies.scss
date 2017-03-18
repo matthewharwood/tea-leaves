@@ -58,11 +58,28 @@
   }
 }
 
-
-
 // Full Bleed
 
 %full-bleed {
     height: 100%;
     width: 100%;
+}
+.show-desktop {
+  display: none;
+  visibility: hidden;
+
+  @include for-desktop-up(){
+    display: block;
+    visibility: visible;
+  }
+}
+
+.show-mobile {
+  display: block;
+  visibility: visible;
+
+  @include for-desktop-up(){
+    display: none;
+    visibility: hidden;
+  }
 }

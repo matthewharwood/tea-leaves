@@ -1,11 +1,22 @@
-$quote-min-height: 400 * 1px;
+$quote-min-height: 200 * 1px;
+
 .quotes {
-  @extend %flex-center-xy;
+  background: $black;
   color: $white-off;
-  flex-direction: column;
-  lost-center: 980px;
-  min-height: $quote-min-height;
   position: relative;
+
+  @include for-desktop-up() {
+    background: transparent;
+  }
+
+  .wrapper {
+    @extend %flex-center-xy;
+    flex-direction: column;
+    height: $quote-min-height;
+    padding: 36px 0;
+    position: relative;
+    lost-center: 980px;
+  }
 }
 
 .quotes__carousel {
@@ -41,14 +52,20 @@ $quote-min-height: 400 * 1px;
   }
 
   p:nth-child(1) {
-    font-size: 36px;
+    font-size: responsive 16px 36px;
+  }
+
+  p:nth-child(2) {
+    font-size: responsive 10px $max-text-para;
   }
 }
 
 .quotes__carousel-controller {
+  bottom: 0;
   flex: 1;
   font-size: 20px;
-  position: relative;
+  height: auto;
+  position: absolute;
   text-align: center;
 }
 

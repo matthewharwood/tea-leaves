@@ -3,46 +3,34 @@
 }
 
 .tasting-notes__imagery {
-  // Cheater McCheaterson BG
-  background: rgba(53,53,53,0);
-  background: -moz-linear-gradient(top, rgba(53,53,53,0) 0%, rgba(53,53,53,1) 53%, rgba(53,53,53,1) 100%);
-  background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(53,53,53,0)), color-stop(53%, rgba(53,53,53,1)), color-stop(100%, rgba(53,53,53,1)));
-  background: -webkit-linear-gradient(top, rgba(53,53,53,0) 0%, rgba(53,53,53,1) 53%, rgba(53,53,53,1) 100%);
-  background: -o-linear-gradient(top, rgba(53,53,53,0) 0%, rgba(53,53,53,1) 53%, rgba(53,53,53,1) 100%);
-  background: -ms-linear-gradient(top, rgba(53,53,53,0) 0%, rgba(53,53,53,1) 53%, rgba(53,53,53,1) 100%);
   background: linear-gradient(to bottom, rgba(53,53,53,0) 0%, rgba(53,53,53,1) 53%, rgba(53,53,53,1) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#353535', endColorstr='#353535', GradientType=0 );
-
-  .wrapper {
-    height: 50%;
-    padding: 0;
-    width: 100%;
-  }
 }
 
 .tasting-notes__intro,
 .tasting-notes__imagery {
   height: auto;
-
   color: $white-off;
   position: relative;
 
-  .wrapper-full-width {
-    width: 100%;
-  }
-}
-
-.tasting-notes__intro {
-  height: auto;
-
   .wrapper {
-    @extend %full-bleed;
     padding-top: 100px;
+    width: 80%;
+    margin: 0 auto;
+
+    @include for-desktop-up() {
+      width: 100%;
+      height: 100%;
+    }
   }
 }
+
 
 .tasting-notes__header {
-  text-align: center;
+  text-align: left;
+
+  @include for-desktop-up() {
+    text-align: center;
+  }
 }
 
 .tasting-notes__headline {
@@ -50,19 +38,33 @@
 }
 
 .tasting-notes__para {
-  lost-center: 420px;
-  margin: ($text-margin-default * $pi) auto;
-  text-align: center;
+  margin: ($text-margin-default * $pi) 0 0 0;
   width: 420px;
+  text-align: left;
+
+  @include for-desktop-up() {
+    margin: ($text-margin-default * $pi) auto;
+    lost-center: 420px;
+    text-align: center;
+  }
 }
 
 .tasting-notes__body {
-  margin: 72px 0 0 0;
+  margin: 42px 0;
+
+  @include for-desktop-up() {
+    margin: 72px 0 0 0;
+  }
 }
 
 .tasting-notes__row {
   @extend %inline-list;
-  lost-center: $container-default;
+  padding: 24px 0;
+
+  @include for-desktop-up() {
+    padding: 0;
+    lost-center: $container-default;
+  }
 }
 
 .tasting-notes__row--full-width {
@@ -72,13 +74,17 @@
 
 .tasting-notes__title {
   lost-column: 2/15 0;
-  text-align: right;
   font-size: 24px;
   font-style: italic;
   font-family: $typeface-serif;
   margin-top: -8px;
+  text-align: left;
 
+  @include for-desktop-up() {
+    text-align: right;
+  }
 }
+
 .tasting-notes__figcaption--pos{
   figcaption{
     left: 60%;
@@ -86,10 +92,14 @@
   }
 }
 .tasting-notes__copy {
-  lost-column: 3/15 0;
+
   font-size: 14px;
-  padding-right: 94px;
   font-family: $typeface-serif;
+
+  @include for-desktop-up() {
+    padding-right: 94px;
+    lost-column: 3/15 0;
+  }
 }
 
 .tasting-notes__cabernet {

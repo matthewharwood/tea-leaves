@@ -1,17 +1,18 @@
-section.quotes
-  ul.quotes__carousel.parallax.waypoint.fade(threshold=0.45 fade-speed=0.01 stop-after active-after speed=1.3)
-    li.quotes__carousel-item(ng-init="selectedQuote = 1" ng-show="selectedQuote == 1")
-      blockquote
-        p “It’s very, very pretty. High toned and flowery is the dominant characteristic of this tea.”
-        p - Will Costello, Mandarin Oriental Las Vegas, Master Sommelier
-    li.quotes__carousel-item(ng-show="selectedQuote == 2")
-      blockquote
-        p “There is a certain terroir that you can taste that is given from the barrels.”
-        p - Executive Chef Shaun Hergatt, 2-Star Michelin
+section.quotes.cf
+  div.wrapper
+    ul.quotes__carousel.parallax.waypoint.fade.cf(threshold=0.45 fade-speed=0.01 stop-after active-after speed=1.3)
+      li.quotes__carousel-item(ng-init="selectedQuote = 1" ng-show="selectedQuote == 1")
+        blockquote
+          p “It’s very, very pretty. High toned and flowery is the dominant characteristic of this tea.”
+          p - Will Costello, Mandarin Oriental Las Vegas, Master Sommelier
+      li.quotes__carousel-item(ng-show="selectedQuote == 2")
+        blockquote
+          p “There is a certain terroir that you can taste that is given from the barrels.”
+          p - Executive Chef Shaun Hergatt, 2-Star Michelin
 
-  ul.quotes__carousel-controller.waypoint.fade(threshold=0.25)
-    li.quotes__carousel-controlller-btn(ng-class="{active: selectedQuote == 1}" ng-click="selectedQuote = 1") ●
-    li.quotes__carousel-controlller-btn(ng-class="{active: selectedQuote == 2}" ng-click="selectedQuote = 2") ●
+    ul.quotes__carousel-controller.waypoint.fade(threshold=0.25)
+      li.quotes__carousel-controlller-btn(ng-class="{active: selectedQuote == 1}" ng-click="selectedQuote = 1") ●
+      li.quotes__carousel-controlller-btn(ng-class="{active: selectedQuote == 2}" ng-click="selectedQuote = 2") ●
 
 
 // File needs the handlers to toggle between quotes.

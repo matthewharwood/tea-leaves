@@ -1,17 +1,20 @@
 // Intro
 .splash {
-  //lost-align: center;
-  //lost-center: 100%;
   background-color: $black;
   color: $white-off;
   opacity: 1;
   position: fixed;
+  width: 100%;
   transition: opacity .5s;
   z-index: $over-9000;
 }
 
 .splash__logo {
-  width: 33%;
+  width: 66%;
+
+  @include for-desktop-up() {
+    width: 33%;
+  }
 }
 
 .splash.splash--invisible {
@@ -35,13 +38,19 @@
   padding-top: 15vh;
 
   h4 {
-    font-size: 18px;
+    font-size: responsive 14px 18px;
     line-height: 80px;
   }
 
   h1 {
-    font-size: 50px;
+    font-size: responsive 28px 50px;
     letter-spacing: 1px;
+    span {
+      display: block;
+      @include for-desktop-up() {
+        display: inline;
+      }
+    }
   }
 }
 
@@ -57,16 +66,20 @@
 }
 
 .landing__bg {
-  background: url(../../assets/images/home-page/full-scroll-without-ingredients.jpg);
-  background-repeat: no-repeat;
-  background-size: 100% auto;
-  background-position: left top;
   height: 230%;
   margin-top: -5%;
   position: absolute;
   top: 50%;
   width: 100%;
   z-index: -1;
+  background-color: $black;
+
+  @include for-desktop-up() {
+    background: url(../../assets/images/home-page/full-scroll-without-ingredients.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position: left top;
+  }
 }
 
 .landing__container {
@@ -81,16 +94,24 @@
 }
 
 .landing__box-container {
-  left: 40.6%;
   position: absolute;
-  margin-top: 22%;
-  top: 0;
-  width: 17.5%
+  margin: -25% auto auto -25%;
+  top: 50%;
+  left: 50%;
+  display: inline;
+  width: 50%;
+
+  @include for-desktop-up() {
+    left: 40.6%;
+    margin: 22% auto auto 0;
+    top: 0;
+    width: 17.5%
+  }
 }
 
 .landing__mobile-fade {
   @extend %full-bleed;
-  background: red;
+  background: $black;
   opacity: 1;
   position: absolute;
   top: 100%;

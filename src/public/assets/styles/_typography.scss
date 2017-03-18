@@ -3,7 +3,8 @@ $typeface-sans-serif: 'Montserrat', sans-serif;
 $typeface-body: 'Muli', sans-serif;
 $text-margin-default: $mod-rhythm-2 * $px;
 $subline-font-size: $mod-rhythm-2 * $px;
-
+$min-text-para: 14 * $px;
+$max-text-para: 17 * $px;
 
 %eyebrow {
   text-transform: uppercase;

@@ -23,6 +23,12 @@
   lost-column: 3/5;
 }
 
+.col-3-5th-md {
+  @include for-tablet-landscape-up() {
+    lost-column: 3/5
+  }
+}
+
 .col-4-5th {
   lost-column: 4/5;
 }
