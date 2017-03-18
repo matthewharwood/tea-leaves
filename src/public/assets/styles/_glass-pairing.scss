@@ -12,10 +12,28 @@ $glass-pairing-section-padding: $mod-rhythm-4 * $px;
   }
 }
 
+.glass-pairing__header {
+  width: 100%;
+
+  @include for-desktop-up() {
+    lost-column: 1/2 0;
+  }
+}
+
 .glass-pairing__headline {
   @extend %headline-font-size;
-  padding-bottom: $glass-pairing-section-padding;
+
+  @include for-desktop-up() {
+    padding-bottom: $glass-pairing-section-padding;
+  }
 }
+
+.glass-pairing__quote {
+  @include for-desktop-up(){
+    lost-column: 1/4 0;
+  }
+}
+
 .glass-pairing__wine {
   bottom: -160px;
   right: -50%;

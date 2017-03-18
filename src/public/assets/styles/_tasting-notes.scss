@@ -3,7 +3,11 @@
 }
 
 .tasting-notes__imagery {
-  background: linear-gradient(to bottom, rgba(53,53,53,0) 0%, rgba(53,53,53,1) 53%, rgba(53,53,53,1) 100%);
+  background: $black;
+
+  @include for-desktop-up() {
+    background: linear-gradient(to bottom, rgba(53,53,53,0) 0%, rgba(53,53,53,1) 53%, rgba(53,53,53,1) 100%);
+  }
 }
 
 .tasting-notes__intro,
@@ -13,11 +17,11 @@
   position: relative;
 
   .wrapper {
-    padding-top: 100px;
     width: 80%;
     margin: 0 auto;
 
     @include for-desktop-up() {
+      padding-top: 100px;
       width: 100%;
       height: 100%;
     }
@@ -39,7 +43,7 @@
 
 .tasting-notes__para {
   margin: ($text-margin-default * $pi) 0 0 0;
-  width: 420px;
+  max-width: 420px;
   text-align: left;
 
   @include for-desktop-up() {
@@ -73,7 +77,10 @@
 }
 
 .tasting-notes__title {
-  lost-column: 2/15 0;
+  width: 30%;
+  max-width: 120px;
+  float: left;
+  height: 70px;
   font-size: 24px;
   font-style: italic;
   font-family: $typeface-serif;
@@ -81,18 +88,28 @@
   text-align: left;
 
   @include for-desktop-up() {
+    float: inherit;
+    lost-column: 2/15 0;
     text-align: right;
+    max-width: inherit;
+    height: auto;
   }
 }
-
-.tasting-notes__figcaption--pos{
+.tasting-notes__figcaption--pos {
   figcaption{
     left: 60%;
     top: 60%;
   }
 }
-.tasting-notes__copy {
 
+@mixin tasting-notes__figcaption--pos($l,$t){
+  figcaption{
+    left: $l * 1%;
+    top: $t * 1%;
+  }
+}
+
+.tasting-notes__copy {
   font-size: 14px;
   font-family: $typeface-serif;
 
@@ -103,68 +120,116 @@
 }
 
 .tasting-notes__cabernet {
-  @extend %figure_img--center;
-  @extend %figure_caption--abs;
-  @extend .tasting-notes__figcaption--pos;
+  width: 50%;
+  float: left;
+  @include figure_img--center();
+  @include figure_caption--abs();
+
+
+
+  @include for-desktop-up() {
+    lost-column: 1/3;
+    @include tasting-notes__figcaption--pos(60,60);
+  }
 
   figcaption {
-    width: 170px;
+    max-width: 170px;
   }
 }
 
 .tasting-notes__tea-cup {
-  @extend %figure_img--center;
-  @extend %figure_caption--abs;
-  @extend .tasting-notes__figcaption--pos;
+  @include figure_img--center();
+  @include figure_caption--abs();
+
+
+  @include for-desktop-up() {
+    lost-column: 1/3;
+    @include tasting-notes__figcaption--pos(60,60);
+  }
 
   figcaption {
-    width: 170px;
+    max-width: 170px;
   }
 }
 
 .tasting-notes__vanilla {
-  @extend %figure_img--center;
-  @extend %figure_caption--abs;
-  @extend .tasting-notes__figcaption--pos;
+  width: 50%;
+  float: left;
+  @include figure_img--center();
+  @include figure_caption--abs();
+
+
+  @include for-desktop-up() {
+    lost-column: 1/3;
+    @include tasting-notes__figcaption--pos(60,60);
+  }
+
   figcaption {
-    width: 170px;
+    max-width: 170px;
   }
 }
 
 .tasting-notes__oak {
-  @extend %figure_img--center;
-  @extend %figure_caption--abs;
-  @extend .tasting-notes__figcaption--pos;
+  width: 50%;
+  float: left;
+  @include figure_img--center();
+  @include figure_caption--abs();
+
+
+  @include for-desktop-up() {
+    lost-column: 1/3;
+    @include tasting-notes__figcaption--pos(60,60);
+  }
+
   figcaption {
-    width: 170px;
+    max-width: 170px;
     top: 33%;
   }
 }
 
 .tasting-notes__white-tea {
-  @extend %figure_img--center;
-  @extend %figure_caption--abs;
-  @extend .tasting-notes__figcaption--pos;
+  width: 50%;
+  float: left;
+  @include figure_img--center();
+  @include figure_caption--abs();
+
+
+  @include for-desktop-up() {
+    lost-column: 1/3;
+    @include tasting-notes__figcaption--pos(60,60);
+  }
+
   figcaption {
     left: 71%;
-    width: 140px;
+    max-width: 140px;
   }
 }
 
 .tasting-notes__jasmine {
-  @extend %figure_img--center;
-  @extend %figure_caption--abs;
-  @extend .tasting-notes__figcaption--pos;
+  width: 50%;
+  float: left;
+  @include figure_img--center();
+  @include figure_caption--abs();
+
+
+  @include for-desktop-up() {
+    lost-column: 1/3;
+    @include tasting-notes__figcaption--pos(60,60);
+  }
+
   figcaption {
-    width: 170px;
+    max-width: 170px;
   }
 }
 
 .tasting-notes__note-image {
-  opacity: 0;
-  transition: opacity 2s;
 
-  &.waypoint--active {
-    opacity: 1;
+  @include for-desktop-up() {
+    opacity: 0;
+    transition: opacity 2s;
+
+    &.waypoint--active {
+      opacity: 1;
+    }
   }
 }

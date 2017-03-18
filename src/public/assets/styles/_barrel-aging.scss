@@ -1,20 +1,23 @@
 $two-thirds: 2/3;
 
 .barrel-aging {
-  @include full-bleed();
+  @extend %full-bleed;
   @include section-center();
   background-color: $beige;
   color: $black-off;
 
-
   .wrapper {
-    width: 90%;
+    width: 80%;
     margin: 24px auto;
 
     @include for-tablet-landscape-up(){
       width: ($container-default * $two-thirds);
     }
   }
+}
+
+.barrel-aging__content {
+  width: 100%;
 }
 
 .barrel-aging__headline {

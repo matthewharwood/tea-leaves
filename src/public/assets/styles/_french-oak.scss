@@ -14,7 +14,13 @@ $subline-font-size: $mod-rhythm-2 * $px;
   lost-align: center;
   lost-center: 100%;
 }
+.french-oak__content {
+  @include for-desktop-up(){
+    lost-offset: 2/5;
+    lost-column: 3/5 0;
+  }
 
+}
 .french-oak__headline {
   @extend %headline-font-size;
 }

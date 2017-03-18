@@ -11,6 +11,20 @@
   lost-center: 100%;
 }
 
+.craftsmanship__header {
+  width: 100%;
+
+  @include for-desktop-up() {
+    lost-column: 1/2 0;
+  }
+}
+.craftsmanship__main {
+  width: 100%;
+
+  @include for-desktop-up() {
+    lost-column: 1/4 0;
+  }
+}
 .craftsmanship__headline {
   @extend %headline-font-size;
 }
