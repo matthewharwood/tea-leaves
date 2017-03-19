@@ -3,52 +3,59 @@ $glass-pairing-section-padding: $mod-rhythm-4 * $px;
 .glass-pairing {
   height: auto;
   overflow: hidden;
-  background-color: $beige;
+  background-color: $white-off;
   color: $black-off;
 
   .wrapper {
-    padding: $glass-pairing-section-padding 0 0 0;
     lost-center: $container-default;
+    padding: $glass-pairing-section-padding 0;
+    position: relative;
   }
 }
 
 .glass-pairing__header {
   width: 100%;
 
+  .glass-pairing__header {
+    display: block;
+  }
+
   @include for-desktop-up() {
     lost-column: 1/2 0;
+
+    .glass-pairing__header {
+      display: none;
+    }
   }
 }
 
 .glass-pairing__headline {
   @extend %headline-font-size;
 
-  //@include for-desktop-up() {
-    padding-bottom: $glass-pairing-section-padding;
-  //}
+  padding-bottom: $glass-pairing-section-padding;
+}
+
+.glass-pairing__para {
+  @extend %para-typography;
 }
 
 .glass-pairing__quote {
-  padding-top: 72px;
+  @extend %quote-typography;
 
-  @include for-desktop-up(){
-    padding-top: 0;
-    lost-column: 1/4 0;
-    lost-offset: 1/12;
-  }
-
-  p {
-    font-size: 21px;
-    font-weight: bold;
-    width: (1/3) + '%';
-
+  @include for-desktop-up() {
+    lost-column: 1/2 0;
+    margin-right: 0 !important;
   }
 }
 
+.glass-pairing__riedel-logo {
+  margin: 40px 0;
+}
+
 .glass-pairing__wine {
-  bottom: -88px;
-  margin-top: -160px;
-  right: -40%;
+  position: absolute;
+  bottom: -160px;
+  right: 0;
 }
 
 .explore-bar {

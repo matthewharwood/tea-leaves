@@ -32,6 +32,18 @@ $max-text-para: 17 * $px;
   margin: $text-margin-default 0;
 }
 
+%quote-typography {
+  p {
+    margin: 15px 0;
+  }
+  p:nth-child(1) {
+    font-size: responsive 36px 36px;
+  }
+  p:nth-child(2) {
+    font-size: responsive 10px $max-text-para;
+  }
+}
+
 h1, h2, h3, h4, h5 {
   font-family: $typeface-serif;
   font-weight: normal;
