@@ -21,3 +21,17 @@ const app = angular.module('app', [
   waypoint.name,
   wipe.name,
 ]);
+
+
+app.controller('appCtrl', ['$rootScope', '$scope',
+  function($rootScope,$scope) {
+    let vm = $scope;
+    vm.bodyScroll = false;
+
+    $rootScope.$on('bodyScroll', function(event, msg) {
+      vm.bodyScroll = msg;
+      console.log(vm.bodyScroll, 'wt2f');
+    });
+
+  }
+]);

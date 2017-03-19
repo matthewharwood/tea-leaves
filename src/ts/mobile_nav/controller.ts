@@ -12,17 +12,17 @@ export class MobileNavigationDirectiveCtrl {
       protected scope: IMobileNavigationScope,
       protected element: ng.IAugmentedJQuery,
       protected attr: ng.IAttributes,
-  ) {}
+) {}
 
   public close() {
     console.log('closed');
     this.scope.opened = false;
-    console.log(this.scope)
+    this.scope.$root.$emit('bodyScroll', this.scope.opened)
   }
 
-  public open() {
-    this.scope.opened = true;
-
+  public toggle() {
+    this.scope.opened = !this.scope.opened;
+    this.scope.$root.$emit('bodyScroll', this.scope.opened)
   }
 
   public getOpen() {

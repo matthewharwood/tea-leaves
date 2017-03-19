@@ -38,7 +38,7 @@ html(lang='en')
     link(rel='stylesheet' type='text/css' href='/assets/styles/main.css')
 
     base(href='/')
-  body(ng-app="app")
+  body(ng-app="app" ng-controller="appCtrl" ng-class="{'no-scroll': bodyScroll}")
     include ../includes/navigation/navigation.pug
     block body
     block script

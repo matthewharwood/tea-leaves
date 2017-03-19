@@ -18,8 +18,8 @@ class MobileNavigationDirective implements ng.IDirective {
   };
   public template: string = `
     <ul class="main-nav__list--mobile">
-      <li ng-click="vm.open()" class="main-nav__item">
-        <p>&#9776; - {{}} asdf</p> 
+      <li ng-click="vm.toggle()" class="main-nav__item">
+        <p>&#9776;</p> 
       </li>
     </ul>
 

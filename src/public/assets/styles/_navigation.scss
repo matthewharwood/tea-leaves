@@ -1,8 +1,4 @@
 
-mobile-navigation {
-  display: flex;
-  width: 100%;
-}
 
 .main-nav {
   @extend %flex-container-row-right;
@@ -51,8 +47,20 @@ mobile-navigation {
   }
 }
 
+mobile-navigation {
+  position: relative;
+  width: 100%;
+  height: 100%;
+
+  @include for-desktop-up() {
+    display: none;
+    visibility: hidden;
+  }
+}
+
 .main-nav__list--mobile {
   width: 100%;
+  height: 100%;
 
   @include for-desktop-up() {
     display: none;
@@ -78,7 +86,7 @@ mobile-navigation {
   height: 100vh;
   z-index: $over-9000+5;
   position: fixed;
-  transition: all .35s ease-in-out-cubic;
+
   transform: translateX(-100%);
   opacity: 0;
 
@@ -95,6 +103,8 @@ mobile-navigation {
 }
 .side-name__list--secondary {
   list-style-type: none;
+  margin: 36px 0;
+  border-top: 1px solid $white-off;
 }
 
 .side-name__containter--mobile {
@@ -107,6 +117,7 @@ mobile-navigation {
   transition: all .35s ease-in-out-cubic;
   transform: translateX(100%);
   overflow: auto;
+  right: 0;
 
   &.open {
     transform: translateX(0);
