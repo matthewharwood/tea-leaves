@@ -99,6 +99,7 @@
   z-index: $over-9000+10;
   transition: all .35s ease-in-out-cubic;
   transform: translateX(100%);
+  overflow: auto;
 
   &.open {
     transform: translateX(0);
