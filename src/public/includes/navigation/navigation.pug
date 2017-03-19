@@ -1,4 +1,4 @@
-nav.main-nav.sticky-nav(ng-init="menu=false")
+nav.main-nav.sticky-nav
   ul.main-nav__list
     li.main-nav__item
       a(href="#" class="main-nav__item__link") Home
@@ -8,32 +8,33 @@ nav.main-nav.sticky-nav(ng-init="menu=false")
       a(href="/tasting/" class="main-nav__item__link") Tasting
     li.main-nav__item
       a(href="#" class="main-nav__item__link") Shop Now
-  ul.main-nav__list--mobile
-    li.main-nav__item(ng-click="menu=true")
-      p &#9776;
-  div.side-name__bg--mobile(ng-click="menu=false" ng-class="{'open': menu===true}")
-  div.side-name__containter--mobile(ng-class="{'open': menu===true}")
-    ul.inline-list.side-name__list--primary
-      li.side-name__item--mobile
-        a(href="/about-us" class="side-name__item--mobile__link") About Us
-      li.side-name__item--mobile
-        a(href="/tasting" class="side-name__item--mobile__link") Tasting
-      li.side-name__item--mobile
-        a(href="#" class="side-name__item--mobile__link") Shop Now
-    ul.inline-list.side-name__list--secondary
-      li.side-name__item--mobile
-        a(href="/" class="side-name__item--mobile__link") Home
-      li.side-name__item--mobile
-        a(href="/" class="side-name__item--mobile__link") Introduction
-      li.side-name__item--mobile
-        a(href="/" class="side-name__item--mobile__link") Tasting Notes
-      li.side-name__item--mobile
-        a(href="/" class="side-name__item--mobile__link") Craftsmanship
-      li.side-name__item--mobile
-        a(href="/" class="side-name__item--mobile__link") Parallels
-      li.side-name__item--mobile
-        a(href="/" class="side-name__item--mobile__link") Shop
-      li.side-name__item--mobile
-        a(href="/" class="side-name__item--mobile__link") Glass Pairing
-      li.side-name__item--mobile
-        a(href="/" class="side-name__item--mobile__link") Tasteamonials
+  mobile-navigation
+  //ul.main-nav__list--mobile
+  //  li.main-nav__item(ng-click="menu=true")
+  //    p &#9776;
+  //div.side-name__bg--mobile(ng-click="menu=false" ng-class="{'open': menu===true}")
+  //div.side-name__containter--mobile(ng-class="{'open': menu===true}")
+  //  ul.inline-list.side-name__list--primary
+  //    li.side-name__item--mobile
+  //      a(href="/about-us" class="side-name__item--mobile__link") About Us
+  //    li.side-name__item--mobile
+  //      a(href="/tasting" class="side-name__item--mobile__link") Tasting
+  //    li.side-name__item--mobile
+  //      a(href="#" class="side-name__item--mobile__link") Shop Now
+  //  ul.inline-list.side-name__list--secondary
+  //    li.side-name__item--mobile
+  //      a(href="/" class="side-name__item--mobile__link") Home
+  //    li.side-name__item--mobile
+  //      a(href="/" class="side-name__item--mobile__link") Introduction
+  //    li.side-name__item--mobile
+  //      a(href="/" class="side-name__item--mobile__link") Tasting Notes
+  //    li.side-name__item--mobile
+  //      a(href="/" class="side-name__item--mobile__link") Craftsmanship
+  //    li.side-name__item--mobile
+  //      a(href="/" class="side-name__item--mobile__link") Parallels
+  //    li.side-name__item--mobile
+  //      a(href="/" class="side-name__item--mobile__link") Shop
+  //    li.side-name__item--mobile
+  //      a(href="/" class="side-name__item--mobile__link") Glass Pairing
+  //    li.side-name__item--mobile
+  //      a(href="/" class="side-name__item--mobile__link") Tasteamonials

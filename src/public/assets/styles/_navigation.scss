@@ -1,3 +1,9 @@
+
+mobile-navigation {
+  display: flex;
+  width: 100%;
+}
+
 .main-nav {
   @extend %flex-container-row-right;
   @extend %pos-fixed;
