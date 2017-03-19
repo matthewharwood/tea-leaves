@@ -1,8 +1,6 @@
 .introduction {
-  @extend %full-bleed;
-  //background: $black-off;
+  @include full-bleed();
   color: $white-off;
-  height: auto;
   display: flex;
   justify-content: center;
   align-items: center;

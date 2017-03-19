@@ -14,12 +14,11 @@ $max-text-para: 17 * $px;
 %headline-font-size {
   font-size: responsive 35px 90px;
   font-range: 350px $tabletLandscape;
-  line-height: 1;
 
   @include for-tablet-landscape-up {
     font-size: responsive 45px 112px;
     font-range: $tabletLandscape $bigDesktop;
-    line-height: 105px;
+
   }
 }
 
@@ -52,7 +51,6 @@ h1, h2, h3, h4, h5 {
 h3 {
   font-size: 24px;
   letter-spacing: 1.5px;
-  line-height: 74px;
 }
 
 h4 {
@@ -70,7 +68,7 @@ h6 {
 
 p {
   font-family: $typeface-serif;
-  font-size: responsive 16px 17px;
+  font-size: 17px;
   line-height: 1.4;
   font-weight: normal;
 }

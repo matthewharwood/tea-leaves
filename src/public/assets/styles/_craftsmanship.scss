@@ -1,5 +1,6 @@
 .craftsmanship {
   @include full-bleed();
+  @include flex-center-xy();
   background: $beige;
   color: $black-off;
   position: relative;
@@ -31,6 +32,7 @@
   width: 100%;
 
   @include for-desktop-up() {
+    lost-offset: 1/15;
     lost-column: 1/4 0;
   }
 }

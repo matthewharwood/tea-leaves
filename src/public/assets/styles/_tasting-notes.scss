@@ -222,6 +222,12 @@
   }
 }
 
+.fullbleed {
+  img {
+    width: 100%;
+  }
+}
+
 .tasting-notes__note-image {
 
   @include for-desktop-up() {

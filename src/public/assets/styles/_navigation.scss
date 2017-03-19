@@ -1,6 +1,7 @@
 .main-nav {
   @extend %flex-container-row-right;
   @extend %pos-fixed;
+  font-family: $typeface-serif;
   background: $black;
   height: 50px;
   top: 0;

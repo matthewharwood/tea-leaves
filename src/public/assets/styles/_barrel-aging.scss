@@ -2,7 +2,6 @@ $two-thirds: 2/3;
 
 .barrel-aging {
   @include full-bleed();
-  @include section-center();
   background-color: $beige;
   color: $black-off;
   display: flex;
