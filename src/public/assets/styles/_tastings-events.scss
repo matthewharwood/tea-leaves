@@ -1,0 +1,60 @@
+$tastings-events-section-padding: $mod-rhythm-4 * $px;
+
+.tastings-events {
+  min-height: 100%;
+  background: $black-off;
+  color: $white-off;
+
+  .wrapper {
+    lost-center: $container-default;
+    padding: $tastings-events-section-padding 0 0 0;
+
+    &:last-of-type {
+      padding-bottom: $tastings-events-section-padding;
+    }
+  }
+}
+
+.tastings-events__headline {
+  @extend %headline-font-size;
+}
+
+.tastings-events__blurb {
+  margin-top: 30px;
+}
+
+.tastings-event {
+  lost-utility: clearfix;
+
+  &:not(:first-of-type) {
+    margin-top: 120px;
+  }
+}
+
+.tastings-event__image {
+  img {
+    width: 100%;
+  }
+}
+
+.tastings-event__info__header {
+  @extend %subline-font-size;
+
+  border-bottom: 1px solid $white-off;
+  padding: 10px 0;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.tastings-event__info__header--date {
+  flex-shrink: 0;
+}
+
+.tastings-event__info__content {
+  button {
+    margin-top: 30px;
+  }
+}
