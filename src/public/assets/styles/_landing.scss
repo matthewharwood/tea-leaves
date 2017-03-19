@@ -63,6 +63,7 @@
   justify-content: center;
   margin-bottom: 30%;
   width: 100%;
+  background-color: $black;
 }
 
 .landing__bg {
@@ -72,7 +73,10 @@
   top: 50%;
   width: 100%;
   z-index: -1;
-  background-color: $black;
+  background: $black url(../../assets/images/home-page/testformobile.png);
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: left 6%;
 
   @include for-desktop-up() {
     background: url(../../assets/images/home-page/full-scroll-without-ingredients.jpg);
@@ -95,11 +99,9 @@
 
 .landing__box-container {
   position: absolute;
-  margin: -25% auto auto -25%;
-  top: 50%;
-  left: 50%;
+  top: 0%;
   display: inline;
-  width: 50%;
+  width: 100%;
 
   @include for-desktop-up() {
     left: 40.6%;

@@ -40,7 +40,6 @@ $tasteteamonials-section-padding: $mod-rhythm-4 * $px;
   @extend %flex-center-xy;
   flex-direction: column;
   lost-column: 1;
-  margin: 30px;
   cursor: pointer;
 
   p,
@@ -57,7 +56,9 @@ $tasteteamonials-section-padding: $mod-rhythm-4 * $px;
 
 
 .tasteteamonial {
-  lost-column: 1/3;
+  @include for-desktop-up(){
+    lost-column: 1/3;
+  }
 }
 
 .tasteteamonial__icons,
