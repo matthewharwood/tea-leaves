@@ -19,6 +19,7 @@
 
 @mixin full-bleed {
   height: auto;
+  min-height: 100%;
 
   @include for-tablet-landscape-up(){
     height: 100%;

@@ -1,10 +1,13 @@
 $two-thirds: 2/3;
 
 .barrel-aging {
-  @extend %full-bleed;
+  @include full-bleed();
   @include section-center();
   background-color: $beige;
   color: $black-off;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   .wrapper {
     width: 80%;

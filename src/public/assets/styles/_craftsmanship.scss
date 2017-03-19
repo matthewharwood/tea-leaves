@@ -1,14 +1,23 @@
 .craftsmanship {
-  @extend %full-bleed;
+  @include full-bleed();
   background: $beige;
   color: $black-off;
   position: relative;
+
+  .wrapper {
+    margin: 24px auto;
+    width: 80%;
+  }
 }
 
 .craftsmanship__content {
-  @extend %full-bleed;
-  lost-align: center;
+  @include full-bleed();
+
   lost-center: 100%;
+
+  @include for-desktop-up() {
+    lost-align: center;
+  }
 }
 
 .craftsmanship__header {
