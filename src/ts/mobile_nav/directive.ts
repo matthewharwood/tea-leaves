@@ -18,28 +18,71 @@ class MobileNavigationDirective implements ng.IDirective {
   };
   public template: string = `
     <ul class="main-nav__list--mobile">
-      <li ng-click="vm.toggle()" class="main-nav__item">
-        <p>&#9776;</p> 
+      <li ng-click="vm.toggle()" class="main-nav__item" ng-switch="vm.getOpen()">
+        <p ng-switch-when="false">&#9776;</p>
+        <p ng-switch-when="true">&#10006;</p>
       </li>
     </ul>
 
     <div ng-click="vm.close()" ng-class="{'open': vm.getOpen()}" class="side-name__bg--mobile">
       <div ng-class="{'open': vm.getOpen()}" class="side-name__containter--mobile">
-        <ul class="inline-list side-name__list--primary">
-          <li class="side-name__item--mobile"><a href="/about-us" class="side-name__item--mobile__link">About Us</a></li>
-          <li class="side-name__item--mobile"><a href="/tasting" class="side-name__item--mobile__link">Tasting</a></li>
-          <li class="side-name__item--mobile"><a href="#" class="side-name__item--mobile__link">Shop Now</a></li>
-        </ul>
-        <ul class="inline-list side-name__list--secondary">
-          <li class="side-name__item--mobile"><a href="/" class="side-name__item--mobile__link">Home</a></li>
-          <li class="side-name__item--mobile"><a href="/" class="side-name__item--mobile__link">Introduction</a></li>
-          <li class="side-name__item--mobile"><a href="/" class="side-name__item--mobile__link">Tasting Notes</a></li>
-          <li class="side-name__item--mobile"><a href="/" class="side-name__item--mobile__link">Craftsmanship</a></li>
-          <li class="side-name__item--mobile"><a href="/" class="side-name__item--mobile__link">Parallels</a></li>
-          <li class="side-name__item--mobile"><a href="/" class="side-name__item--mobile__link">Shop</a></li>
-          <li class="side-name__item--mobile"><a href="/" class="side-name__item--mobile__link">Glass Pairing</a></li>
-          <li class="side-name__item--mobile"><a href="/" class="side-name__item--mobile__link">Tasteamonials</a></li>
-        </ul>
+        <div class="side-name__container--inner">
+          <ul class="inline-list side-name__list--primary">
+            <li class="side-name__item--mobile"><a href="/about-us" class="side-name__item--mobile__link">About Us</a></li>
+            <li class="side-name__item--mobile"><a href="/tasting" class="side-name__item--mobile__link">Tasting</a></li>
+            <li class="side-name__item--mobile"><a href="#" class="side-name__item--mobile__link">Shop Now</a></li>
+          </ul>
+          <ul class="inline-list side-name__list--secondary">
+            <li class="side-name__item--mobile"><a href="/" class="side-name__item--mobile__link">Home</a></li>
+            <li class="side-name__item--mobile"><a href="/" class="side-name__item--mobile__link">Introduction</a></li>
+            <li class="side-name__item--mobile"><a href="/" class="side-name__item--mobile__link">Tasting Notes</a></li>
+            <li class="side-name__item--mobile"><a href="/" class="side-name__item--mobile__link">Craftsmanship</a></li>
+            <li class="side-name__item--mobile"><a href="/" class="side-name__item--mobile__link">Parallels</a></li>
+            <li class="side-name__item--mobile"><a href="/" class="side-name__item--mobile__link">Shop</a></li>
+            <li class="side-name__item--mobile"><a href="/" class="side-name__item--mobile__link">Glass Pairing</a></li>
+            <li class="side-name__item--mobile"><a href="/" class="side-name__item--mobile__link">Tasteamonials</a></li>
+          </ul>
+          <ul class="inline-list side-name__list--social">
+            <li class="side-name__item--mobile">
+              <a href="/" class="side-name__item--mobile__link">
+                <figure>
+                  <img src="assets/images/social-media/Beige/Facebook_Beige.png" alt="">
+                </figure>
+              </a>
+            </li>
+            <li class="side-name__item--mobile">
+              <a href="/" class="side-name__item--mobile__link">
+                <figure>
+                  <img src="assets/images/social-media/Beige/Twitter_Beige.png" alt="">
+                </figure>
+              </a>
+            </li>
+            <li class="side-name__item--mobile">
+              <a href="/" class="side-name__item--mobile__link">
+                <figure>
+                  <img src="assets/images/social-media/Beige/Instagram_Beige.png" alt="">
+                </figure>
+              </a>
+            </li>
+            <li class="side-name__item--mobile">
+              <a href="/" class="side-name__item--mobile__link">
+                <figure>
+                  <img src="assets/images/social-media/Beige/Pinterest_Beige.png" alt="">
+                </figure>
+              </a>
+            </li>
+            <li class="side-name__item--mobile">
+              <a href="/" class="side-name__item--mobile__link">
+                <figure>
+                  <img src="assets/images/social-media/Beige/Vimeo_Beige.png" alt="">
+                </figure>
+              </a>
+            </li>
+          </ul>
+          <ul class="inline-list side-name__list--final">
+            <li class="side-name__item--mobile"><a href="http://www.tealeaves.com" class="side-name__item--mobile__link">TEALEAVES.COM</a></li>
+          </ul>
+        </div>
       </div>
     </div>
    `;
