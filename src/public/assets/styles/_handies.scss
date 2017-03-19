@@ -62,11 +62,25 @@
   justify-content: center;
 }
 
+@mixin flex-center-xy() {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 %inline-list {
   li {
     display: inline-block;
   }
 }
+
+@mixin inline-list() {
+  li {
+    display: inline-block;
+  }
+}
+
+
 
 // Full Bleed
 

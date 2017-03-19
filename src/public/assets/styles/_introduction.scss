@@ -1,9 +1,14 @@
 .introduction {
   @extend %full-bleed;
-  lost-align: center;
-  lost-center: 100%;
   //background: $black-off;
   color: $white-off;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 10;
+
 }
 
 .introduction__container {
@@ -11,7 +16,13 @@
   flex-wrap: wrap;
   justify-content: space-around;
   width: $container-default;
-  height: 60%;
+  margin: 0 auto;
+  padding: 72px 0;
+
+  @include for-desktop-up() {
+    padding: 0;
+    height: 60%;
+  }
 
   h1 {
     @extend %headline-font-size;

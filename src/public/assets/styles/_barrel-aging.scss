@@ -34,7 +34,9 @@ $two-thirds: 2/3;
   }
 
   p:first-child {
-    margin: 0 $text-margin-default 0 0;
+    @include for-desktop-up() {
+      margin: 0 $text-margin-default 0 0;
+    }
   }
 }
 .barrel-aging__animation {
