@@ -4,20 +4,60 @@ $text-margin-default: $mod-rhythm-2 * $px;
 $subline-font-size: $mod-rhythm-2 * $px;
 
 .french-oak {
-  @extend %full-bleed;
-  background-image: url('../images/french-oak/french-oak-bg.jpg'), linear-gradient(135deg, $gray-light, $gray-dark);
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
+  width: 100%;
+  min-height: 100%;
+  padding-bottom: 72px;
+  background-color: #707781;
+
+
+  @include for-desktop-up() {
+    background-image: url('../images/french-oak/french-oak-bg.jpg'), linear-gradient(135deg, $gray-light, $gray-dark);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+  }
 
   color: $white-off;
-  lost-align: center;
-  lost-center: 100%;
+  .wrapper {
+    margin: 0 auto;
+    @include for-desktop-up() {
+      padding-top: 72px;
+      justify-content: center;
+      align-items: center;
+    }
+  }
 }
+
+.french-oak__image {
+  display: block;
+  visibility: visible;
+
+  figure {
+    img {
+      width: 100%;
+    }
+  }
+
+  @include for-desktop-up() {
+    display: none;
+    visibility: hidden;
+  }
+}
+
 .french-oak__content {
   @include for-desktop-up(){
     lost-offset: 2/5;
     lost-column: 3/5 0;
+  }
+
+  figure {
+    width: 65%;
+
+    @include for-desktop-up() {
+      width: 25%;
+    }
   }
 
 }
