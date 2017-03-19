@@ -35,7 +35,9 @@ html(lang='en')
     link(rel='author', href='https://plus.google.com/[YOUR PERSONAL G+ PROFILE HERE]')
     //link(rel="stylesheet" type="text/css" href="https://cloud.typography.com/6681376/6429972/css/fonts.css")
     link(href='https://fonts.googleapis.com/css?family=Montserrat|Muli', rel='stylesheet')
-    link(rel='stylesheet' type='text/css' href='./assets/styles/main.css')
+    link(rel='stylesheet' type='text/css' href='/assets/styles/main.css')
+
+    base(href='/')
   body(ng-app="app")
     include ../includes/navigation/navigation.pug
     block body
