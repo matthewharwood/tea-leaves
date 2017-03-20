@@ -18,7 +18,6 @@ export class MobileNavigationDirectiveCtrl {
 
 
   public close() {
-    console.log('closed');
     this.scope.opened = false;
     this.scope.$root.$emit('bodyScroll', this.scope.opened)
   }

@@ -30,7 +30,6 @@ app.controller('appCtrl', ['$rootScope', '$scope',
 
     $rootScope.$on('bodyScroll', function(event, msg) {
       vm.bodyScroll = msg;
-      console.log(vm.bodyScroll, 'wt2f');
     });
 
   }
