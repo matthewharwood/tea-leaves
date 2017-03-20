@@ -32,5 +32,40 @@ app.controller('appCtrl', ['$rootScope', '$scope',
       vm.bodyScroll = msg;
     });
 
+    vm.events = [
+      {
+        name: 'Tea & Wine Tasting With Riedel Glass',
+        date: null,
+        venue: null,
+        location: null,
+        imgLink: '../assets/images/tastings-events/Event1.jpg',
+        withRiedel: true,
+      },
+      {
+        name: 'Blending & Craftsmanship Talk',
+        date: null,
+        venue: null,
+        location: null,
+        imgLink: '../assets/images/tastings-events/Event2.jpg',
+        withRiedel: false,
+      },
+      {
+        name: 'Tea & Wine Tasting With Riedel Glass',
+        date: null,
+        venue: null,
+        location: null,
+        imgLink: '../assets/images/tastings-events/Event3.jpg',
+        withRiedel: false,
+      },
+      {
+        name: 'Blending & Craftsmanship Talk Featuring Riedel Glass',
+        date: null,
+        venue: null,
+        location: null,
+        imgLink: '../assets/images/tastings-events/event-4.png',
+        withRiedel: true,
+      },
+    ];
+
   }
 ]);
