@@ -64,7 +64,7 @@ function update(element: HTMLElement, prevState: IStickyState = {
                 SPEED * currentState.translateDirection + currentY;
             const cappedAdjustment =
                 Math.max(-height, Math.min(0, initialAdjustment));
-            element.style.transform = `translateY(${cappedAdjustment}px)`;
+            element.style.transform = `translate3d(0, ${cappedAdjustment}px, 0)`;
         });
     });
     window.requestAnimationFrame(() => {

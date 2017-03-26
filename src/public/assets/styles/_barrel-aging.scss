@@ -2,11 +2,12 @@ $two-thirds: 2/3;
 
 .barrel-aging {
   @include full-bleed();
+  align-items: center;
   background-color: $beige;
   color: $black-off;
   display: flex;
   justify-content: center;
-  align-items: center;
+  overflow: hidden;
 
   .wrapper {
     width: 80%;
@@ -61,13 +62,13 @@ $two-thirds: 2/3;
 
 .barrel-aging__animation--md {
   opacity: 0;
-  transform: translateY(-240%);
+  transform: translate3d(0, -240%, 0);
   transition: transform 0s, opacity 0s;
-  z-index: -2;
+  z-index: 0;
 
   &.waypoint--active {
     opacity: 1;
-    transform: translateY(0);
+    transform: translate3d(0, 0, 0);
     transition: transform 3s, opacity 0.5s;
   }
 }
