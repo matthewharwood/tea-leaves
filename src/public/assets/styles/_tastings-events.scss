@@ -28,13 +28,33 @@ $tastings-events-section-padding: $mod-rhythm-4 * $px;
   lost-utility: clearfix;
 
   &:not(:first-of-type) {
-    margin-top: 120px;
+    margin-top: 60px;
+
+    @include for-tablet-landscape-up() {
+      margin-top: 120px;
+    }
   }
 }
 
 .tastings-event__image {
+  lost-column: 3/3;
+  margin-bottom: 50px;
+
   img {
     width: 100%;
+  }
+
+  @include for-tablet-landscape-up() {
+    lost-column: 1/3;
+    margin-bottom: 0px;
+  }
+}
+
+.tastings-event__info {
+  lost-column: 3/3;
+
+  @include for-tablet-landscape-up() {
+    lost-column: 2/3;
   }
 }
 
@@ -45,14 +65,29 @@ $tastings-events-section-padding: $mod-rhythm-4 * $px;
   padding: 10px 0;
 
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: flex-end;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  @include for-tablet-landscape-up() {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+}
+
+.tastings-event__info__header--name,
+.tastings-event__info__header--date {
+  line-height: 1.8;
 }
 
 .tastings-event__info__header--date {
   flex-shrink: 0;
-  margin-left: 15px;
+  margin-left: 0px;
+
+  @include for-tablet-landscape-up() {
+    margin-left: 15px;
+  }
 }
 
 .tastings-event__info__content {
@@ -68,7 +103,11 @@ $tastings-events-section-padding: $mod-rhythm-4 * $px;
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.35);
-  padding: 50px;
+  padding: 0px;
+
+  @include for-tablet-landscape-up() {
+    padding: 50px;
+  }
 }
 
 .tastings-event-modal {
@@ -77,14 +116,23 @@ $tastings-events-section-padding: $mod-rhythm-4 * $px;
   color: $black;
   padding: 20px 30px;
   max-width: 750px;
-  width: 60%;
+  width: 90%;
   margin: 115px auto 0;
+
+  @include for-tablet-landscape-up() {
+    padding: 20px 30px;
+    width: 60%;
+  }
 }
 
 .tastings-event-modal__close-btn {
   position: absolute;
   top: 25px;
   right: 25px;
+
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 .tastings-event-modal__branding {

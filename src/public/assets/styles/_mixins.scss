@@ -21,7 +21,7 @@
   height: auto;
   min-height: 100%;
 
-  @include for-tablet-landscape-up(){
+  @include for-tablet-landscape-up() {
     height: 100%;
     width: 100%;
   }
