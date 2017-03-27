@@ -4,7 +4,7 @@ doctype html
 html(lang='en')
   head
     meta(charset='UTF-8')
-    include ./gtm-head.html
+    include ./gtm-head.rawhtml
     meta(name="viewport" content="width=device-width, initial-scale=1")
     title Tealeaves x RUDD
     meta(name='author', content='Lana Sutherland')
@@ -40,7 +40,7 @@ html(lang='en')
 
     base(href='/')
   body(ng-app="app" ng-controller="appCtrl" ng-class="{'no-scroll': bodyScroll}")
-    include ./gtm-body.html
+    include ./gtm-body.rawhtml
     include ../includes/navigation/navigation.pug
     block body
     block script
