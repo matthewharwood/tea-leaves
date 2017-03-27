@@ -57,32 +57,45 @@
 // Landing
 
 .landing {
-  align-items: flex-end;
-  display: flex;
+  //display: flex;
+  //align-items: flex-end;
+  //justify-content: center;
   height: 200%;
-  justify-content: center;
   margin-bottom: 30%;
   width: 100%;
   background-color: $black;
 }
 
 .landing__bg {
-  height: 230%;
-  margin-top: -5%;
+  align-items: center;
+  background: $black;
+  display: flex;
+  justify-content: center;
+  height: 50%;
   position: absolute;
   top: 50%;
   width: 100%;
   z-index: -1;
-  background: $black url(../../assets/images/home-page/testformobile.png);
-  background-repeat: no-repeat;
-  background-size: 100% auto;
-  background-position: left 6%;
 
   @include for-desktop-up() {
-    background: url(../../assets/images/home-page/full-scroll-without-ingredients.jpg);
+    background-image: url(../../assets/images/home-page/full-scroll-without-ingredients.jpg);
     background-repeat: no-repeat;
     background-size: 100% auto;
+    background-origin: content-box;
     background-position: left top;
+    height: 230%;
+    margin-top: -5%;
+  }
+}
+
+.landing__bg--mobile {
+  display: block;
+  width: 70%;
+  height: auto;
+  max-width: 70vh;
+
+  @include for-desktop-up() {
+    display: none;
   }
 }
 
@@ -94,19 +107,33 @@
 }
 
 .landing__box {
-  width: 100%;
+  width: 70%;
+  height: auto;
+  max-width: 70vh;
+
+  @include for-desktop-up() {
+    height: auto;
+    width: 100%;
+    max-width: none;
+  }
 }
 
 .landing__box-container {
   position: absolute;
-  top: 0%;
-  display: inline;
+  top: 0;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
   width: 100%;
 
   @include for-desktop-up() {
+    position: absolute;
+    display: inline;
     left: 40.6%;
     margin: 22% auto auto 0;
     top: 0;
+    height: auto;
     width: 17.5%
   }
 }
