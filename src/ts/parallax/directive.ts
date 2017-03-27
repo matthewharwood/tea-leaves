@@ -70,7 +70,7 @@ function update(
         }
 
         fastdom.mutate(() => {
-            element.style.transform = `translateY(${translateY}px)`;
+            element.style.transform = `translate3d(0, ${translateY}px, 0)`;
         });
     });
 
