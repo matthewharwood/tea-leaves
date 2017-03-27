@@ -30,6 +30,15 @@ waypoint.directive('waypoint', WaypointDirective.instance);
 
 function update(element: HTMLElement, activeAfter, activeBefore, threshold) {
     fastdom.measure(() => {
+
+        // Jump out early on unshown things.
+        if (!element.clientHeight) {
+            fastdom.mutate(() => {
+                element.classList.remove(ACTIVE_CLASS);
+            });
+            return;
+        }
+
         const distanceFromCenter = getDistanceFromWindowCenter(element);
         const thresholdDistance = window.innerHeight * threshold;
         fastdom.mutate(() => {

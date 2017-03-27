@@ -45,6 +45,12 @@ function update(
     element: HTMLElement, speed: number, stopBefore: boolean = false,
     stopAfter: boolean = false, target: Target = Target.Center) {
     fastdom.measure(() => {
+
+        // Jump out early on unshown things.
+        if (!element.clientHeight) {
+            return;
+        }
+
         let distance;
         switch (target) {
             case Target.Top:
