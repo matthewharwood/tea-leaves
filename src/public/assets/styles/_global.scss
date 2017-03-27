@@ -6,6 +6,7 @@
 }
 
 html, body {
+  background: #353535;
   height: 100%;
 }
 
@@ -17,7 +18,13 @@ figure img, figure object, figure embed, figure video {
   max-width: 100%;
   display: block;
 }
+
 img {
   border: 0;
   -ms-interpolation-mode: bicubic;
+}
+
+.parallax, .waypoint {
+  -webkit-backface-visibility: hidden;
+  -webkit-perspective: 1000;
 }

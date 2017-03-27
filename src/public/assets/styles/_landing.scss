@@ -1,3 +1,5 @@
+@import "mixins";
+
 // Intro
 .splash {
   background-color: $black;
@@ -57,13 +59,14 @@
 // Landing
 
 .landing {
-  //display: flex;
-  //align-items: flex-end;
-  //justify-content: center;
-  height: 200%;
+  height: 300%;
   margin-bottom: 30%;
   width: 100%;
   background-color: $black;
+
+  @include for-desktop-up() {
+    height: 200%;
+  }
 }
 
 .landing__bg {
@@ -71,20 +74,38 @@
   background: $black;
   display: flex;
   justify-content: center;
-  height: 50%;
+  height: calc(100% / 3);
   position: absolute;
-  top: 50%;
+  top: calc(200% / 3);
   width: 100%;
   z-index: -1;
+  transition: opacity 0.4s;
+  opacity: 1;
+  -webkit-backface-visibility: hidden;
+  -webkit-perspective: 1000;
 
   @include for-desktop-up() {
     background-image: url(../../assets/images/home-page/full-scroll-without-ingredients.jpg);
     background-repeat: no-repeat;
     background-size: 100% auto;
-    background-origin: content-box;
     background-position: left top;
-    height: 230%;
+    height: auto;
+    padding-top: 220%;
     margin-top: -5%;
+    top: 50%;
+  }
+}
+
+.landing__bg-linear-fade {
+  display: none;
+
+  @include for-desktop-up() {
+    display: block;
+    position: absolute;
+    top: 70%;
+    bottom: 0;
+    background: linear-gradient(to bottom, rgba(53, 53, 53, 0) 0, #353535 100%);
+    width: 100%;
   }
 }
 
@@ -106,13 +127,36 @@
   width: 100%;
 }
 
+.landing__mobile-fade-target {
+  height: 100%;
+  pointer-events: none;
+  position: absolute;
+  top: 200%;
+  width: 100%;
+  visibility: hidden;
+
+  &.waypoint--active + .landing .landing__bg {
+    opacity: 0;
+  }
+}
+
+.landing__mobile-tasting-table {
+  background: url(../../assets/images/home-page/full-scroll-without-ingredients.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: left top;
+  position: absolute;
+  top: calc(200%/3);
+  padding-top: 220%;
+  width: 100%;
+  z-index: -2;
+}
+
 .landing__box {
   width: 70%;
-  height: auto;
   max-width: 70vh;
 
   @include for-desktop-up() {
-    height: auto;
     width: 100%;
     max-width: none;
   }
