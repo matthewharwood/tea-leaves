@@ -4,6 +4,7 @@ $tastings-events-section-padding: $mod-rhythm-4 * $px;
   min-height: 100%;
   background: $black-off;
   color: $white-off;
+  position: relative;
 
   .wrapper {
     lost-center: $container-default;
@@ -58,4 +59,62 @@ $tastings-events-section-padding: $mod-rhythm-4 * $px;
   button {
     margin-top: 30px;
   }
+}
+
+.tastings-event-modal-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.35);
+  padding: 50px;
+}
+
+.tastings-event-modal {
+  position: relative;
+  background-color: $white-off;
+  color: $black;
+  padding: 20px 30px;
+  max-width: 750px;
+  width: 60%;
+  margin: 115px auto 0;
+}
+
+.tastings-event-modal__close-btn {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+}
+
+.tastings-event-modal__branding {
+  margin: 25px 0 0;
+}
+
+.tastings-event-modal__header {
+  @extend %subline-font-size;
+
+  border-bottom: 1px solid $black;
+  padding: 10px 0;
+}
+
+.tastings-event-modal__info {
+  margin-bottom: 30px;
+
+  h6 {
+    margin-bottom: 10px;
+    text-transform: uppercase;
+  }
+  div {
+
+  }
+}
+
+.tastings-event-modal__footer {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+.tastings-event-modal__social-icon {
+  margin-left: 25px;
 }

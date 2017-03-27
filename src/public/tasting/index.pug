@@ -10,95 +10,55 @@ block body
     div.wrapper
       section.tastings-event__content
 
-        div.tastings-event(ng-repeat='event in events')
+        div.tastings-event(ng-repeat="event in events")
           div.tastings-event__image.col-3rd
-            img(ng-src='{{ event.imgLink }}')
+            img(ng-src="{{ event.imgLink }}")
           div.tastings-event__info.col-2-3rd
             div.tastings-event__info__branding
-              img(src='../assets/images/tastings-events/logo_tealeaves-rudd.png' alt='TEALEAVES x RUDD' ng-if='!event.withRiedel')
-              img(src='../assets/images/tastings-events/logo_tealeaves-rudd-riedel.png' alt='TEALEAVES x RUDD x Riedel' ng-if='event.withRiedel')
+              img(src="../assets/images/tastings-events/logo_tealeaves-rudd.png" alt="TEALEAVES x RUDD" ng-if="!event.withRiedel")
+              img(src="../assets/images/tastings-events/logo_tealeaves-rudd-riedel.png" alt="TEALEAVES x RUDD x Riedel" ng-if="event.withRiedel")
             div.tastings-event__info__header
               h2.tastings-event__info__header--name
-                span(ng-if='event.name') {{ event.name }}
-                span(ng-if='!event.name') TBD
+                span(ng-if="event.name") {{ event.name }}
+                span(ng-if="!event.name") TBD
               h2.tastings-event__info__header--date
-                span(ng-if='event.date') Date: {{ event.date }}
-                span(ng-if='!event.date') Date: TBD
+                span(ng-if="event.date") Date: {{ event.date }}
+                span(ng-if="!event.date") Date: TBD
             div.tastings-event__info__content
-              p(ng-if='event.venue') Venue: {{ event.venue }}
-              p(ng-if='!event.venue') Venue: TBD
-              p(ng-if='event.location') Location: {{ event.location }}
-              p(ng-if='!event.location') Location: TBD
-              button.button--primary
+              p(ng-if="event.venue") Venue: {{ event.venue }}
+              p(ng-if="!event.venue") Venue: TBD
+              p(ng-if="event.location") Location: {{ event.location }}
+              p(ng-if="!event.location") Location: TBD
+              button.button--primary(ng-click="selectedEvent = event")
                 | Event Details
 
-
-        //- div.tastings-event
-        //-   div.tastings-event__image.col-3rd
-        //-     img(src='../assets/images/tastings-events/Event1.jpg')
-        //-   div.tastings-event__info.col-2-3rd
-        //-     div.tastings-event__info__branding
-        //-       img(src='../assets/images/tastings-events/logo_tealeaves-rudd-riedel.png' alt='TEALEAVES x RUDD x Riedel')
-        //-     div.tastings-event__info__header
-        //-       h2.tastings-event__info__header--name
-        //-         | Tea &amp; Wine Tasting With Riedel Glass
-        //-       h2.tastings-event__info__header--date
-        //-         | Date: TBD
-        //-     div.tastings-event__info__content
-        //-       p Venue: TBD
-        //-       p Location: TBD
-        //-       button.button--primary
-        //-         | Event Details
-
-        //- div.tastings-event
-        //-   div.tastings-event__image.col-3rd
-        //-     img(src='../assets/images/tastings-events/Event2.jpg')
-        //-   div.tastings-event__info.col-2-3rd
-        //-     div.tastings-event__info__branding
-        //-       img(src='../assets/images/tastings-events/logo_tealeaves-rudd.png' alt='TEALEAVES x RUDD')
-        //-     div.tastings-event__info__header
-        //-       h2.tastings-event__info__header--name
-        //-         | Blending &amp; Craftsmanship Talk
-        //-       h2.tastings-event__info__header--date
-        //-         | Date: TBD
-        //-     div.tastings-event__info__content
-        //-       p Venue: TBD
-        //-       p Location: TBD
-        //-       button.button--primary
-        //-         | Event Details
-
-        //- div.tastings-event
-        //-   div.tastings-event__image.col-3rd
-        //-     img(src='../assets/images/tastings-events/Event3.jpg')
-        //-   div.tastings-event__info.col-2-3rd
-        //-     div.tastings-event__info__branding
-        //-       img(src='../assets/images/tastings-events/logo_tealeaves-rudd.png' alt='TEALEAVES x RUDD')
-        //-     div.tastings-event__info__header
-        //-       h2.tastings-event__info__header--name
-        //-         | Tea &amp; Wine Tasting With Riedel Glass
-        //-       h2.tastings-event__info__header--date
-        //-         | Date: TBD
-        //-     div.tastings-event__info__content
-        //-       p Venue: TBD
-        //-       p Location: TBD
-        //-       button.button--primary
-        //-         | Event Details
-
-        //- div.tastings-event
-        //-   div.tastings-event__image.col-3rd
-        //-     img(src='../assets/images/tastings-events/event-4.png')
-        //-   div.tastings-event__info.col-2-3rd
-        //-     div.tastings-event__info__branding
-        //-       img(src='../assets/images/tastings-events/logo_tealeaves-rudd-riedel.png' alt='TEALEAVES x RUDD x Riedel')
-        //-     div.tastings-event__info__header
-        //-       h2.tastings-event__info__header--name
-        //-         | Blending &amp; Craftsmanship Talk Featuring Riedel Glass
-        //-       h2.tastings-event__info__header--date
-        //-         | Date: TBD
-        //-     div.tastings-event__info__content
-        //-       p Venue: TBD
-        //-       p Location: TBD
-        //-       button.button--primary
-        //-         | Event Details
-
+    section.tastings-event-modal-container
+      div.tastings-event-modal
+        div.tastings-event-modal__close-btn
+          img(src="../assets/images/tastings-events/icon_close-btn.png")
+        div.tastings-event-modal__age-restriction
+          img(ng-src="../assets/images/tastings-events/icon_age-restriction.png" alt="Ages 21+")
+        div.tastings-event-modal__branding
+          img(src="../assets/images/tastings-events/logo_tealeaves-rudd_black.png" alt="TEALEAVES x RUDD" ng-if="!selectedEvent.withRiedel")
+          img(src="../assets/images/tastings-events/logo_tealeaves-rudd-riedel_black.png" alt="TEALEAVES x RUDD x Riedel" ng-if="selectedEvent.withRiedel")
+        div.tastings-event-modal__header
+          h2 Tea &amp; Wine Tasting With Riedel Glass
+        div.tastings-event-modal__content
+          div.tastings-event-modal__info
+            h6 Date and Time:
+            div Tbd
+          div.tastings-event-modal__info
+            h6 Venue:
+            div Tbd
+          div.tastings-event-modal__info
+            h6 Details:
+            div Tbd
+          div.tastings-event-modal__info
+            h6 More Info:
+            div Tbd
+        div.tastings-event-modal__footer
+          div.tastings-event-modal__social-icon
+            img(src="../assets/images/tastings-events/icon_social-facebook.png")
+          div.tastings-event-modal__social-icon
+            img(src="../assets/images/tastings-events/icon_social-twitter.png")
 
