@@ -93,9 +93,6 @@
     height: 100%;
     width: 100%;
 
-    &.waypoint--active + .fixed-table {
-      opacity: 0;
-    }
     &.waypoint--active + .fixed-table + .landing__bg {
       opacity: 1
     }
@@ -104,35 +101,25 @@
 
 .landing__bg {
   align-items: center;
-  background: $black;
-  display: flex;
   justify-content: center;
-  height: calc(100% / 3);
-  position: absolute;
-  top: calc(200% / 3);
   width: 100%;
-  transition: opacity 0.4s;
-  opacity: 1;
   -webkit-backface-visibility: hidden;
   -webkit-perspective: 1000;
+  background-image: url(../../assets/images/home-page/full-scroll-without-ingredients.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: left top;
+  height: auto;
+  padding-top: 220%;
+  margin-top: -5%;
+  opacity: 0;
+  transition: none;
+  display: block;
+  position: absolute;
+  top: 100%;
 
-  @include for-desktop-up() {
-    background-image: url(../../assets/images/home-page/full-scroll-without-ingredients.jpg);
-    background-repeat: no-repeat;
-    background-size: 100% auto;
-    background-position: left top;
-    height: auto;
-    padding-top: 220%;
-    margin-top: -5%;
-    opacity: 0;
-    transition: none;
+  .landing__bg-linear-fade {
     display: block;
-    position: absolute;
-    top: 100%;
-
-    .landing__bg-linear-fade {
-      display: block;
-    }
   }
 }
 
@@ -145,11 +132,35 @@
   width: 100%;
 }
 
-.landing__bg--mobile {
-  display: block;
-  width: 70%;
-  height: auto;
-  max-width: 70vh;
+.landing__mobile-fade-target {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  height: 100%;
+  width: 100%;
+
+  &.waypoint--active + .landing__box-bottom-mobile {
+    opacity: 0;
+  }
+}
+
+.landing__box-bottom-mobile {
+  @extend %flex-center-xy;
+  background: $black;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  height: 100%;
+  opacity: 1;
+  transition: opacity .4s;
+
+  img {
+    display: block;
+    width: 70%;
+    height: auto;
+    max-width: 70vh;
+  }
 
   @include for-desktop-up() {
     display: none;
@@ -161,23 +172,6 @@
   height: 50%;
   overflow: hidden;
   width: 100%;
-}
-
-.landing__mobile-fade-target {
-  height: 100%;
-  pointer-events: none;
-  position: absolute;
-  top: 200%;
-  width: 100%;
-  visibility: hidden;
-
-  &.waypoint--active + .landing .landing__bg {
-    opacity: 0;
-  }
-
-  @include for-desktop-up() {
-    display: none;
-  }
 }
 
 .landing__mobile-tasting-table {
