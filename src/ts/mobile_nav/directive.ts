@@ -32,12 +32,12 @@ class MobileNavigationDirective implements ng.IDirective {
         <div class="side-name__container--inner">
           <ul class="inline-list side-name__list--primary">
             <li class="side-name__item--mobile">
-                <a href="/about-us" class="side-name__item--mobile__link">
+                <a href="about" class="side-name__item--mobile__link">
                   About Us
                 </a>
             </li>
             <li class="side-name__item--mobile">
-              <a href="/tasting" class="side-name__item--mobile__link">
+              <a href="tasting" class="side-name__item--mobile__link">
                 Tasting
               </a>
             </li>

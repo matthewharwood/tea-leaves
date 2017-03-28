@@ -11,7 +11,7 @@ $subline-font-size: $mod-rhythm-2 * $px;
 
 
   @include for-desktop-up() {
-    background-image: url('../images/french-oak/french-oak-bg.jpg'), linear-gradient(135deg, $gray-light, $gray-dark);
+    background-image: url('assets/images/french-oak/french-oak-bg.jpg'), linear-gradient(135deg, $gray-light, $gray-dark);
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;

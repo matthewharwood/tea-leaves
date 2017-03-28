@@ -15,8 +15,8 @@ block body
             img(ng-src="{{ event.imgLink }}")
           div.tastings-event__info
             div.tastings-event__info__branding
-              img(src="../assets/images/tastings-events/logo_tealeaves-rudd.png" alt="TEALEAVES x RUDD" ng-if="!event.withRiedel")
-              img(src="../assets/images/tastings-events/logo_tealeaves-rudd-riedel.png" alt="TEALEAVES x RUDD x Riedel" ng-if="event.withRiedel")
+              img(src="assets/images/tastings-events/logo_tealeaves-rudd.png" alt="TEALEAVES x RUDD" ng-if="!event.withRiedel")
+              img(src="assets/images/tastings-events/logo_tealeaves-rudd-riedel.png" alt="TEALEAVES x RUDD x Riedel" ng-if="event.withRiedel")
             div.tastings-event__info__header
               h2.tastings-event__info__header--name
                 span(ng-if="event.name") {{ event.name }}
@@ -35,12 +35,12 @@ block body
     section.tastings-event-modal-container(ng-show="ac.selectedEvent")
       div.tastings-event-modal
         div.tastings-event-modal__close-btn(ng-click="ac.selectedEvent = null")
-          img(src="../assets/images/tastings-events/icon_close-btn.png")
+          img(src="assets/images/tastings-events/icon_close-btn.png")
         div.tastings-event-modal__age-restriction(ng-if="ac.selectedEvent.ageRestriction")
-          img(ng-src="../assets/images/tastings-events/icon_age-restriction.png" alt="Ages 21+")
+          img(ng-src="assets/images/tastings-events/icon_age-restriction.png" alt="Ages 21+")
         div.tastings-event-modal__branding
-          img(src="../assets/images/tastings-events/logo_tealeaves-rudd_black.png" alt="TEALEAVES x RUDD" ng-if="!ac.selectedEvent.withRiedel")
-          img(src="../assets/images/tastings-events/logo_tealeaves-rudd-riedel_black.png" alt="TEALEAVES x RUDD x Riedel" ng-if="ac.selectedEvent.withRiedel")
+          img(src="assets/images/tastings-events/logo_tealeaves-rudd_black.png" alt="TEALEAVES x RUDD" ng-if="!ac.selectedEvent.withRiedel")
+          img(src="assets/images/tastings-events/logo_tealeaves-rudd-riedel_black.png" alt="TEALEAVES x RUDD x Riedel" ng-if="ac.selectedEvent.withRiedel")
         div.tastings-event-modal__header
           h2(ng-if="ac.selectedEvent.name") {{ ac.selectedEvent.name }}
           h2(ng-if="!ac.selectedEvent.name") TBD
@@ -61,7 +61,7 @@ block body
             div TBD
         div.tastings-event-modal__footer
           div.tastings-event-modal__social-icon
-            img(src="../assets/images/tastings-events/icon_social-facebook.png")
+            img(src="assets/images/tastings-events/icon_social-facebook.png")
           div.tastings-event-modal__social-icon
-            img(src="../assets/images/tastings-events/icon_social-twitter.png")
+            img(src="assets/images/tastings-events/icon_social-twitter.png")
 

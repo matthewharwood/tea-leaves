@@ -80,6 +80,7 @@
   background-position: left top;
   margin-top: -5%;
   opacity: 1;
+  pointer-events: none;
 }
 
 .landing__bg-trigger {
@@ -94,7 +95,11 @@
     width: 100%;
 
     &.waypoint--active + .fixed-table + .landing__bg {
-      opacity: 1
+      opacity: 1;
+    }
+
+    &.waypoint--active + .fixed-table {
+      opacity: 0;
     }
   }
 }

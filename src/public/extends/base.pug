@@ -3,6 +3,7 @@
 doctype html
 html(lang='en')
   head
+    base(href="/")
     meta(charset='UTF-8')
     include ./gtm-head.rawhtml
     meta(name="viewport" content="width=device-width, initial-scale=1")
@@ -36,7 +37,7 @@ html(lang='en')
     link(rel='author', href='https://plus.google.com/[YOUR PERSONAL G+ PROFILE HERE]')
     //link(rel="stylesheet" type="text/css" href="https://cloud.typography.com/6681376/6429972/css/fonts.css")
     link(href='https://fonts.googleapis.com/css?family=Montserrat|Muli', rel='stylesheet')
-    link(rel='stylesheet' type='text/css' href='/assets/styles/main.css')
+    link(rel='stylesheet' type='text/css' href='assets/styles/main.css')
 
     base(href='/')
   body(ng-app="app" ng-controller="appCtrl as ac" ng-class="{'no-scroll': bodyScroll}")
@@ -44,5 +45,5 @@ html(lang='en')
     include ../includes/navigation/navigation.pug
     block body
     block script
-      script(src='bundle.js')
+      script(src='./bundle.js')
 
