@@ -64,8 +64,15 @@ $quote-min-height: 200 * 1px;
   flex: 1;
   font-size: 20px;
   height: auto;
+  margin: -5px;
   position: absolute;
   text-align: center;
+  top: 70%;
+
+  @include for-desktop-up() {
+    margin: 0;
+    top: auto;
+  }
 }
 
 .quotes__carousel-controlller-btn {
