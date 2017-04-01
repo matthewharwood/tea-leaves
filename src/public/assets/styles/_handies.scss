@@ -94,6 +94,13 @@
     height: 100%;
     width: 100%;
 }
+
+.full-bleed {
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
 .show-desktop {
    display: none;
    visibility: hidden;
