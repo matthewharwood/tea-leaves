@@ -7,7 +7,18 @@
   background: $black;
   height: 50px;
   top: 0;
-  z-index: $over-9000
+  z-index: $over-9000;
+  transform: translate3d(0, -50px, 0);
+  transition: transform .2s;
+
+  @include for-desktop-up() {
+    transition: none;
+    transform: translate3d(0, 0, 0);
+  }
+
+  &.sticky-nav--shown {
+    transform: translate3d(0, 0, 0);
+  }
 }
 
 .main-nav__list {
