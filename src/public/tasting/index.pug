@@ -32,7 +32,7 @@ block body
               button.button--primary(ng-click="ac.selectedEvent = event")
                 | Event Details
 
-    section.tastings-event-modal-container(ng-show="ac.selectedEvent")
+    section.tastings-event-modal-container.ng-cloak(ng-show="ac.selectedEvent")
       div.tastings-event-modal
         div.tastings-event-modal__close-btn(ng-click="ac.selectedEvent = null")
           img(src="assets/images/tastings-events/icon_close-btn.png")
