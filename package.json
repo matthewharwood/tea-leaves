@@ -14,9 +14,6 @@
   "devDependencies": {
     "@types/jasmine": "^2.5.38",
     "@types/jquery": "^2.0.41",
-    "angular-carousel": "^1.0.2",
-    "angular-slick": "0.0.0",
-    "angular-touch": "^1.6.4",
     "autoprefixer": "^6.7.6",
     "browser-sync": "^2.18.8",
     "concurrently": "^3.4.0",
@@ -56,7 +53,10 @@
   "dependencies": {
     "@types/angular": "^1.6.7",
     "angular": "^1.6.3",
-    "angular-touch": "^1.6.3",
-    "fastdom": "^1.0.5"
+    "angular-carousel": "^1.0.2",
+    "angular-slick": "0.0.0",
+    "angular-touch": "^1.6.4",
+    "fastdom": "^1.0.5",
+    "slick-carousel": "^1.6.0"
   }
 }
