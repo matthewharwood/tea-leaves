@@ -1,0 +1,119 @@
+@import "vars-color";
+
+.about-us {
+  height: 100%;
+  width: 100%;
+
+  & > * {
+    height: auto;
+    lost-utility: clearfix;
+    padding: 6%;
+    position: relative;
+    width: 100%;
+  }
+}
+
+.about-us__intro {
+  background: $white-off;
+}
+
+.about-us__intro-copy,
+.about-us__intro-typography {
+  padding: 5%;
+}
+
+.about-us__intro-typography {
+  font-size: 120px;
+  height: 100%;
+  lost-column: 1/3;
+  position: relative;
+}
+
+.about-us__intro-typography-line {
+  margin-top: 8%;
+  position: absolute;
+
+  &:first-child {
+    left: 15%;
+    top: 35px;
+  }
+
+  &:nth-child(2) {
+    display: flex;
+    left: 59%;
+    top: 170px;
+  }
+}
+
+.about-us__intro-logo {
+  position: absolute;
+  bottom: 25%;
+  left: 10%;
+  width: 20%;
+}
+
+.about-us__intro-copy-header {
+  font-size: 46px;
+  font-weight: 600;
+  margin-bottom: 70px;
+}
+
+.about-us__intro-copy-body {
+  font-size: 25px;
+  padding-right: 25%;
+}
+
+.about-us__title-line {
+  background: $black-off;
+  border: 2px solid #353535;
+  display: inline-block;
+  margin: 32% 0 0 20px;
+  height: 1px;
+  width: 100px;
+}
+
+.about-us__intro-copy {
+  lost-column: 2/3;
+  padding: 7% 10% 5% 15%;
+}
+
+.about-us__tealeaves,
+.about-us__art-of-blending {
+  background: $black-off;
+  color: $white-off;
+}
+
+.about-us__tealeaves-image-container,
+.about-us__tealeaves-copy,
+.about-us__art-of-blending__image-container,
+.about-us__art-of-blending__header-container,
+.about-us__ultimate-expression__header-container,
+.about-us__ultimate-expression__photo-container,
+.about-us__rudd-image-container,
+.about-us__rudd-copy {
+  lost-column: 1/2;
+}
+
+.about-us__art-of-blending__header-container {
+  position: absolute;
+  right: 543px;
+  top: 25%;
+}
+
+.about-us__art-of-blending__header {
+  font-size: 160px;
+}
+
+.about-us__art-of-blending__image {
+  max-width: 100%;
+}
+
+.about-us__tealeaves-copy {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.about-us__rudd-image {}
+.about-us__rudd-image-link {}
