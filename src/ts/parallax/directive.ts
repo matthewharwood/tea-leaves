@@ -91,7 +91,7 @@ function getDistanceFromWindowTop(element: HTMLElement): number {
         element = element.offsetParent;
         total += element.offsetTop - element.scrollTop;
     }
-    return total;
+    return total - document.scrollingElement.scrollTop;
 }
 
 function getDistanceFromWindowCenter(element: HTMLElement): number {
