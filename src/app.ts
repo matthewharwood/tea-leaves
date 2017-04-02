@@ -1,4 +1,8 @@
 import * as angular from 'angular';
+import * as slick from 'slick-carousel';
+import * as angularTouch from 'angular-touch';
+import * as angularSlick from 'angular-slick';
+import * as $ from 'jquery';
 
 import { fade } from './ts/fade/directive';
 import { frenchOak } from './ts/french-oak/directive';
@@ -10,7 +14,14 @@ import { mobileNavigation } from './ts/mobile_nav/directive';
 import { waypoint } from './ts/waypoint/directive';
 import { wipe } from './ts/wipe/directive';
 
+window['$'] = $;
+console.log('slick', slick);
+console.log('angularSlick', angularSlick);
+console.log('ANGULAR TOUCH', angularTouch);
+
 const app = angular.module('app', [
+  angularSlick,
+  angularTouch,
   fade.name,
   frenchOak.name,
   modal.name,

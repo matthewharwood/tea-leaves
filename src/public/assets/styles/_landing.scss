@@ -179,10 +179,11 @@ $tasting-table-setting-height-as-margin: 35%;
   background: $black;
   position: fixed;
   width: 100%;
-  top: -100%;
   left: 0;
   height: 300%;
   opacity: 1;
+  pointer-events: none;
+  top: -100%;
   transition: opacity .5s;
 
   img {
@@ -209,8 +210,9 @@ $tasting-table-setting-height-as-margin: 35%;
   background-repeat: no-repeat;
   background-size: 100% auto;
   background-position: left top;
-  position: fixed;
   padding-top: 220%;
+  pointer-events: none;
+  position: fixed;
   top: 0;
   width: 100%;
 
