@@ -61,9 +61,9 @@ function update(element: HTMLElement, prevState: IStickyState = {
         }
         fastdom.mutate(() => {
             if (currentState.translateDirection >= 0) {
-                element.classList.add('sticky-nav--shown');
+                element.classList.remove('sticky-nav--hidden');
             } else {
-                element.classList.remove('sticky-nav--shown');
+                element.classList.add('sticky-nav--hidden');
             }
             // const initialAdjustment =
             //     SPEED * currentState.translateDirection + currentY;
