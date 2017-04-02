@@ -1,4 +1,6 @@
 section.tasteteamonials
+    iframe(ng-if="showTasteaVideo" src="https://player.vimeo.com/video/181964440?autoplay=1&color=d2c0ac&title=0&byline=0&portrait=0" width="1920" height="960" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen)
+
   div.wrapper
     header
       h3.tasteteamonials__headline
@@ -15,7 +17,7 @@ section.tasteteamonials
         h4.tasteteamonial__title Master Sommelier
         h4.tasteteamonial__name Will Costello
         p.tasteteamonial__quote “It’s very, very pretty. High toned and flowery is the dominant characteristic of this tea.”
-        img.tasteteamonial__cta(src='assets/images/tasteamonials/cta.svg')
+        img.tasteteamonial__cta(src='assets/images/tasteamonials/cta.svg' ng-click="showTasteteaVideo = true; tasteteaVideoUrl='https://vimeo.com/180103049'")
       div.tasteteamonial
         div.tasteteamonial__icons
           img(src='assets/images/tasteamonials/logos/shaun-hergatt.png')
@@ -23,37 +25,51 @@ section.tasteteamonials
         h4.tasteteamonial__title 2-Star Michelin Executive Chef
         h4.tasteteamonial__name Shaun Hergatt
         p.tasteteamonial__quote “It’s extremely balanced and has a refined flavor profile. There is a certain terroir you can taste that is given from the barrels.”
-        img.tasteteamonial__cta(src='assets/images/tasteamonials/cta.svg')
+        img.tasteteamonial__cta(src='assets/images/tasteamonials/cta.svg' ng-click="showTasteteaVideo = true; tasteteaVideoUrl='https://vimeo.com/182721968'")
       div.tasteteamonial
         div.tasteteamonial__icons
           img(src='assets/images/tasteamonials/logos/mandarin-oriental.svg')
         h4.tasteteamonial__title Winemaker
         h4.tasteteamonial__name Frederick Ammons
         p.tasteteamonial__quote “I don’t get a lot of the toastyness from the oak which I think is good. Tea naturally has a smoky character to it, so I think the two fit really well together.”
-        img.tasteteamonial__cta(src='assets/images/tasteamonials/cta.svg')
+        img.tasteteamonial__cta(src='assets/images/tasteamonials/cta.svg' ng-click="showTasteteaVideo = true; tasteteaVideoUrl='https://vimeo.com/178613490'")
       div.tasteteamonial
         div.tasteteamonial__icons
           img(src='assets/images/tasteamonials/logos/mandarin-oriental.svg')
           img(src='assets/images/tasteamonials/logos/court-of-master-sommeliers.png')
-        h4.tasteteamonial__title Master Sommelier
-        h4.tasteteamonial__name Will Costello
-        p.tasteteamonial__quote “It’s very, very pretty. High toned and flowery is the dominant characteristic of this tea.”
-        img.tasteteamonial__cta(src='assets/images/tasteamonials/cta.svg')
+        h4.tasteteamonial__title Managing Director
+        h4.tasteteamonial__name Oscar Henquet
+        p.tasteteamonial__quote “Here you get the floral notes, you get some of the vanilla notes, the smoky notes, and at the same time it is a very elegant tea.”
+        img.tasteteamonial__cta(src='assets/images/tasteamonials/cta.svg' ng-click="showTasteteaVideo = true; tasteteaVideoUrl='https://vimeo.com/178954387'")
       div.tasteteamonial
         div.tasteteamonial__icons
           img(src='assets/images/tasteamonials/logos/shaun-hergatt.png')
           img(src='assets/images/tasteamonials/logos/shaun-hergatt.png')
-        h4.tasteteamonial__title 2-Star Michelin Executive Chef
-        h4.tasteteamonial__name Shaun Hergatt
-        p.tasteteamonial__quote “It’s extremely balanced and has a refined flavor profile. There is a certain terroir you can taste that is given from the barrels.”
-        img.tasteteamonial__cta(src='assets/images/tasteamonials/cta.svg')
+        h4.tasteteamonial__title VP of Operations
+        h4.tasteteamonial__name John Washko
+        p.tasteteamonial__quote “This leaves an essence of the wine on your palate, it leaves a taste that I’ve just come out of the wine room.”
+        img.tasteteamonial__cta(src='assets/images/tasteamonials/cta.svg' ng-click="showTasteteaVideo = true; tasteteaVideoUrl='https://vimeo.com/117297484'")
       div.tasteteamonial
         div.tasteteamonial__icons
           img(src='assets/images/tasteamonials/logos/mandarin-oriental.svg')
-        h4.tasteteamonial__title Winemakers
-        h4.tasteteamonial__name Frederick Ammons
-        p.tasteteamonial__quote “I don’t get a lot of the toastyness from the oak which I think is good. Tea naturally has a smoky character to it, so I think the two fit really well together.”
-        img.tasteteamonial__cta(src='assets/images/tasteamonials/cta.svg')
+        h4.tasteteamonial__title Executive Chef
+        h4.tasteteamonial__name Antonio Cardoso
+        p.tasteteamonial__quote “The blend, it’s very soothing. For a white tea, I think it’s a great flavorful tea.”
+        img.tasteteamonial__cta(src='assets/images/tasteamonials/cta.svg' ng-click="showTasteteaVideo = true; tasteteaVideoUrl='https://vimeo.com/159517608'")
+      div.tasteteamonial
+        div.tasteteamonial__icons
+          img(src='assets/images/tasteamonials/logos/mandarin-oriental.svg')
+        h4.tasteteamonial__title Food and Beverage Manager
+        h4.tasteteamonial__name Lukasz Bolbot
+        p.tasteteamonial__quote “If you age it longer, it’s going to overpower the subtleties of the white tea  so it’s a very fine game you know when it comes to aging.”
+        img.tasteteamonial__cta(src='assets/images/tasteamonials/cta.svg' ng-click="showTasteteaVideo = true; tasteteaVideoUrl='https://vimeo.com/124157232'")
+      div.tasteteamonial
+        div.tasteteamonial__icons
+          img(src='assets/images/tasteamonials/logos/mandarin-oriental.svg')
+        h4.tasteteamonial__title Executive Chef and General Manager
+        h4.tasteteamonial__name Trevor Kunk and Spencer Weiss
+        p.tasteteamonial__quote “I say a little bit of oak, jasmine, again the orange blossom or the honeysuckle blossom really resonates.”
+        img.tasteteamonial__cta(src='assets/images/tasteamonials/cta.svg' ng-click="showTasteteaVideo = true; tasteteaVideoUrl='https://vimeo.com/118042878'")
   div.wrapper.wrapper--mobile
     slick.tasteteamonials__content.tasteteamonials__content--mobile(dots="true" infinite="true")
       div.tasteteamonial__pair
@@ -64,7 +80,7 @@ section.tasteteamonials
           h4.tasteteamonial__title Master Sommelier
           h4.tasteteamonial__name Will Costello
           p.tasteteamonial__quote “It’s very, very pretty. High toned and flowery is the dominant characteristic of this tea.”
-          img.tasteteamonial__cta(src='assets/images/tasteamonials/cta.svg')
+          img.tasteteamonial__cta(src='assets/images/tasteamonials/cta.svg' ng-click="showTasteteaVideo = true; tasteteaVideoUrl=''")
         div.tasteteamonial
           div.tasteteamonial__icons
             img(src='assets/images/tasteamonials/logos/shaun-hergatt.png')
@@ -72,7 +88,7 @@ section.tasteteamonials
           h4.tasteteamonial__title 2-Star Michelin Executive Chef
           h4.tasteteamonial__name Shaun Hergatt
           p.tasteteamonial__quote “It’s extremely balanced and has a refined flavor profile. There is a certain terroir you can taste that is given from the barrels.”
-          img.tasteteamonial__cta(src='assets/images/tasteamonials/cta.svg')
+          img.tasteteamonial__cta(src='assets/images/tasteamonials/cta.svg' ng-click="showTasteteaVideo = true; tasteteaVideoUrl=''")
       div.tasteteamonial__pair
         div.tasteteamonial
           div.tasteteamonial__icons
@@ -80,7 +96,7 @@ section.tasteteamonials
           h4.tasteteamonial__title Winemaker
           h4.tasteteamonial__name Frederick Ammons
           p.tasteteamonial__quote “I don’t get a lot of the toastyness from the oak which I think is good. Tea naturally has a smoky character to it, so I think the two fit really well together.”
-          img.tasteteamonial__cta(src='assets/images/tasteamonials/cta.svg')
+          img.tasteteamonial__cta(src='assets/images/tasteamonials/cta.svg' ng-click="showTasteteaVideo = true; tasteteaVideoUrl=''")
         div.tasteteamonial
           div.tasteteamonial__icons
             img(src='assets/images/tasteamonials/logos/mandarin-oriental.svg')
@@ -88,7 +104,7 @@ section.tasteteamonials
           h4.tasteteamonial__title Master Sommelier
           h4.tasteteamonial__name Will Costello
           p.tasteteamonial__quote “It’s very, very pretty. High toned and flowery is the dominant characteristic of this tea.”
-          img.tasteteamonial__cta(src='assets/images/tasteamonials/cta.svg')
+          img.tasteteamonial__cta(src='assets/images/tasteamonials/cta.svg' ng-click="showTasteteaVideo = true; tasteteaVideoUrl=''")
       div.tasteteamonial__pair
         div.tasteteamonial
           div.tasteteamonial__icons
@@ -97,11 +113,11 @@ section.tasteteamonials
           h4.tasteteamonial__title 2-Star Michelin Executive Chef
           h4.tasteteamonial__name Shaun Hergatt
           p.tasteteamonial__quote “It’s extremely balanced and has a refined flavor profile. There is a certain terroir you can taste that is given from the barrels.”
-          img.tasteteamonial__cta(src='assets/images/tasteamonials/cta.svg')
+          img.tasteteamonial__cta(src='assets/images/tasteamonials/cta.svg' ng-click="showTasteteaVideo = true; tasteteaVideoUrl=''")
         div.tasteteamonial
           div.tasteteamonial__icons
             img(src='assets/images/tasteamonials/logos/mandarin-oriental.svg')
           h4.tasteteamonial__title Winemaker
           h4.tasteteamonial__name Frederick Ammons
           p.tasteteamonial__quote “I don’t get a lot of the toastyness from the oak which I think is good. Tea naturally has a smoky character to it, so I think the two fit really well together.”
-          img.tasteteamonial__cta(src='assets/images/tasteamonials/cta.svg')
+          img.tasteteamonial__cta(src='assets/images/tasteamonials/cta.svg' ng-click="showTasteteaVideo = true; tasteteaVideoUrl=''")

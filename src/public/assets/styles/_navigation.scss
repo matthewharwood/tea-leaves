@@ -11,13 +11,15 @@
   transform: translate3d(0, 0, 0);
   transition: transform .2s;
 
-  @include for-desktop-up() {
-    transition: none;
-    transform: translate3d(0, 0, 0);
-  }
-
   &.sticky-nav--hidden {
     transform: translate3d(0, -50px, 0);
+  }
+
+  @include for-desktop-up() {
+    transition: none;
+    &.sticky-nav--hidden {
+      transform: translate3d(0, 0, 0);
+    }
   }
 }
 

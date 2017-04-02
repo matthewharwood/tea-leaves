@@ -128,6 +128,7 @@ $tasteteamonials-section-padding: $mod-rhythm-4 * $px;
 .tasteteamonial__cta {
   width: 30px;
   margin-left: 1px;
+  cursor: pointer;
 
   @include for-desktop-up() {
     margin: 0;
@@ -136,4 +137,11 @@ $tasteteamonials-section-padding: $mod-rhythm-4 * $px;
 
 .down-chevron {
   width: 20px;
+}
+
+.tasteteamonials_video-overlay {
+  @extend %full-bleed;
+  position: fixed;
+  top: 0;
+  left: 0;
 }
