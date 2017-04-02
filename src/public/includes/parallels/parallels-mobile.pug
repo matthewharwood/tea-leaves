@@ -1,3 +1,103 @@
 include content
-section.parallels
-  h1 #{terroirTea.headline}
+section(ng-init="parallelsModalOpen = false" class='parallels--mobile')
+  h3.parallels--mobile__headline Parallels in <br> Wine &amp; Tea
+
+  ul
+    //
+    // Terroir wine
+    //
+    li.parallels--mobile__section
+      div.parallels__bg.parallels__bg--map--beige
+      div.parallels--mobile__title
+        h4 #{terroirWine.headline}
+        h3 #{terroirWine.subline} / <br> #{terroirTea.subline}
+      div.parallels--mobile__button-container
+        button(ng-click="parallelsModalOpen = true" class="button--primary--light") Learn more
+
+    li.parallels--mobile__section
+      div.parallels__bg.parallels__bg--grapes--beige
+      div.parallels--mobile__title
+        h4 #{keyIngredientWine.headline}
+        h3 #{keyIngredientWine.subline} / <br> #{keyIngredientTea.subline}
+      div.parallels--mobile__button-container
+        button(ng-click="parallelsModalOpen2 = true" class="button--primary--light") Learn more
+
+    li.parallels--mobile__section
+      div.parallels__bg.parallels__bg--barrel--beige
+      div.parallels--mobile__title
+        h4 #{techniqueWine.headline}
+        h3 #{techniqueWine.subline} / <br> #{techniqueTea.subline}
+      div.parallels--mobile__button-container
+        button(ng-click="parallelsModalOpen3 = true" class="button--primary--light") Learn more
+
+  modal.parallels--mobile__modal(opened='parallelsModalOpen')
+    div.parallels--mobile-container
+      div.parallels--mobile__content--mobile
+        div.parallels--mobile__title
+          h4 #{terroirWine.headline}
+          h3 #{terroirWine.subline}
+          div.parallels__bg.parallels__bg--map--beige
+        div
+          p.parallels--mobile__copy
+            | #{terroirWine.copy}
+      div.parallels--mobile__content--mobile
+        div.parallels--mobile__title
+          h4 #{terroirTea.headline}
+          h3 #{terroirTea.subline}
+          div.parallels__bg.parallels__bg--china--beige
+        div.parallels--mobile__content
+          p.parallels--mobile__copy
+            | #{terroirTea.copy}
+      div.parallels--mobile__content--mobile
+        a(href=terroirTea.buttonLink target="_blank")
+          button.button--primary--light #{terroirTea.button}
+        div.parallels__product
+          p #{terroirTea.buttonCopy}
+
+  modal.parallels--mobile__modal(opened='parallelsModalOpen2')
+    div.parallels--mobile-container
+      div.parallels--mobile__content--mobile
+        div.parallels--mobile__title
+          h4 #{keyIngredientWine.headline}
+          h3 #{keyIngredientWine.subline}
+          div.parallels__bg.parallels__bg--map--beige
+        div
+          p.parallels--mobile__copy
+            | #{keyIngredientWine.copy}
+      div.parallels--mobile__content--mobile
+        div.parallels--mobile__title
+          h4 #{keyIngredientTea.headline}
+          h3 #{keyIngredientTea.subline}
+          div.parallels__bg.parallels__bg--china--beige
+        div.parallels--mobile__content
+          p.parallels--mobile__copy
+            | #{keyIngredientTea.copy}
+      div.parallels--mobile__content--mobile
+        a(href=keyIngredientTea.buttonLink target="_blank")
+          button.button--primary--light #{keyIngredientTea.button}
+        div.parallels__product
+          p #{keyIngredientTea.buttonCopy}
+
+  modal.parallels--mobile__modal(opened='parallelsModalOpen3')
+    div.parallels--mobile-container
+      div.parallels--mobile__content--mobile
+        div.parallels--mobile__title
+          h4 #{techniqueWine.headline}
+          h3 #{techniqueWine.subline}
+          div.parallels__bg.parallels__bg--map--beige
+        div
+          p.parallels--mobile__copy
+            | #{techniqueWine.copy}
+      div.parallels--mobile__content--mobile
+        div.parallels--mobile__title
+          h4 #{techniqueTea.headline}
+          h3 #{techniqueTea.subline}
+          div.parallels__bg.parallels__bg--china--beige
+        div.parallels--mobile__content
+          p.parallels--mobile__copy
+            | #{techniqueTea.copy}
+      div.parallels--mobile__content--mobile
+        a(href=techniqueTea.buttonLink target="_blank")
+          button.button--primary--light #{techniqueTea.button}
+        div.parallels__product
+          p #{techniqueTea.buttonCopy}

@@ -33,7 +33,7 @@ const app = angular.module('app', [
   wipe.name,
 ]);
 
-app.config(['$sceDelegateProvider', function($sceDelegateProvider) {
+app.config(['$sceDelegateProvider', function ($sceDelegateProvider) {
   $sceDelegateProvider.resourceUrlWhitelist([
     'https://player.vimeo.com/video/180103049?autoplay=1&color=d2c0ac&title=0&byline=0&portrait=0',
     'https://player.vimeo.com/video/182721968?autoplay=1&color=d2c0ac&title=0&byline=0&portrait=0',
@@ -49,12 +49,12 @@ app.config(['$sceDelegateProvider', function($sceDelegateProvider) {
 
 
 app.controller('appCtrl', ['$rootScope', '$scope',
-  function($rootScope,$scope) {
+  function ($rootScope, $scope) {
 
     let vm = $scope;
     vm.bodyScroll = false;
 
-    $rootScope.$on('bodyScroll', function(event, msg) {
+    $rootScope.$on('bodyScroll', function (event, msg) {
       vm.bodyScroll = msg;
     });
 
