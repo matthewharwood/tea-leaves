@@ -77,14 +77,60 @@ $arrow-box-point-offset-y: 0;
 .parallels__title {
   width: 30%;
 }
-
-.parallels__barrel {
-  background-image: url(../../assets/images/parallels/barrel-light.svg);
+.parallels__bg {
   background-position: center center;
   background-repeat: no-repeat;
   background-size: contain;
   display: inline-block;
-  height: 60%;
+  height: 100%;
+  width: 30%;
+  opacity: .8;
+}
+
+// black
+.parallels__bg--barrel {
+  background-image: url(../../assets/images/parallels/barrel-light.svg);
+}
+
+.parallels__bg--map--black {
+  background-image: url(../images/parallels/black/america-map-black.png);
+}
+
+.parallels__bg--grapes--black {
+  background-image: url(../images/parallels/black/wine-grapes-black.png);
+}
+
+.parallels__bg--barrel--black {
+  background-image: url(../images/parallels/black/wine-barrel-black.png);
+}
+
+.parallels__bg--tea--black {
+  background-image: url(../images/parallels/black/tea-leaf-plant-black.png);
+}
+
+// beige
+.parallels__bg--map--beige {
+  background-image: url(../images/parallels/beige/america-map-beige.png);
+}
+
+.parallels__bg--grapes--beige {
+  background-image: url(../images/parallels/beige/wine-grapes-beige.png);
+}
+
+.parallels__bg--barrel--beige {
+  background-image: url(../images/parallels/beige/wine-barrel-beige.png);
+}
+
+.parallels__bg--tea-leaf--beige {
+  background-image: url(../images/parallels/beige/tea-leaf-plant-beige.png);
+}
+
+.parallels__bg--tea-rack--beige {
+  background-image: url(../images/parallels/beige/tea-leaves-racks-beige.png);
+}
+
+.parallels__bg--china--beige {
+  background-image: url(../images/parallels/beige/china-map-beige.png);
 }
 
 .parallels__content,
@@ -97,6 +143,10 @@ $arrow-box-point-offset-y: 0;
 
 .parallels__copy {
   font-family: $typeface-serif;
+}
+
+.parallels__product {
+  margin-left: 12px;
 }
 
 .parallels__product,

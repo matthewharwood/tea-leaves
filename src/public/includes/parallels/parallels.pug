@@ -3,69 +3,97 @@ section.parallels
   div.wipe
     div.wipe__section.wipe__section--left.parallels__tea-leaves
       ul.wipe__section-container
-        li.parallels__section
-          div.parallels__title
-            h4 #{terroirTea.headline}
-            h3 #{terroirTea.subline}
-          div.parallels__barrel
-          div.parallels__content
-            p.parallels__copy
-              | #{terroirTea.copy}
-            div.parallels__cta
-              button.button--primary--dark #{terroirTea.button}
-              div.parallels__product
-                p #{terroirTea.buttonCopy}
-        li.parallels__section
-          div.parallels__title
-            h4 #{keyIngredientTea.headline}
-            h3 #{keyIngredientTea.subline}
-          div.parallels__barrel
-          div.parallels__content
-            p.parallels__copy
-              | #{keyIngredientTea.copy}
-            div.parallels__cta
-              button.button--primary--dark #{keyIngredientTea.button}
-              div.parallels__product
-                p #{keyIngredientTea.buttonCopy}
-        li.parallels__section
-          div.parallels__title
-            h4 #{techniqueTea.headline}
-            h3 #{techniqueTea.subline}
-          div.parallels__barrel
-          div.parallels__content
-            p.parallels__copy
-              | #{techniqueTea.copy}
-            div.parallels__cta
-              button.button--primary--dark #{techniqueTea.button}
-              div.parallels__product
-                p #{techniqueTea.buttonCopy}
 
-    div.wipe__section.wipe__section--right.parallels__wine
-      ul.wipe__section-container
+        //
+        // Terroir wine
+        //
         li.parallels__section
           div.parallels__title
             h4 #{terroirWine.headline}
             h3 #{terroirWine.subline}
-          div.parallels__barrel
+          div.parallels__bg.parallels__bg--map--black
           div.parallels__content
             p.parallels__copy
               | #{terroirWine.copy}
+
+        //
+        // Technique wine
+        //
         li.parallels__section
           div.parallels__title
             h4 #{keyIngredientWine.headline}
             h3 #{keyIngredientWine.subline}
-          div.parallels__barrel
+          div.parallels__bg.parallels__bg--grapes--black
           div.parallels__content
             p.parallels__copy
               | #{keyIngredientWine.copy}
+
+        //
+        // Technique wine
+        //
         li.parallels__section
           div.parallels__title
             h4 #{techniqueWine.headline}
             h3 #{techniqueWine.subline}
-          div.parallels__barrel
+          div.parallels__bg.parallels__bg--barrel--black
           div.parallels__content
             p.parallels__copy
               | #{techniqueWine.copy}
+
+    div.wipe__section.wipe__section--right.parallels__wine
+      ul.wipe__section-container
+
+        //
+        // Terroir Tea
+        //
+        li.parallels__section
+          div.parallels__title
+            h4 #{terroirTea.headline}
+            h3 #{terroirTea.subline}
+          div.parallels__bg.parallels__bg--china--beige
+          div.parallels__content
+            p.parallels__copy
+              | #{terroirTea.copy}
+            div.parallels__cta
+              button.button--primary--light #{terroirTea.button}
+              div.parallels__product
+                p #{terroirTea.buttonCopy}
+
+        //
+        // Key Ingredient Tea
+        //
+        li.parallels__section
+          div.parallels__title
+            h4 #{keyIngredientTea.headline}
+            h3 #{keyIngredientTea.subline}
+          div.parallels__bg.parallels__bg--tea-leaf--beige
+          div.parallels__content
+            p.parallels__copy
+              | #{keyIngredientTea.copy}
+            div.parallels__cta
+              button.button--primary--light #{keyIngredientTea.button}
+              div.parallels__product
+                p #{keyIngredientTea.buttonCopy}
+
+        //
+        // Technique Tea
+        //
+        li.parallels__section
+          div.parallels__title
+            h4 #{techniqueTea.headline}
+            h3 #{techniqueTea.subline}
+          div.parallels__bg.parallels__bg--tea-rack--beige
+          div.parallels__content
+            p.parallels__copy
+              | #{techniqueTea.copy}
+            div.parallels__cta
+              button.button--primary--light #{techniqueTea.button}
+              div.parallels__product
+                p #{techniqueTea.buttonCopy}
+
+    //
+    // SLIDER
+    //
     div.wipe-slider
       div.wipe-slider__show-left
         div.arrow-box.arrow-box--left
