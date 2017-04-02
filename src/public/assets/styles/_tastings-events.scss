@@ -97,13 +97,13 @@ $tastings-events-section-padding: $mod-rhythm-4 * $px;
 }
 
 .tastings-event-modal-container {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.35);
-  padding: 0px;
+  padding: 0;
 
   @include for-tablet-landscape-up() {
     padding: 50px;
