@@ -128,6 +128,8 @@ $arrow-box-point-offset-y: 0;
 .parallels__cta {
   margin-top: 25px;
   width: 100%;
+  display: flex;
+
   .button--primary--dark {
     margin-right: 10px;
   }
