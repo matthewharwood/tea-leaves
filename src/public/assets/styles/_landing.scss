@@ -67,6 +67,7 @@ $tasting-table-setting-height-as-margin: 35%;
 
   @include for-desktop-up() {
     height: 200%;
+    margin-bottom: 0;
   }
 }
 
