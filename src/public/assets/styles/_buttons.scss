@@ -48,7 +48,6 @@
 
   &:active {
     background-color: lighten($black-off, 5%);
-    margin-top: 1px;
     box-shadow: rgba(0,0,0,.5) 0 1px 7px;
   }
 
@@ -79,7 +78,6 @@
 
   &:active {
     background-color: darken($white-off, 5%);
-    margin-top: 1px;
     box-shadow: rgba(0,0,0,.5) 0 1px 7px;
   }
 

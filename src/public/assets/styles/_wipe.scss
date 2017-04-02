@@ -1,6 +1,8 @@
 .wipe {
-  @extend %full-bleed;
+  height: auto;
+  min-height: 100%;
   overflow: hidden;
+  width: 100%;
 }
 
 .wipe-slider {
@@ -27,7 +29,8 @@
 }
 .wipe__section-container,
 .wipe__section {
-  @extend %full-bleed;
+  height: auto;
+  min-height: 100%;
   @extend %abs-fill;
   overflow: hidden;
 }

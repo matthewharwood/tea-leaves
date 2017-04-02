@@ -95,6 +95,15 @@
     width: 100%;
 }
 
+.min-full-bleed {
+  height: auto;
+  min-height: 100%;
+}
+
+.bg-off-black {
+  background-color: $black-off;
+}
+
 .full-bleed {
   height: 100%;
   width: 100%;
