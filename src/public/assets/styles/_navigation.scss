@@ -87,7 +87,8 @@ mobile-navigation {
     text-align: center;
     line-height: 31px;
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
+    padding-right: 16px;
     align-items: center;
     list-style-type: none;
   }
