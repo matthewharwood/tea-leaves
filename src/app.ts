@@ -33,9 +33,24 @@ const app = angular.module('app', [
   wipe.name,
 ]);
 
+app.config(['$sceDelegateProvider', function($sceDelegateProvider) {
+  $sceDelegateProvider.resourceUrlWhitelist([
+    'https://player.vimeo.com/video/180103049?autoplay=1&color=d2c0ac&title=0&byline=0&portrait=0',
+    'https://player.vimeo.com/video/182721968?autoplay=1&color=d2c0ac&title=0&byline=0&portrait=0',
+    'https://player.vimeo.com/video/178613490?autoplay=1&color=d2c0ac&title=0&byline=0&portrait=0',
+    'https://player.vimeo.com/video/178954387?autoplay=1&color=d2c0ac&title=0&byline=0&portrait=0',
+    'https://player.vimeo.com/video/117297484?autoplay=1&color=d2c0ac&title=0&byline=0&portrait=0',
+    'https://player.vimeo.com/video/159517608?autoplay=1&color=d2c0ac&title=0&byline=0&portrait=0',
+    'https://player.vimeo.com/video/124157232?autoplay=1&color=d2c0ac&title=0&byline=0&portrait=0',
+    'https://player.vimeo.com/video/118042878?autoplay=1&color=d2c0ac&title=0&byline=0&portrait=0',
+    'self',
+  ]);
+}]);
+
 
 app.controller('appCtrl', ['$rootScope', '$scope',
   function($rootScope,$scope) {
+
     let vm = $scope;
     vm.bodyScroll = false;
 
