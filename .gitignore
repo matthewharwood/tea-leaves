@@ -9,3 +9,4 @@ dist
 *.css
 *.html
 
+npm-debug.log
