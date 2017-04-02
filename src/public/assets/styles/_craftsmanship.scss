@@ -1,5 +1,6 @@
 .craftsmanship {
-  @include full-bleed();
+  height: auto;
+  min-height: 100%;
   @include flex-center-xy();
   background: $beige;
   color: $black-off;
@@ -12,13 +13,7 @@
 }
 
 .craftsmanship__content {
-  @include full-bleed();
-
-  lost-center: 100%;
-
-  @include for-desktop-up() {
-    lost-align: center;
-  }
+  width: 100%;
 }
 
 .craftsmanship__header {

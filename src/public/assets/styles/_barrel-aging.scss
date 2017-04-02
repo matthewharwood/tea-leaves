@@ -1,12 +1,12 @@
 $two-thirds: 2/3;
 
 .barrel-aging {
-  @include full-bleed();
+  @include flex-center-xy();
+  height: auto;
+  min-height: 100%;
   align-items: center;
   background-color: $beige;
   color: $black-off;
-  display: flex;
-  justify-content: center;
   overflow: hidden;
 
   .wrapper {
@@ -25,6 +25,7 @@ $two-thirds: 2/3;
 
 .barrel-aging__content {
   width: 100%;
+  padding-top: 144px;
 }
 
 .barrel-aging__headline {
@@ -47,20 +48,12 @@ $two-thirds: 2/3;
   @extend %figure_img--center--abs;
 }
 
-.barrel-aging__animation--bg {
-  //z-index: -3;
-}
-
-.barrel-aging__animation--fg-bg,
-.barrel-aging__animation--fg {
-  //z-index: -1;
-}
 
 .barrel-aging__animation--fg-bg {
   position: absolute;
   background: $beige;
   height: 140px;
-  margin-top: 1px;
+  margin-top: 4px;
   width: 100%;
 }
 
