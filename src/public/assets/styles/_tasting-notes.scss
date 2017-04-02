@@ -1,14 +1,3 @@
-.tasting-notes__intro {
-  height: auto;
-}
-
-.tasting-notes__imagery {
-  background: $black;
-
-  @include for-desktop-up() {
-    background: none;
-  }
-}
 
 .tasting-notes__intro,
 .tasting-notes__imagery {
@@ -17,17 +6,51 @@
   position: relative;
 
   .wrapper {
-    width: 80%;
     margin: 0 auto;
+  }
+}
 
-    @include for-desktop-up() {
+.tasting-notes__intro {
+  background: $black;
+
+  .wrapper {
+    width: 80%;
+  }
+
+  @include for-tablet-landscape-up() {
+    .wrapper {
+      width: 90%;
+    }
+  }
+
+  @include for-desktop-up() {
+    background: none;
+
+    .wrapper {
+      width: 80%;
+    }
+  }
+}
+
+.tasting-notes__imagery {
+  background: black;
+
+  .wrapper {
+    width: 80%;
+  }
+
+  @include for-tablet-landscape-up() {
+    .wrapper {
       padding-top: 100px;
       width: 100%;
       height: 100%;
     }
   }
-}
 
+  @include for-desktop-up() {
+    background: linear-gradient(to bottom,  rgba(0,0,0,0) 0%, rgba(0,0,0,0.75) 55%, rgba(0,0,0,1) 56%, rgba(0,0,0,1) 100%);
+  }
+}
 
 .tasting-notes__header {
   text-align: left;
@@ -39,36 +62,28 @@
 
 .tasting-notes__headline {
   @extend %headline-font-size;
-}
 
-.tasting-notes__para {
-  margin: ($text-margin-default * $pi) 0 0 0;
-  max-width: 420px;
   text-align: left;
 
-  @include for-desktop-up() {
-    margin: ($text-margin-default * $pi) auto;
-    lost-center: 420px;
+  @include for-tablet-landscape-up() {
     text-align: center;
   }
 }
 
-.tasting-notes__body {
-  margin: 42px 0;
+.tasting-notes__para {
+  margin: ($text-margin-default * $pi) auto 0;
+  max-width: 420px;
+  text-align: left;
 
-  @include for-desktop-up() {
-    margin: 72px 0 0 0;
+  @include for-tablet-landscape-up() {
+    text-align: center;
   }
-}
 
-.tasting-notes__row {
-  @extend %inline-list;
-  padding: 24px 0;
-
-  @include for-desktop-up() {
-    padding: 0;
-    lost-center: $container-default;
-  }
+  // @include for-desktop-up() {
+  //   margin: ($text-margin-default * $pi) auto;
+  //   lost-center: 420px;
+  //   text-align: center;
+  // }
 }
 
 .tasting-notes__row--full-width {
@@ -76,25 +91,77 @@
   lost-center: 100%;
 }
 
+.tasting-notes__body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 42px 0;
+
+  @include for-tablet-landscape-up() {
+    flex-direction: row;
+    margin: 72px 0 0 0;
+    min-width: 25%;
+  }
+}
+
+.tasting-note {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 36px;
+  max-width: 100%;
+
+  @include for-tablet-landscape-up() {
+    margin-bottom: 0;
+    max-width: 33%;
+  }
+
+  @include for-desktop-up() {
+    max-width: 30%;
+  }
+}
+
 .tasting-notes__title {
   width: 30%;
   max-width: 120px;
-  float: left;
-  height: 70px;
+  // height: 70px;
+  flex-shrink: 0;
   font-size: 24px;
   font-style: italic;
   font-family: $typeface-serif;
-  margin-top: -8px;
-  text-align: left;
+  // margin-top: -8px;
+  // text-align: left;
 
-  @include for-desktop-up() {
-    float: inherit;
-    lost-column: 2/15 0;
-    text-align: right;
-    max-width: inherit;
-    height: auto;
+  // @include for-tablet-landscape-up() {
+  //   float: inherit;
+  //   lost-column: 2/15 0;
+  //   text-align: right;
+  //   max-width: inherit;
+  //   height: auto;
+  // }
+}
+
+.tasting-notes__copy {
+  font-size: 14px;
+  font-family: $typeface-serif;
+
+  // @include for-tablet-landscape-up() {
+  //   padding-right: 94px;
+  //   lost-column: 3/15 0;
+  // }
+}
+
+.tasting-notes__row {
+  @extend %inline-list;
+
+  list-style-type: none;
+  padding: 24px 0;
+
+  @include for-tablet-landscape-up() {
+    padding: 0;
+    lost-center: $container-default;
   }
 }
+
 .tasting-notes__figcaption--pos {
   figcaption{
     left: 60%;
@@ -106,16 +173,6 @@
   figcaption{
     left: $l * 1%;
     top: $t * 1%;
-  }
-}
-
-.tasting-notes__copy {
-  font-size: 14px;
-  font-family: $typeface-serif;
-
-  @include for-desktop-up() {
-    padding-right: 94px;
-    lost-column: 3/15 0;
   }
 }
 
