@@ -270,6 +270,13 @@ $arrow-box-point-offset-y: 0;
 }
 
 .parallels--mobile__modal {
+  .tea-modal__content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: content-box;
+    padding: 72px 0;
+  }
 
   .tea-modal__content > * {
     position: relative;
@@ -283,11 +290,12 @@ $arrow-box-point-offset-y: 0;
 
   .tea-modal__container {
     position: fixed;
+    overflow: scroll;
 
     .tea-modal__close-btn {
       position: absolute;
       top: 66px;
-      right: 31px;
+      right: 12px;
       z-index: 10;
 
       svg {
