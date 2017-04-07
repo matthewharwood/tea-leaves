@@ -6,7 +6,7 @@
   "scripts": {
     "bootstrap": "npm install gulp-cli gulp postcss-cli -g && npm i && npm start",
     "start": "concurrently \"gulp watch\" \"webpack-dev-server --no-inline\"",
-    "build": "gulp && webpack && gulp images",
+    "build": "gulp && webpack -p && gulp images",
     "test": "karma start",
     "test-watch": "karma start --no-single-run --auto-watch"
   },

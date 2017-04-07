@@ -2,11 +2,10 @@ node_modules
 yarn-error.log
 yarn.lock
 coverage
-dist
 .idea
 .vscode
 *.map
-*.css
-*.html
+src/**/*.css
+src/**/*.html
 
 npm-debug.log
