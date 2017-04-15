@@ -49,6 +49,7 @@
 
   &:hover {
     color: darken($white, 10%);
+    border-bottom: 1px solid #fff;
   }
 
   &:active {
@@ -57,6 +58,10 @@
 
   &:visited {
     color: $white;
+  }
+
+  &.selected {
+    border-bottom: 1px solid #fff;
   }
 }
 

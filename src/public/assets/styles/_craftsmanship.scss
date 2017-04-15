@@ -1,10 +1,11 @@
 .craftsmanship {
-  height: auto;
-  min-height: 100%;
   @include flex-center-xy();
+  height: auto;
+  min-height: auto;
   background: $beige;
   color: $black-off;
   position: relative;
+  padding: 72px 0;
 
   .wrapper {
     margin: 48px auto;
