@@ -1,3 +1,7 @@
+
+@import "../../../../node_modules/slick-carousel/slick/slick.scss";
+@import "../../../../node_modules/slick-carousel/slick/slick-theme.scss";
+
 @import "vars-measurable";
 @import "vars-color";
 @import "mixins";
@@ -26,6 +30,3 @@
 
 @import "tastings-events";
 @import "about-us";
-
-@import "../../../../node_modules/slick-carousel/slick/slick.scss";
-@import "../../../../node_modules/slick-carousel/slick/slick-theme.scss";
