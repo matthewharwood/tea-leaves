@@ -13,7 +13,7 @@ $max-text-para: 17 * $px;
 }
 
 %headline-font-size {
-  font-size: responsive 46px 90px;
+  font-size: responsive 40px 90px;
   font-range: 350px $tabletLandscape;
 
   @include for-tablet-landscape-up {
@@ -55,7 +55,6 @@ h1, h2, h3, h4, h5 {
 
 h3 {
   font-size: 24px;
-  letter-spacing: 1.5px;
 }
 
 h4 {
