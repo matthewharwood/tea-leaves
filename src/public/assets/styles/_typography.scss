@@ -13,18 +13,22 @@ $max-text-para: 17 * $px;
 }
 
 %headline-font-size {
-  font-size: responsive 35px 90px;
+  font-size: responsive 46px 90px;
   font-range: 350px $tabletLandscape;
 
   @include for-tablet-landscape-up {
-    font-size: responsive 45px 112px;
+    font-size: responsive 64px 122px;
     font-range: $tabletLandscape $bigDesktop;
-
   }
 }
 
 %subline-font-size {
+  font-size: 32px;
   margin: $text-margin-default 0;
+
+  @include for-tablet-landscape-up {
+    font-size: 42px;
+  }
 }
 
 %para-typography {
@@ -73,4 +77,8 @@ p {
   font-weight: 300;
   font-size: 16px;
   line-height: 1.4;
+
+  @include for-tablet-landscape-up {
+    font-size: 17px;
+  }
 }
