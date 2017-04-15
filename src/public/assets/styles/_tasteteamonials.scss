@@ -81,7 +81,7 @@ $tasteteamonials-section-padding: $mod-rhythm-4 * $px;
   }
 
   .tasteteamonials__headline--highlighted {
-    color: $gray-dark;
+    color: lighten($black-off, 15%)
   }
 
   .tasteteamonials__blurb {
