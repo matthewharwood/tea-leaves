@@ -21,6 +21,11 @@ class WaypointDirective implements ng.IDirective {
         const threshold: number =
             'threshold' in attr ?
                 parseFloat(attr.threshold) : DEFAULT_THRESHOLD;
+        setTimeout(() => {
+            fastdom.measure(() => {
+                element[0].classList.add('waypoint--running');
+            });
+        }, 50);
         update(element[0] as HTMLElement, activeAfter, activeBefore, threshold);
     }
 }

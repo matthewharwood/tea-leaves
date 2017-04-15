@@ -5,6 +5,7 @@ import * as angularSlick from 'angular-slick';
 import * as $ from 'jquery';
 
 import { fade } from './ts/fade/directive';
+import { fluc } from './ts/fluc-curtain/directive';
 import { frenchOak } from './ts/french-oak/directive';
 import { modal } from './ts/modal/directive';
 import { parallax } from './ts/parallax/directive';
@@ -24,6 +25,7 @@ const app = angular.module('app', [
   angularSlick,
   angularTouch,
   fade.name,
+  fluc.name,
   frenchOak.name,
   modal.name,
   mobileNavigation.name,
