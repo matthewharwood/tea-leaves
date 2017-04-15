@@ -79,6 +79,7 @@ $tastings-events-section-padding: $mod-rhythm-4 * $px;
 .tastings-event__info__header--name,
 .tastings-event__info__header--date {
   line-height: 1.8;
+  @extend %subline-font-size;
 }
 
 .tastings-event__info__header--date {
