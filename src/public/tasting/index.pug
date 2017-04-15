@@ -62,8 +62,8 @@ block body
             h6 More Info:
             div TBD
         div.tastings-event-modal__footer
-          div.tastings-event-modal__social-icon
+          a.tastings-event-modal__social-icon(ng-if="ac.selectedEvent.facebook" ng-href="{{ ac.selectedEvent.facebook }}" target="_blank")
             img(src="assets/images/tastings-events/icon_social-facebook.png")
-          div.tastings-event-modal__social-icon
+          a.tastings-event-modal__social-icon(ng-if="ac.selectedEvent.twitter" ng-href="{{ ac.selectedEvent.twitter }}" target="_blank")
             img(src="assets/images/tastings-events/icon_social-twitter.png")
 
