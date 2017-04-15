@@ -1,5 +1,18 @@
 $tasting-table-setting-height-as-margin: 35%;
 
+@keyframes bounceAnimation{
+  0%{
+    transform: translate3d(0, 0, 0);}
+  25%{
+    transform: translate3d(0, -20px, 0);}
+  50%{
+    transform: translate3d(0, -10px, 0);}
+  75%{
+    transform: translate3d(0, -20px, 0);}
+  100%{
+    transform: translate3d(0, 0, 0);}
+}
+
 .fluc-curtain {
   position: fixed;
   top: 0;
@@ -211,9 +224,9 @@ $tasting-table-setting-height-as-margin: 35%;
 
   img {
     display: block;
-    width: 70%;
+    width: 50%;
     height: auto;
-    max-width: 70vh;
+    max-width: 50vh;
   }
 
   @include for-desktop-up() {
@@ -264,8 +277,8 @@ $tasting-table-setting-height-as-margin: 35%;
 }
 
 .landing__box {
-  width: 70%;
-  max-width: 70vh;
+  width: 50%;
+  max-width: 50vh;
 
   @include for-desktop-up() {
     width: 100%;
@@ -308,4 +321,47 @@ $tasting-table-setting-height-as-margin: 35%;
   @include for-desktop-up() {
     display: none;
   }
+}
+
+.landing-cta {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .25s;
+
+  .landing-cta__copy-container {
+    max-width: 50vh;
+    padding-top: 64%;
+    position: relative;
+    width: 50%;
+  }
+  .landing-cta__copy {
+    position: absolute;
+    top: 110%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    left: 0;
+
+    img {
+      animation: bounceAnimation 3s infinite;
+      cursor: pointer;
+      width: 20%;
+    }
+  }
+}
+
+.landing__box-container.waypoint.waypoint--active + .landing-cta {
+  opacity: 1;
+  pointer-events: all;
 }

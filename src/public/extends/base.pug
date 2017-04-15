@@ -69,3 +69,14 @@ html(lang='en')
     block script
       script(src='./bundle.js')
     include ../includes/footer/footer.pug
+    script
+      | $('.landing-cta__copy').click(function() {
+      |   $('html, body').animate({
+      |     scrollTop: window.document.body.clientHeight,
+      |   }, 800);
+      |   setTimeout(function() {
+      |     $('html, body').animate({
+      |       scrollTop: window.document.body.clientHeight + 1,
+      |     }, 0);
+      |   }, 1400);
+      | });
