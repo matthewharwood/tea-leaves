@@ -1,0 +1,40 @@
+.footer {
+  background-color: $black-off;
+  color: $white;
+  display: flex;
+  font-size: 12px;
+  letter-spacing: 1px;
+  justify-content: center;
+  padding: 25px;
+  text-transform: uppercase;
+
+  @include for-tablet-landscape-up {
+    justify-content: space-between;
+  }
+}
+
+.footer--social {
+  display: none;
+
+  a {
+    display: inline-block;
+    margin: 0 5px;
+
+    &:first-of-type {
+      margin-left: 0;
+    }
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+  }
+
+  @include for-tablet-landscape-up {
+    display: initial;
+  }
+}
+
+.footer--copyright {
+  display: flex;
+  align-items: center;
+}
