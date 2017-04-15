@@ -9,3 +9,4 @@ src/**/*.css
 src/**/*.html
 
 npm-debug.log
+dist/*
