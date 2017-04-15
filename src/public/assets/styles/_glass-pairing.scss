@@ -21,8 +21,7 @@ $glass-pairing-section-padding: $mod-rhythm-4 * $px;
   }
 
   @include for-desktop-up() {
-    lost-column: 1/2 0;
-
+    lost-column: 7/15 0;
     .glass-pairing__header {
       display: none;
     }
@@ -46,16 +45,21 @@ $glass-pairing-section-padding: $mod-rhythm-4 * $px;
 
   blockquote {
     @extend %quote-typography;
+    p {
+      line-height: 1.2;
+    }
   }
 
   @include for-desktop-up() {
-    lost-column: 1/2 0;
+    padding-top: 48px;
+    lost-column: 6/15 0;
+    lost-offset: 1/15;
     margin-right: 0 !important;
   }
 }
 
 .glass-pairing__riedel-logo {
-  margin: 40px 0;
+  margin: 72px 0;
 }
 
 .glass-pairing__wine {
