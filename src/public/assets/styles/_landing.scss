@@ -5,7 +5,7 @@ $tasting-table-setting-height-as-margin: 35%;
   background-color: $black;
   color: $white-off;
   opacity: 1;
-  position: fixed;
+  position: absolute;
   width: 100%;
   transition: opacity .5s;
   z-index: $over-9000;
@@ -65,7 +65,7 @@ $tasting-table-setting-height-as-margin: 35%;
 
   @include for-desktop-up() {
     height: 100%;
-    margin-bottom: 80%;
+    margin-bottom: 70%;
   }
 }
 

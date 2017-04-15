@@ -57,32 +57,34 @@ class MobileNavigationDirective implements ng.IDirective {
                 <a href="/" class="side-name__item--mobile__link">Home</a>
               </li>
             <li class="side-name__item--mobile">
-              <a href="/" class="side-name__item--mobile__link">Introduction</a>
+              <a href="/#introduction" class="side-name__item--mobile__link">Introduction</a>
             </li>
             <li class="side-name__item--mobile">
-              <a href="/" class="side-name__item--mobile__link">
+              <a href="/#tastingnotes" class="side-name__item--mobile__link">
                 Tasting Notes
               </a>
             </li>
             <li class="side-name__item--mobile">
-              <a href="/" class="side-name__item--mobile__link">
+              <a href="/#craftsmanship" class="side-name__item--mobile__link">
                 Craftsmanship
               </a>
             </li>
             <li class="side-name__item--mobile">
-              <a href="/" class="side-name__item--mobile__link">Parallels</a>
+              <a href="/#parallels" class="side-name__item--mobile__link">
+                Parallels
+              </a>
             </li>
             <li class="side-name__item--mobile">
-              <a href="/" class="side-name__item--mobile__link">Shop</a>
+              <a href="/#shop" class="side-name__item--mobile__link">Shop</a>
             </li>
             <li class="side-name__item--mobile">
-              <a href="/" class="side-name__item--mobile__link">
+              <a href="/#glasspairing" class="side-name__item--mobile__link">
                 Glass Pairing
               </a>
             </li>
             <li class="side-name__item--mobile">
-              <a href="/" class="side-name__item--mobile__link">
-                Tasteamonials
+              <a href="/#tasteteamonials" class="side-name__item--mobile__link">
+                Tasteteamonials
               </a>
             </li>
           </ul>

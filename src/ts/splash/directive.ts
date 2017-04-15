@@ -19,25 +19,38 @@ class SplashDirective implements ng.IDirective {
         function eatEvent(event) {
             event.preventDefault();
         }
+
+        let isFading = false;
         const scrollEvents = [
+            'mousedown',
             'touchmove',
             'scroll',
             'wheel',
             'keydown',
         ];
-        scrollEvents.forEach((event) => {
-            angular.element(document).on(event, eatEvent);
-        });
+        element[0].style.position = 'fixed';
 
-        setTimeout(() => {
-            element[0].classList.add('splash--invisible');
-            setTimeout(() => {
-                element[0].style.display = 'none';
-                scrollEvents.forEach((event) => {
-                    angular.element(document).off(event, eatEvent);
-                });
-            }, SPLASH_ANIM_TIME);
-        }, SPLASH_DELAY_TIME);
+        function startFading(event) {
+            eatEvent(event);
+            if (!isFading) {
+                isFading = true;
+                element[0].classList.add('splash--invisible');
+                setTimeout(() => {
+                    element[0].style.display = 'none';
+                    scrollEvents.forEach((event) => {
+                        angular.element(document).off(event, startFading);
+                    });
+                }, SPLASH_ANIM_TIME);
+            }
+        }
+
+        if (document.body.scrollTop || document.scrollingElement.scrollTop) {
+            element[0].style.display = 'none';
+        } else {
+            scrollEvents.forEach((event) => {
+                angular.element(document).on(event, startFading);
+            });
+        }
     }
 }
 
