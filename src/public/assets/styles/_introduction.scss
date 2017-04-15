@@ -8,6 +8,11 @@
   position: relative;
   z-index: 10;
 
+  @include for-desktop-up() {
+    height: auto;
+    width: auto;
+    padding: 72px 0 3% 0;
+  }
 }
 
 .introduction__container {
@@ -61,6 +66,7 @@
   @include for-tablet-landscape-up {
     order: 1;
     width: 66%;
+    padding-bottom: 7%;
 
     h1 + h1 {
       margin-left: 15%;
