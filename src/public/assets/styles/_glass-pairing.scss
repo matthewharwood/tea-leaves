@@ -32,7 +32,7 @@ $glass-pairing-section-padding: $mod-rhythm-4 * $px;
 .glass-pairing__headline {
   @extend %headline-font-size;
 
-  padding-bottom: $glass-pairing-section-padding;
+  padding-bottom: $glass-pairing-section-padding/4;
 }
 
 .glass-pairing__para {
@@ -40,7 +40,13 @@ $glass-pairing-section-padding: $mod-rhythm-4 * $px;
 }
 
 .glass-pairing__quote {
-  @extend %quote-typography;
+  .sub {
+    width: 50%;
+  }
+
+  blockquote {
+    @extend %quote-typography;
+  }
 
   @include for-desktop-up() {
     lost-column: 1/2 0;
