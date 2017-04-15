@@ -48,12 +48,26 @@ $two-thirds: 2/3;
   @extend %figure_img--center--abs;
 }
 
+.barrel-aging__animation--bg,
+.barrel-aging__animation--md,
+.barrel-aging__animation--fg-bg,
+.barrel-aging__animation--fg {
+  left: 16%;
+  margin-top: 6%;
+  width: 80%;
+}
+
+.barrel-aging__animation--md {
+  left: 11%;
+  margin-top: 4.5%;
+}
+
 
 .barrel-aging__animation--fg-bg {
   position: absolute;
   background: $beige;
-  height: 140px;
-  margin-top: 16px;
+  padding-top: 30%;
+  margin-top: 6.65%;
   width: 100%;
 }
 
