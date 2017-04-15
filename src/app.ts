@@ -8,6 +8,7 @@ import { fade } from './ts/fade/directive';
 import { frenchOak } from './ts/french-oak/directive';
 import { modal } from './ts/modal/directive';
 import { parallax } from './ts/parallax/directive';
+import { quotes } from './ts/quotes/directive';
 import { splash } from './ts/splash/directive';
 import { stickyNav } from './ts/sticky_nav/directive';
 import { mobileNavigation } from './ts/mobile_nav/directive';
@@ -27,6 +28,7 @@ const app = angular.module('app', [
   modal.name,
   mobileNavigation.name,
   parallax.name,
+  quotes.name,
   splash.name,
   stickyNav.name,
   waypoint.name,
