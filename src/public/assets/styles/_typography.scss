@@ -19,6 +19,7 @@ $max-text-para: 17 * $px;
   @include for-tablet-landscape-up {
     font-size: responsive 64px 122px;
     font-range: $tabletLandscape $bigDesktop;
+    line-height: 1;
   }
 }
 
