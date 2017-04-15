@@ -135,9 +135,19 @@ $tasteteamonials-section-padding: $mod-rhythm-4 * $px;
   }
 
   .tasteteamonial__cta {
+    height: 30px;
     width: 30px;
     margin-left: 1px;
     cursor: pointer;
+    background-image: url('../images/tasteamonials/cta.png');
+    background-size: 99%;
+    background-repeat: no-repeat;
+
+    &:hover {
+      background-image: url('../images/tasteamonials/cta-hover.png');
+      background-size: 99%;
+      background-repeat: no-repeat;
+    }
 
     @include for-desktop-up() {
       margin: 0;
@@ -155,6 +165,17 @@ $tasteteamonials-section-padding: $mod-rhythm-4 * $px;
     top: 0;
     left: 0;
     @extend %flex-center-xy;
+  }
+
+  .tasteteamonials_video-close-btn {
+    position: absolute;
+    right: 25px;
+    top: 75px;
+    z-index: 100;
+
+    &:hover {
+      cursor: pointer;
+    }
   }
 
   .tasteteamonials_video-overlay-container {
