@@ -59,8 +59,6 @@ $tastings-events-section-padding: $mod-rhythm-4 * $px;
 }
 
 .tastings-event__info__header {
-  @extend %subline-font-size;
-
   border-bottom: 1px solid $white-off;
   padding: 10px 0;
 
@@ -78,8 +76,7 @@ $tastings-events-section-padding: $mod-rhythm-4 * $px;
 
 .tastings-event__info__header--name,
 .tastings-event__info__header--date {
-  line-height: 1.8;
-  @extend %subline-font-size;
+  font-size: 32pt;
 }
 
 .tastings-event__info__header--date {
@@ -92,6 +89,8 @@ $tastings-events-section-padding: $mod-rhythm-4 * $px;
 }
 
 .tastings-event__info__content {
+  margin-top: 30px;
+
   button {
     margin-top: 30px;
   }
@@ -165,5 +164,6 @@ $tastings-events-section-padding: $mod-rhythm-4 * $px;
   align-items: flex-end;
 }
 .tastings-event-modal__social-icon {
+  display: inline-block;
   margin-left: 25px;
 }
