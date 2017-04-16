@@ -348,3 +348,27 @@ $arrow-box-point-offset-y: 0;
     flex-direction: row;
   }
 }
+
+.parallels--mobile__section .parallels-bg.wipe {
+  width: 100%;
+  position: relative;
+  padding-top: 75%;
+
+  img {
+    max-width: 75%;
+    max-height: 100%;
+  }
+
+  .wipe__section--left,
+  .wipe__section--right {
+    background: none;
+  }
+
+  .wipe__section--left {
+    border-right: 1px solid $white;
+  }
+
+  .wipe-slider__handle {
+    width: 12.5%;
+  }
+}
