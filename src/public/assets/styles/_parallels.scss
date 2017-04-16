@@ -365,7 +365,15 @@ $arrow-box-point-offset-y: 0;
   }
 
   .wipe__section--left {
-    border-right: 1px solid $white;
+    &::after {
+      position: absolute;
+      right: 0;
+      bottom: 80px;
+      width: 1px;
+      height: 70%;
+      background: #fff;
+      content: '';
+    }
   }
 
   .wipe-slider__handle {
