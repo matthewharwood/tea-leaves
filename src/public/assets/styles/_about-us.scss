@@ -252,15 +252,38 @@
   left: 3%;
   right: 3%;
 
+  color: $white;
+  text-decoration: none;
+
+  &:hover {
+    color: $beige;
+
+    .about-us__rudd-image-link-cta {
+      background-image: url('../images/about-us/cta-hover.png');
+      background-size: 99%;
+      background-repeat: no-repeat;
+    }
+  }
+
   p {
     display: inline-block;
     flex: 1;
+    font-size: 16pt;
     margin-bottom: 0;
+  }
+
+  @include for-tablet-landscape-up() {
+    p {
+      font-size: 17pt;
+    }
   }
 }
 
 .about-us__rudd-image-link-cta {
+  background-image: url('../images/about-us/cta.png');
+  background-size: 99%;
+  background-repeat: no-repeat;
   margin-right: 3%;
-  min-width: 30px;
-  width: 5%;
+  height: 30px;
+  width: 30px;
 }
