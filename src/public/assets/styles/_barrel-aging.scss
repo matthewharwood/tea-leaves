@@ -48,12 +48,19 @@ $two-thirds: 2/3;
   }
 }
 .barrel-aging__animation {
-  &, & figure {
+  position: absolute;
+
+  & figure {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
+    top: 5%;
+    left: 3%;
+    width: 184%;
     height: 100%;
+  }
+
+  .barrel-aging__headline {
+    opacity: 0;
+    visibility: hidden;
   }
 }
 .barrel-aging__animation--fg {
