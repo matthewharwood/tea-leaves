@@ -18,7 +18,7 @@ $arrow-box-point-offset-y: 0;
 #parallels {
   @include for-desktop-up-small-width() {
 
-    height: 140vh;
+    height: 150vh;
     position: relative;
   }
 
@@ -97,7 +97,7 @@ $arrow-box-point-offset-y: 0;
   flex-direction: row;
   justify-content: center;
   list-style: none;
-  width: 80%;
+  width: 95%;
   height: 100%;
   padding: 24px 0;
 }
@@ -147,17 +147,14 @@ $arrow-box-point-offset-y: 0;
 
 .parallels__bg--map--black {
   background-image: url(../images/parallels/black/america-map-black.png);
-  background-position: 12px;
 }
 
 .parallels__bg--grapes--black {
   background-image: url(../images/parallels/black/wine-grapes-black.png);
-  background-position: 12px;
 }
 
 .parallels__bg--barrel--black {
   background-image: url(../images/parallels/black/wine-barrel-black.png);
-  background-position: 12px;
 }
 
 .parallels__bg--tea--black {
@@ -201,7 +198,7 @@ $arrow-box-point-offset-y: 0;
   font-family: $typeface-serif;
   font-size: responsive 15px 22px;
   font-range: $tabletLandscape $bigDesktop;
-  line-height: 1;
+  line-height: 1.4;
 
 }
 
