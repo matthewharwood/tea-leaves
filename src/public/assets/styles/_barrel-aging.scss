@@ -13,6 +13,7 @@ $two-thirds: 2/3;
   .wrapper {
     width: 80%;
     margin: 24px auto;
+    max-width: 1130px;
     position: relative;
 
     @include for-tablet-landscape-up(){
@@ -27,7 +28,7 @@ $two-thirds: 2/3;
 
 .barrel-aging__content {
   width: 100%;
-  padding-top: 144px;
+  padding-top: 10%;
 }
 
 .barrel-aging__headline {
@@ -47,43 +48,44 @@ $two-thirds: 2/3;
   }
 }
 .barrel-aging__animation {
-  &, & figure {
+  position: absolute;
+
+  & figure {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
+    top: 5%;
+    left: 3%;
+    width: 184%;
     height: 100%;
   }
-}
 
-.barrel-aging__animation--bg,
-.barrel-aging__animation--md,
-.barrel-aging__animation--fg-bg,
+  .barrel-aging__headline {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
 .barrel-aging__animation--fg {
   position: absolute;
   top: 0;
-  left: 22%;
-  width: 57%;
-  margin-top: -17%;
-}
-
-.barrel-aging__animation--fg-bg {
-  position: absolute;
-  background: $beige;
-  padding-top: 30%;
-  margin-top: -5.5%;
-  width: 100%;
+  left: 31%;
+  width: 33%;
+  margin-top: -9.5%;
 }
 
 .barrel-aging__animation--md {
-  opacity: 0;
-  transform: translate3d(0, -150%, 0);
-  transition: transform 0s, opacity 0s;
-  z-index: 0;
+  position: absolute;
+  top: 0;
+  left: 22%;
+  width: 48%;
+  margin-top: -17%;
+}
 
-  &.waypoint--active {
-    opacity: 1;
-    transform: translate3d(0, 0, 0);
-    transition: transform 3s, opacity 0.5s;
-  }
+.barrel-aging__animation--md {
+  transform: translate3d(0, -48%, 0);
+  transition: transform 0s;
+  z-index: 0;
+}
+
+.barrel-aging.waypoint--active .barrel-aging__animation--md {
+  transform: translate3d(0, 0, 0);
+  transition: transform 3s, opacity 0.5s;
 }

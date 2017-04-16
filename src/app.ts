@@ -62,6 +62,10 @@ app.controller('appCtrl', ['$rootScope', '$scope',
       vm.bodyScroll = msg;
     });
 
+    this.disableScroll = () => {
+      document.body.style.overflow = 'hidden';
+    };
+
     vm.events = [
       {
         name: 'Tea & Wine Tasting With Riedel Glass',
@@ -97,7 +101,7 @@ app.controller('appCtrl', ['$rootScope', '$scope',
         twitter: 'https://twitter.com/TealeavesCo',
       },
       {
-        name: 'Blending & Craftsmanship Talk Featuring Riedel Glass',
+        name: 'Blending & Craftsmanship Talk With Riedel Glass',
         date: null,
         venue: null,
         location: null,

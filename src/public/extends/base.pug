@@ -36,7 +36,7 @@ html(lang='en')
     meta(property='fb:admins', content='USER_ID')
     link(rel='author', href='https://plus.google.com/[YOUR PERSONAL G+ PROFILE HERE]')
     link(rel="stylesheet" type="text/css" href="https://cloud.typography.com/6681376/6429972/css/fonts.css")
-    link(href='https://fonts.googleapis.com/css?family=Montserrat|Muli', rel='stylesheet')
+    link(href='https://fonts.googleapis.com/css?family=Montserrat', rel='stylesheet')
     link(rel='stylesheet' type='text/css' href='assets/styles/main.css')
 
     link(rel="apple-touch-icon" sizes="180x180" href="/assets/images/favicon/apple-touch-icon.png")
@@ -49,7 +49,7 @@ html(lang='en')
     base(href='/')
   body(ng-app="app" ng-controller="appCtrl as ac" ng-class="{'no-scroll': bodyScroll}")
     include ./gtm-body.rawhtml
-    -var menu = { 'Home': '/', 'About': '/about', 'Tasting': '/tasting' };
+    -var menu = { 'Home': '/', 'About': '/about', 'Tastings': '/tastings' };
 
     block link
       -var selected = 'Home'; //default
@@ -63,8 +63,9 @@ html(lang='en')
             else
               a(class="main-nav__item__link" href=val, title=key)= key
         li.main-nav__item
-          a(href="#" class="main-nav__item__link") Shop Now
+          a(href="http://www.tealeaves.com/" class="main-nav__item__link") Shop Now
       mobile-navigation
+    div.fluc-curtain
     block body
     block script
       script(src='./bundle.js')

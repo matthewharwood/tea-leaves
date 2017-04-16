@@ -63,7 +63,7 @@
 
   @include for-tablet-landscape-up() {
     flex-direction: row;
-    margin: 144px 0 72px;
+    margin: 144px 0 50px;
     min-width: 25%;
   }
 }
@@ -102,6 +102,14 @@
 .tasting-notes__copy {
   font-size: 14px;
   font-family: $typeface-serif;
+
+  h3 {
+    font-family: $typeface-sans-serif;
+    text-transform: uppercase;
+    font-size: 14px;
+    margin-bottom: 24px;
+    padding-top: 12px;
+  }
 }
 
 .tasting-notes__images {
@@ -135,12 +143,16 @@
     width: 50%;
   }
 
+
   @include for-desktop-up() {
     order: 2;
     width: 33%;
 
     img {
       width: 60%;
+    }
+    figure img {
+        margin: 100px auto;
     }
   }
 }
@@ -212,7 +224,6 @@
   width: 40%;
 
   img {
-    margin-top: 0%;
     width: 80%;
   }
 
@@ -227,13 +238,13 @@
     width: 33%;
 
     figure img {
-      margin-top: 21%;
+      margin: 90px;
       width: 40%;
     }
 
     figcaption {
-      left: 80%;
-      width: 25%;
+      left: 65%;
+      width: 35%;
     }
   }
 }
@@ -273,7 +284,7 @@
 
   order: 6;
   width: 50%;
-  margin-top: -20%;
+  margin-top: 31%;
 
   figure {
     position: absolute;
@@ -286,8 +297,8 @@
 
   figcaption {
     max-width: 170px;
-    bottom: 85%;
-    right: 0%;
+    bottom: 45%;
+    right: -45%;
   }
 
   @include for-desktop-up() {
@@ -296,7 +307,7 @@
     margin-top: 0%;
 
     figcaption {
-      bottom: 60%;
+      bottom: 80%;
       right: -13%;
     }
   }

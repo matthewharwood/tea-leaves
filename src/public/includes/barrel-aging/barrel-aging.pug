@@ -1,16 +1,14 @@
 - var imgsrc =  'assets/images/barrel-aging/'
-section.barrel-aging
+section.barrel-aging.waypoint(active-after active-until-disappear)
   div.barrel-aging__content
     div.wrapper
       div.barrel-aging__animation
+        h3.barrel-aging__headline Wine Barrel
         figure
-          img(src=imgsrc + "barrel-v2-bg.png" class="barrel-aging__animation--bg")
-          img(src=imgsrc + "leaves-v2.png" active-after threshold=0.7 class="barrel-aging__animation--md waypoint")
-          div.barrel-aging__animation--fg-bg
-          img(src=imgsrc + "barrel-v2-fg.png" class="barrel-aging__animation--fg")
+          img.barrel-aging__animation--md(src=imgsrc + "leaves-v2.png")
+          img.barrel-aging__animation--fg(src=imgsrc + "whole-barrel.png")
       header.barrel-aging__header.cf
         div.col-4-5th
-
           h4.eyebrow Technique&mdash;
           h3.barrel-aging__headline Wine Barrel Aging Tea
       div.barrel-aging__para

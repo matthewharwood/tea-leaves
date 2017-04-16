@@ -19,13 +19,14 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  width: $container-default;
+  width: 90%;
   margin: 0 auto;
   padding: 72px 0;
 
   @include for-desktop-up() {
     padding: 0;
     height: 60%;
+    width: 90%;
   }
 
   h1 {
@@ -100,7 +101,8 @@
   @include for-tablet-landscape-up {
     justify-content: flex-end;
     order: 3;
-    width: 33%;
+    width: 50%;
+    padding-top: 24px;
 
     .introduction__quote {
       margin-left: 10%;
@@ -118,12 +120,19 @@
     align-items: flex-end;
     justify-content: flex-end;
     order: 4;
-    width: 66%;
+    width: 50%;
+    padding-top: 24px;
   }
+}
+
+.introduction__container.waypoint--active .introduction__quote {
+  opacity: 1;
 }
 
 .introduction__quote {
   max-width: 450px;
+  opacity: 0;
+  transition: opacity 1s;
 
   p {
     &:not(:first-of-type) {

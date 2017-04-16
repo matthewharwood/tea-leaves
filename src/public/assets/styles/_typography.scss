@@ -1,4 +1,4 @@
-$typeface-serif: "Hoefler Titling A", "Hoefler Titling B", sans-serif;
+$typeface-serif: "Hoefler Titling A", "Hoefler Titling B", serif;
 $typeface-sans-serif: 'Montserrat', sans-serif;
 $typeface-body: 'Muli', sans-serif;
 $text-margin-default: $mod-rhythm-2 * $px;
@@ -55,7 +55,7 @@ h1, h2, h3, h4, h5 {
 }
 
 h3 {
-  font-size: 24px;
+  font-size: 32px;
 }
 
 h4 {
@@ -75,7 +75,7 @@ p {
   font-family: $typeface-serif;
   font-style: normal;
   font-weight: 300;
-  font-size: 16px;
+  font-size: 10pt;
   line-height: 1.4;
 
   @include for-tablet-landscape-up {

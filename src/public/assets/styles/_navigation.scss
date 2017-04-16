@@ -7,7 +7,7 @@
   background: $black;
   height: 50px;
   top: 0;
-  z-index: $over-9000;
+  z-index: $over-9000 + 25;
   transform: translate3d(0, 0, 0);
   transition: transform .2s;
 

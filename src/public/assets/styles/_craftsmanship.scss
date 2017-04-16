@@ -15,6 +15,14 @@
 
 .craftsmanship__content {
   width: 100%;
+  opacity: 0;
+  transform: translate3d(0, 24px, 0);
+  transition: transform 1s, opacity 1s;
+
+  &.waypoint--active {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
 }
 
 .craftsmanship__header {
@@ -26,6 +34,7 @@
 }
 .craftsmanship__main {
   width: 100%;
+  margin-top: 42px;
 
   @include for-desktop-up() {
     lost-offset: 1/15;
