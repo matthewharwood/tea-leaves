@@ -217,6 +217,7 @@ $tasting-table-setting-height-as-margin: 35%;
   opacity: 1;
   pointer-events: none;
   top: -100%;
+  z-index: $over-9000;
 
   &.waypoint--running {
     transition: opacity .5s;

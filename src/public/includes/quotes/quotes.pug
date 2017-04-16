@@ -1,6 +1,6 @@
 section.quotes.cf
   div.wrapper
-    ul.quotes__carousel.parallax.waypoint.fade.quotes-directive.cf(threshold=0.3 fade-speed=0.05 stop-after active-after speed=1.1)
+    ul.quotes__carousel.parallax.waypoint.quotes-directive.cf(threshold=0.45 stop-after active-after speed=1.1)
       li.quotes__carousel-item(ng-init="selectedQuote = 1" ng-show="selectedQuote == 1")
         blockquote
           p “It’s very, very pretty. High toned and flowery is the dominant characteristic of this tea.”
@@ -10,7 +10,7 @@ section.quotes.cf
           p “There is a certain terroir that you can taste that is given from the barrels.”
           p - Executive Chef Shaun Hergatt, 2-Star Michelin
 
-    ul.quotes__carousel-controller.waypoint.fade(threshold=0.3)
+    ul.quotes__carousel-controller
       li.quotes__carousel-controlller-btn(ng-class="{active: selectedQuote == 1}" ng-click="selectedQuote = 1") ●
       li.quotes__carousel-controlller-btn(ng-class="{active: selectedQuote == 2}" ng-click="selectedQuote = 2") ●
 

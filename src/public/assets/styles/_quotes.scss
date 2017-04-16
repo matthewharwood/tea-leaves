@@ -2,6 +2,7 @@ $quote-min-height: 200 * 1px;
 
 .quotes {
   color: $white-off;
+  padding-top: 3%;
   position: relative;
 
   @include for-desktop-up() {
