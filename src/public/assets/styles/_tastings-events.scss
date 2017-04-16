@@ -141,7 +141,7 @@ $tastings-events-section-padding: $mod-rhythm-4 * $px;
 
 .tastings-event-modal__header {
   border-bottom: 1px solid $black;
-  padding: 10px 0;
+  padding: 22px 0 5px;
 }
 
 .tastings-event-modal__info {
@@ -149,6 +149,7 @@ $tastings-events-section-padding: $mod-rhythm-4 * $px;
 
   h6 {
     margin-bottom: 10px;
+    margin-top: 15px;
     text-transform: uppercase;
   }
   div {
