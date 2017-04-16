@@ -369,7 +369,7 @@ $tasting-table-setting-height-as-margin: 35%;
     img {
       //animation: bounceAnimation 3s infinite;
       cursor: pointer;
-      width: 10%;
+      width: 40px;
     }
   }
 }
@@ -392,6 +392,6 @@ $tasting-table-setting-height-as-margin: 35%;
   content: 'swipe';
   font-family: $typeface-serif;
   bottom: 0;
-  font-size: 20px;
+  font-size: 12px;
   opacity: .75;
 }
