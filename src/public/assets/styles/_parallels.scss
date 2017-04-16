@@ -4,6 +4,17 @@ $slider-size: 50px;
 $arrow-box-point-offset-x: $slider-size * .75;
 $arrow-box-point-offset-y: 0;
 
+@keyframes pulse{
+  0%,100%{
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+  50%{
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+  }
+}
+
 #parallels {
   @include for-desktop-up-small-width() {
 
@@ -63,12 +74,20 @@ $arrow-box-point-offset-y: 0;
     background: $white-off;
     border-radius: $slider-size;
     cursor: pointer;
+    cursor: ew-resize;
     display: flex;
     justify-content: center;
     font-family: $typeface-sans-serif;
     font-size: 30px;
     height: $slider-size;
     width: $slider-size;
+
+    animation: pulse 1.2s infinite cubic-bezier(.4,0,.2,1);
+    animation-delay: .3s;
+
+    &:hover {
+      animation-play-state: paused;
+    }
   }
 }
 
@@ -177,6 +196,10 @@ $arrow-box-point-offset-y: 0;
 
 .parallels__copy {
   font-family: $typeface-serif;
+  font-size: responsive 15px 22px;
+  font-range: $tabletLandscape $bigDesktop;
+  line-height: 1;
+
 }
 
 .parallels__product {
