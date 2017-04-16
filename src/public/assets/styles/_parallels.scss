@@ -369,15 +369,14 @@ $arrow-box-point-offset-y: 0;
       position: absolute;
       right: 0;
       width: 1px;
-      height: 172px;
+      height: 240px;
       background: #fff;
       content: '';
       display: flex;
       align-items: center;
       justify-content: center;
-      top: 10px;
-      bottom: 10px;
-      margin: 10px 0;
+      top: 20px;
+      bottom: 20px;
     }
   }
 
