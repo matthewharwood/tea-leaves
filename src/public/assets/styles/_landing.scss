@@ -356,9 +356,10 @@ $tasting-table-setting-height-as-margin: 35%;
     position: relative;
     width: 50%;
   }
+
   .landing-cta__copy {
-    position: absolute;
-    top: 110%;
+    position: fixed;
+    bottom: 5%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -366,9 +367,9 @@ $tasting-table-setting-height-as-margin: 35%;
     left: 0;
 
     img {
-      animation: bounceAnimation 3s infinite;
+      //animation: bounceAnimation 3s infinite;
       cursor: pointer;
-      width: 20%;
+      width: 10%;
     }
   }
 }
@@ -384,3 +385,13 @@ $tasting-table-setting-height-as-margin: 35%;
   pointer-events: all;
 }
 
+
+.landing-cta__copy::after {
+  color: #fff;
+  position: absolute;
+  content: 'swipe';
+  font-family: $typeface-serif;
+  bottom: 0;
+  font-size: 20px;
+  opacity: .75;
+}
