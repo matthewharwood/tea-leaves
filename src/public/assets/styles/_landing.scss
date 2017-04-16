@@ -82,9 +82,6 @@ $tasting-table-setting-height-as-margin: 35%;
     letter-spacing: 1px;
     span {
       display: block;
-      @include for-desktop-up() {
-        display: inline;
-      }
     }
   }
 }
