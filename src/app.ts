@@ -97,7 +97,7 @@ app.controller('appCtrl', ['$rootScope', '$scope',
         twitter: 'https://twitter.com/TealeavesCo',
       },
       {
-        name: 'Blending & Craftsmanship Talk Featuring Riedel Glass',
+        name: 'Blending & Craftsmanship Talk With Riedel Glass',
         date: null,
         venue: null,
         location: null,
