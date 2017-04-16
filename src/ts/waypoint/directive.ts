@@ -18,6 +18,7 @@ class WaypointDirective implements ng.IDirective {
     ): void {
         const activeAfter: boolean = 'activeAfter' in attr;
         const activeBefore: boolean = 'activeBefore' in attr;
+        const activeUntilDisappear: boolean = 'activeUntilDisappear' in attr;
         const threshold: number =
             'threshold' in attr ?
                 parseFloat(attr.threshold) : DEFAULT_THRESHOLD;
@@ -26,14 +27,14 @@ class WaypointDirective implements ng.IDirective {
                 element[0].classList.add('waypoint--running');
             });
         }, 50);
-        update(element[0] as HTMLElement, activeAfter, activeBefore, threshold);
+        update(element[0] as HTMLElement, activeAfter, activeBefore, activeUntilDisappear, threshold);
     }
 }
 
 export const waypoint = angular.module('waypoint', []);
 waypoint.directive('waypoint', WaypointDirective.instance);
 
-function update(element: HTMLElement, activeAfter, activeBefore, threshold) {
+function update(element: HTMLElement, activeAfter, activeBefore, activeUntilDisappear, threshold) {
     fastdom.measure(() => {
 
         // Jump out early on unshown things.
@@ -44,6 +45,8 @@ function update(element: HTMLElement, activeAfter, activeBefore, threshold) {
             return;
         }
 
+        const clientHeight = element.clientHeight;
+        const windowHeight = window.innerHeight;
         const distanceFromCenter = getDistanceFromWindowCenter(element);
         const thresholdDistance = window.innerHeight * threshold;
         fastdom.mutate(() => {
@@ -54,13 +57,19 @@ function update(element: HTMLElement, activeAfter, activeBefore, threshold) {
             ) {
                 element.classList.add(ACTIVE_CLASS);
             } else {
-                element.classList.remove(ACTIVE_CLASS);
+                if (
+                    !activeUntilDisappear ||
+                    (Math.abs(distanceFromCenter) >= Math.max(
+                        clientHeight / 2, windowHeight))
+                ) {
+                    element.classList.remove(ACTIVE_CLASS);
+                }
             }
         });
     });
 
     window.requestAnimationFrame(() => {
-        update(element, activeAfter, activeBefore, threshold);
+        update(element, activeAfter, activeBefore, activeUntilDisappear, threshold);
     });
 }
 
