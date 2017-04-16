@@ -4,6 +4,14 @@ $slider-size: 50px;
 $arrow-box-point-offset-x: $slider-size * .75;
 $arrow-box-point-offset-y: 0;
 
+#parallels {
+  @include for-desktop-up-small-width() {
+
+    height: 140vh;
+    position: relative;
+  }
+
+}
 
 .arrow-box {
   align-items: center;
