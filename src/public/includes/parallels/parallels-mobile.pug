@@ -20,7 +20,7 @@ section.parallels--mobile(ng-init="parallelsModalOpen = false")
         h4 #{terroirWine.headline}
         h3 #{terroirWine.subline} / <br> #{terroirTea.subline}
       div.parallels--mobile__button-container
-        button(ng-click="parallelsModalOpen = true" class="button--primary--light") Learn more
+        button.button--primary--light(ng-click="ac.disableScroll(); parallelsModalOpen = true") Learn more
 
     li.parallels--mobile__section
       div.parallels-bg.wipe
@@ -36,7 +36,7 @@ section.parallels--mobile(ng-init="parallelsModalOpen = false")
         h4 #{keyIngredientWine.headline}
         h3 #{keyIngredientWine.subline} / <br> #{keyIngredientTea.subline}
       div.parallels--mobile__button-container
-        button(ng-click="parallelsModalOpen2 = true" class="button--primary--light") Learn more
+        button.button--primary--light(ng-click="ac.disableScroll(); parallelsModalOpen2 = true") Learn more
 
     li.parallels--mobile__section
       div.parallels-bg.wipe
@@ -52,7 +52,7 @@ section.parallels--mobile(ng-init="parallelsModalOpen = false")
         h4 #{techniqueWine.headline}
         h3 #{techniqueWine.subline} / <br> #{techniqueTea.subline}
       div.parallels--mobile__button-container
-        button(ng-click="parallelsModalOpen3 = true" class="button--primary--light") Learn more
+        button.button--primary--light(ng-click="ac.disableScroll(); parallelsModalOpen3 = true") Learn more
 
   modal.parallels--mobile__modal(opened='parallelsModalOpen')
     div.parallels--mobile-container

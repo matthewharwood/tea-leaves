@@ -62,6 +62,10 @@ app.controller('appCtrl', ['$rootScope', '$scope',
       vm.bodyScroll = msg;
     });
 
+    this.disableScroll = () => {
+      document.body.style.overflow = 'hidden';
+    };
+
     vm.events = [
       {
         name: 'Tea & Wine Tasting With Riedel Glass',
