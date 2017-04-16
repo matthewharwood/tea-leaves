@@ -67,7 +67,7 @@ gulp.task('css', function () {
           util.log("Results for app/**/*.js");
           util.log("# src files: ", nSrc);
           util.log("# dest files:", nDes);
-      });
+      }).on('change', browserSync.reload);
 
 });
 
@@ -81,8 +81,8 @@ gulp.task('browser-sync', ()=> {
     });
 });
 
-gulp.task('watch', ['css', 'html'], ()=> {
-    gulp.watch(cssPath, ['css']).on('change', browserSync.reload);
-    gulp.watch(templatePath, ['html']).on('change', browserSync.reload);
+gulp.task('watch', ['css', 'html', 'browser-sync'], ()=> {
+    gulp.watch(cssPath, ['css']);
+    gulp.watch(templatePath, ['html']);
 });
 
