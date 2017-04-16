@@ -50,6 +50,7 @@ class SplashDirective implements ng.IDirective {
             element[0].style.display = 'none';
         } else {
             $(document).ready(() => {
+                element[0].style.position = 'fixed';
                 scrollEvents.forEach((event) => {
                     angular.element(document).on(event, startFading);
                 });
