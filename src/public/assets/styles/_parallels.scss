@@ -15,14 +15,6 @@ $arrow-box-point-offset-y: 0;
   }
 }
 
-#parallels {
-  @include for-desktop-up-small-width() {
-    height: 120vh;
-    position: relative;
-  }
-
-}
-
 .arrow-box {
   align-items: center;
   background: url(../images/parallels/slider-arrow.svg);

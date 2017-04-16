@@ -27,7 +27,7 @@ $two-thirds: 2/3;
 
 .barrel-aging__content {
   width: 100%;
-  padding-top: 144px;
+  padding-top: 10%;
 }
 
 .barrel-aging__headline {
@@ -72,7 +72,7 @@ $two-thirds: 2/3;
 }
 
 .barrel-aging__animation--md {
-  transform: translate3d(0, -53%, 0);
+  transform: translate3d(0, -48%, 0);
   transition: transform 0s;
   z-index: 0;
 }
