@@ -16,11 +16,13 @@
 }
 
 .wipe-slider__show-left {
-
+  cursor: pointer;
+  pointer-events: all;
 }
 
 .wipe-slider__show-right {
-
+  cursor: pointer;
+  pointer-events: all;
 }
 
 .wipe__section-container {
