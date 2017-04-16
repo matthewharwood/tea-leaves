@@ -4,6 +4,7 @@ $slider-size: 50px;
 $arrow-box-point-offset-x: $slider-size * .75;
 $arrow-box-point-offset-y: 0;
 
+
 .arrow-box {
   align-items: center;
   background: url(../images/parallels/slider-arrow.svg);
@@ -171,6 +172,10 @@ $arrow-box-point-offset-y: 0;
 
 .parallels__copy {
   font-family: $typeface-serif;
+  font-size: responsive 15px 22px;
+  font-range: $tabletLandscape $bigDesktop;
+  line-height: 1;
+
 }
 
 .parallels__product {
