@@ -284,7 +284,7 @@
 
   order: 6;
   width: 50%;
-  margin-top: 11%;
+  margin-top: 31%;
 
   figure {
     position: absolute;
@@ -297,8 +297,8 @@
 
   figcaption {
     max-width: 170px;
-    bottom: 85%;
-    right: 0%;
+    bottom: 45%;
+    right: -45%;
   }
 
   @include for-desktop-up() {
