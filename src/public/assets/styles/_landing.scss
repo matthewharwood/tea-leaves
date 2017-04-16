@@ -13,6 +13,11 @@ $tasting-table-setting-height-as-margin: 35%;
     transform: translate3d(0, 0, 0);}
 }
 
+@keyframes fade-in-on-enter {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+
 .fluc-curtain {
   position: fixed;
   top: 0;
@@ -46,6 +51,9 @@ $tasting-table-setting-height-as-margin: 35%;
 
 .splash__logo {
   width: 66%;
+  animation:fade-in-on-enter ease-in 1;
+  animation-fill-mode:forwards;
+  animation-duration:1s;
 
   @include for-desktop-up() {
     width: 33%;
@@ -71,6 +79,9 @@ $tasting-table-setting-height-as-margin: 35%;
 .splash__container__figure-caption {
   text-align: center;
   padding-top: 15vh;
+  animation:fade-in-on-enter ease-in 1;
+  animation-fill-mode:forwards;
+  animation-duration:1s;
 
   h4 {
     font-size: responsive 14px 18px;

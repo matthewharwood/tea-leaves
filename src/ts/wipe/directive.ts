@@ -43,13 +43,13 @@ function update(element: HTMLElement) {
 
         fastdom.mutate(() => {
             leftSection.style.transform =
-                `translateX(calc(-50% + ${translateX}px))`;
+                `translate3d(calc(-50% + ${translateX}px), 0, 0)`;
             rightSection.style.transform =
-                `translateX(calc(50% + ${translateX}px))`;
+                `translate3d(calc(50% + ${translateX}px), 0, 0)`;
             leftSectionContainer.style.transform =
-                `translateX(calc(50% - ${translateX}px))`;
+                `translate3d(calc(50% - ${translateX}px), 0, 0)`;
             rightSectionContainer.style.transform =
-                `translateX(calc(-50% - ${translateX}px))`;
+                `translate3d(calc(-50% - ${translateX}px), 0, 0)`;
         });
     });
     window.requestAnimationFrame(() => {

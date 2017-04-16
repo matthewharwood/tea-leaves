@@ -8,24 +8,42 @@ $subline-font-size: $mod-rhythm-2 * $px;
   min-height: 100%;
   padding-bottom: 72px;
   background-color: #707781;
-
+  color: $white-off;
 
   @include for-desktop-up() {
     background-image: url('../images/french-oak/shop.jpg'), linear-gradient(135deg, $gray-light, $gray-dark);
-    background-size: cover;
-    background-position: left bottom;
+    background-size: 160%;
+    background-position: 32% 75%;
     background-repeat: no-repeat;
+    color: $black-off;
     display: flex;
     align-items: center;
   }
 
-  color: $black-off;
   .wrapper {
     margin: 0 auto;
     @include for-desktop-up() {
       padding-top: 72px;
       justify-content: center;
       align-items: center;
+    }
+  }
+}
+
+.french-oak {
+  .button--primary {
+    display: block;
+    &.button--primary--dark {
+      display: none;
+    }
+  }
+
+  @include for-desktop-up() {
+    .button--primary {
+      display: none;
+      &.button--primary--dark {
+        display: block;
+      }
     }
   }
 }
@@ -55,8 +73,21 @@ $subline-font-size: $mod-rhythm-2 * $px;
   figure {
     width: 65%;
 
+    img.desktop {
+      display: none;
+    }
+    img.mobile {
+      display: block;
+    }
+
     @include for-desktop-up() {
       width: 25%;
+      img.desktop {
+        display: block;
+      }
+      img.mobile {
+        display: none;
+      }
     }
   }
 

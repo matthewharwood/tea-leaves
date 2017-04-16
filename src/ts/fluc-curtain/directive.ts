@@ -14,12 +14,14 @@ class FlucDirective implements ng.IDirective {
         element: ng.IAugmentedJQuery,
         attr: ng.IAttributes,
     ): void {
-        console.log('Raising the curtain');
-        element[0].classList.add('fluc-curtain--raised');
-        setTimeout(() => {
-            console.log('Curtain raised');
-            element[0].style.display = 'none';
-        }, FLUC_ANIM_TIME);
+        $(document).ready(() => {
+            console.log('Raising the curtain');
+            element[0].classList.add('fluc-curtain--raised');
+            setTimeout(() => {
+                console.log('Curtain raised');
+                element[0].style.display = 'none';
+            }, FLUC_ANIM_TIME);
+        });
     }
 }
 

@@ -3,7 +3,7 @@ $glass-pairing-section-padding: $mod-rhythm-4 * $px;
 .glass-pairing {
   height: auto;
   overflow: hidden;
-  background-color: $white-off;
+  background-color: $beige;
   color: $black-off;
 
   .wrapper {
@@ -108,6 +108,10 @@ $glass-pairing-section-padding: $mod-rhythm-4 * $px;
   @include for-desktop-up() {
     @include inline-list();
     flex-direction: row;
+  }
+
+  .button--primary {
+    width: 160px;
   }
 }
 

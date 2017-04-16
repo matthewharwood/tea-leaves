@@ -29,11 +29,12 @@
   @extend %flex-center-xy;
   flex-direction: column;
 }
+
 .wipe__section-container,
 .wipe__section {
+  @extend %abs-fill;
   height: auto;
   min-height: 100%;
-  @extend %abs-fill;
   overflow: hidden;
 }
 .wipe__section--left {
