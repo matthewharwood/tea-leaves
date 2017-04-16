@@ -13,6 +13,7 @@ $two-thirds: 2/3;
   .wrapper {
     width: 80%;
     margin: 24px auto;
+    max-width: 1130px;
     position: relative;
 
     @include for-tablet-landscape-up(){
