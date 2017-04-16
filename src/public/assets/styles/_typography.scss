@@ -24,7 +24,7 @@ $max-text-para: 17 * $px;
 }
 
 %subline-font-size {
-  font-size: 32px;
+  font-size: 24px;
   margin: $text-margin-default 0;
 
   @include for-tablet-landscape-up {

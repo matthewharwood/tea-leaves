@@ -48,6 +48,7 @@ gulp.task('css', function () {
   const postcss    = require('gulp-postcss');
   const sourcemaps = require('gulp-sourcemaps');
   let nSrc=0, nDes=0;
+
   const processors = [
       require('lost'),
       require('rucksack-css'),
@@ -80,7 +81,7 @@ gulp.task('browser-sync', ()=> {
     });
 });
 
-gulp.task('watch', ['css', 'html', 'browser-sync'], ()=> {
+gulp.task('watch', ['css', 'html'], ()=> {
     gulp.watch(cssPath, ['css']).on('change', browserSync.reload);
     gulp.watch(templatePath, ['html']).on('change', browserSync.reload);
 });
