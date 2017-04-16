@@ -73,8 +73,21 @@ $subline-font-size: $mod-rhythm-2 * $px;
   figure {
     width: 65%;
 
+    img.desktop {
+      display: none;
+    }
+    img.mobile {
+      display: block;
+    }
+
     @include for-desktop-up() {
       width: 25%;
+      img.desktop {
+        display: block;
+      }
+      img.mobile {
+        display: none;
+      }
     }
   }
 
