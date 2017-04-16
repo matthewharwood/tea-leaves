@@ -24,13 +24,14 @@ class SplashDirective implements ng.IDirective {
         const scrollEvents = [
             'mousedown',
             'touchmove',
+            'touchstart',
             'scroll',
             'wheel',
             'keydown',
         ];
-        element[0].style.position = 'fixed';
 
         function startFading(event) {
+            console.log('STARTING FADING SPLASH', event);
             eatEvent(event);
             if (!isFading) {
                 isFading = true;
@@ -45,10 +46,13 @@ class SplashDirective implements ng.IDirective {
         }
 
         if (document.body.scrollTop || document.scrollingElement.scrollTop) {
+            console.log('HIDING splash', document.body.scrollTop || document.scrollingElement.scrollTop);
             element[0].style.display = 'none';
         } else {
-            scrollEvents.forEach((event) => {
-                angular.element(document).on(event, startFading);
+            $(document).ready(() => {
+                scrollEvents.forEach((event) => {
+                    angular.element(document).on(event, startFading);
+                });
             });
         }
     }
