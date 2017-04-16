@@ -122,8 +122,14 @@
   }
 }
 
+.introduction__container.waypoint--active .introduction__quote {
+  opacity: 1;
+}
+
 .introduction__quote {
   max-width: 450px;
+  opacity: 0;
+  transition: opacity 1s;
 
   p {
     &:not(:first-of-type) {
