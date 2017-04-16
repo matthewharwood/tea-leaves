@@ -11,15 +11,15 @@ $subline-font-size: $mod-rhythm-2 * $px;
 
 
   @include for-desktop-up() {
-    background-image: url('../images/french-oak/french-oak-bg.jpg'), linear-gradient(135deg, $gray-light, $gray-dark);
+    background-image: url('../images/french-oak/shop.jpg'), linear-gradient(135deg, $gray-light, $gray-dark);
     background-size: cover;
-    background-position: center center;
+    background-position: left bottom;
     background-repeat: no-repeat;
     display: flex;
     align-items: center;
   }
 
-  color: $white-off;
+  color: $black-off;
   .wrapper {
     margin: 0 auto;
     @include for-desktop-up() {

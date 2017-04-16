@@ -38,33 +38,51 @@ class SliderDirective implements ng.IDirective {
             offset: null,
         };
 
-        angular.element(handle).bind('mousedown', (event) => {
-            if (toggle.animating) {
-                return;
-            }
-            toggle.downX = event.clientX;
-            toggle.offset = null;
-            toggle.dragging = true;
-            event.preventDefault();
-        });
-        angular.element(document).bind('mousemove', (event) => {
-            toggle.currX = event.clientX;
-        });
-        angular.element(document).bind('mouseup', () => {
-            toggle.dragging = false;
+        const downEvents = ['mousedown', 'touchstart'];
+        const endEvents = ['mouseup', 'touchend'];
+        const moveEvents = ['mousemove', 'touchmove'];
+
+        function getClientX(e) {
+            return e.clientX || e['touches'][0].clientX;
+        }
+
+        downEvents.forEach((downEvent) => {
+            angular.element(handle).bind(downEvent, (event) => {
+                if (toggle.animating || toggle.dragging) {
+                    return;
+                }
+                toggle.dragging = true;
+                toggle.downX = getClientX(event);
+                toggle.offset = null;
+                event.preventDefault();
+            });
+
+            angular.element(element[0].offsetParent).bind(downEvent, (event) => {
+                if (toggle.dragging || toggle.animating) {
+                    return;
+                }
+                toggle.animating = true;
+                fastdom.measure(() => {
+                    const offset: number =
+                        getOffset(getClientX(event),
+                            element[0]) - element[0].clientWidth / 2;
+                    fastdom.mutate(() => {
+                        slideTo(element[0], offset > 0, toggle);
+                    });
+                });
+            });
         });
 
-        angular.element(element[0].offsetParent).bind('mousedown', (event) => {
-            if (toggle.dragging) {
-                return;
-            }
-            toggle.animating = true;
-            fastdom.measure(() => {
-                const offset: number =
-                    getOffset(event.clientX, element[0]) - element[0].clientWidth / 2;
-                fastdom.mutate(() => {
-                    slideTo(element[0], offset > 0, toggle);
-                });
+        moveEvents.forEach((moveEvent) => {
+            angular.element(document).bind(moveEvent, (event) => {
+                toggle.currX = getClientX(event)
+            });
+        });
+
+        endEvents.forEach((endEvent) => {
+            angular.element(document).bind(endEvent, () => {
+                console.log('ending dragging');
+                toggle.dragging = false;
             });
         });
 
