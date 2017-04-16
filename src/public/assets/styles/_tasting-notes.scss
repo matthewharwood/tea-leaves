@@ -143,12 +143,16 @@
     width: 50%;
   }
 
+
   @include for-desktop-up() {
     order: 2;
     width: 33%;
 
     img {
       width: 60%;
+    }
+    figure img {
+        margin: 100px auto;
     }
   }
 }
@@ -220,7 +224,6 @@
   width: 40%;
 
   img {
-    margin-top: 0%;
     width: 80%;
   }
 
@@ -235,13 +238,13 @@
     width: 33%;
 
     figure img {
-      margin-top: 21%;
+      margin: 90px;
       width: 40%;
     }
 
     figcaption {
-      left: 80%;
-      width: 25%;
+      left: 65%;
+      width: 35%;
     }
   }
 }
@@ -304,7 +307,7 @@
     margin-top: 0%;
 
     figcaption {
-      bottom: 60%;
+      bottom: 80%;
       right: -13%;
     }
   }
