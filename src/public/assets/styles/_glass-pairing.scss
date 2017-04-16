@@ -41,6 +41,8 @@ $glass-pairing-section-padding: $mod-rhythm-4 * $px;
 .glass-pairing__quote {
   .sub {
     width: 50%;
+    position: relative;
+    z-index: $over-9000;
   }
 
   blockquote {
