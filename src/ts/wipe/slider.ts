@@ -59,7 +59,7 @@ class SliderDirective implements ng.IDirective {
             });
 
             angular.element(element[0].offsetParent).bind(downEvent, (event) => {
-                if (toggle.dragging || toggle.animating) {
+                if (toggle.dragging || toggle.animating || window.innerWidth < 1024) {
                     return;
                 }
                 toggle.animating = true;
