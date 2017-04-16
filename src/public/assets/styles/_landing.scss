@@ -41,7 +41,7 @@ $tasting-table-setting-height-as-margin: 35%;
   position: absolute;
   width: 100%;
   transition: opacity .5s;
-  z-index: $over-9000;
+  z-index: $over-9000 + 2;
 }
 
 .splash__logo {
@@ -95,6 +95,7 @@ $tasting-table-setting-height-as-margin: 35%;
   height: 100%;
   margin-bottom: 110%;
   width: 100%;
+  z-index: $over-9000;
 
   @include for-desktop-up() {
     height: 100%;
@@ -217,7 +218,7 @@ $tasting-table-setting-height-as-margin: 35%;
   opacity: 1;
   pointer-events: none;
   top: -100%;
-  z-index: $over-9000;
+  z-index: $over-9000 - 1;
 
   &.waypoint--running {
     transition: opacity .5s;
@@ -295,6 +296,7 @@ $tasting-table-setting-height-as-margin: 35%;
   align-items: center;
   height: 100%;
   width: 100%;
+  z-index: $over-9000;
 
   @include for-desktop-up() {
     position: absolute;
@@ -338,6 +340,7 @@ $tasting-table-setting-height-as-margin: 35%;
   opacity: 0;
   pointer-events: none;
   transition: opacity .25s;
+  z-index: $over-9000;
 
   .landing-cta__copy-container {
     max-width: 50vh;
