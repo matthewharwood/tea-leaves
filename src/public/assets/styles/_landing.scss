@@ -373,7 +373,14 @@ $tasting-table-setting-height-as-margin: 35%;
   }
 }
 
-.landing__box-container.waypoint.waypoint--active + .landing-cta {
+.landing__box-container.waypoint.waypoint--active ~ .landing-cta {
   opacity: 1;
   pointer-events: all;
 }
+
+
+.splash.waypoint.waypoint--active ~ .landing-cta {
+  opacity: 1;
+  pointer-events: all;
+}
+
