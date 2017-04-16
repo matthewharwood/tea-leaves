@@ -43,7 +43,8 @@ class SliderDirective implements ng.IDirective {
         const moveEvents = ['mousemove', 'touchmove'];
 
         function getClientX(e) {
-            return e.clientX || e['touches'][0].clientX;
+            return typeof e.clientX !== 'undefined' ?
+                e.clientX : e['touches'][0].clientX;
         }
 
         downEvents.forEach((downEvent) => {
@@ -137,13 +138,17 @@ function update(element: HTMLElement, toggle, arrows, arrowOpacity = 1) {
             if (newOpacity <= 0) {
                 fastdom.mutate(() => {
                     arrows.forEach((arrow) => {
-                        arrow.style.display = 'none';
+                        if (arrow) {
+                            arrow.style.display = 'none';
+                        }
                     });
                 });
             } else if (newOpacity !== arrowOpacity) {
                 fastdom.mutate(() => {
                     arrows.forEach((arrow) => {
-                        arrow.style.opacity = newOpacity;
+                        if (arrow) {
+                            arrow.style.opacity = newOpacity;
+                        }
                     });
                 });
             }

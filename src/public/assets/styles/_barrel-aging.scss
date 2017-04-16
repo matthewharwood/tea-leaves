@@ -77,9 +77,7 @@ $two-thirds: 2/3;
   z-index: 0;
 }
 
-.barrel-aging.waypoint--active {
-  .barrel-aging__animation--md {
-    transform: translate3d(0, 0, 0);
-    transition: transform 3s, opacity 0.5s;
-  }
+.barrel-aging.waypoint--active .barrel-aging__animation--md {
+  transform: translate3d(0, 0, 0);
+  transition: transform 3s, opacity 0.5s;
 }

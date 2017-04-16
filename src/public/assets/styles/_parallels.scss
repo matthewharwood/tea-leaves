@@ -154,8 +154,11 @@ $arrow-box-point-offset-y: 0;
 }
 
 // beige
-.parallels__bg--map--beige {
+.parallels__bg--map--beige-us {
   background-image: url(../images/parallels/beige/america-map-beige.png);
+}
+.parallels__bg--map--beige-china {
+  background-image: url(../images/parallels/beige/china-map-beige.png);
 }
 
 .parallels__bg--grapes--beige {
@@ -346,5 +349,29 @@ $arrow-box-point-offset-y: 0;
 
   &:last-child {
     flex-direction: row;
+  }
+}
+
+.parallels--mobile__section .parallels-bg.wipe {
+  width: 100%;
+  position: relative;
+  padding-top: 75%;
+
+  img {
+    max-width: 75%;
+    max-height: 100%;
+  }
+
+  .wipe__section--left,
+  .wipe__section--right {
+    background: none;
+  }
+
+  .wipe__section--left {
+    border-right: 1px solid $white;
+  }
+
+  .wipe-slider__handle {
+    width: 12.5%;
   }
 }

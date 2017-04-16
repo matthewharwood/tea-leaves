@@ -7,7 +7,15 @@ section.parallels--mobile(ng-init="parallelsModalOpen = false")
     // Terroir wine
     //
     li.parallels--mobile__section
-      div.parallels__bg.parallels__bg--map--beige
+      div.parallels-bg.wipe
+        div.wipe__section.wipe__section--left
+          div.wipe__section-container
+            img(src="assets/images/parallels/beige/america-map-beige.png")
+        div.wipe__section.wipe__section--right
+          div.wipe__section-container
+            img(src="assets/images/parallels/beige/china-map-beige.png")
+        div.wipe-slider
+          img.wipe-slider__handle(src="assets/images/parallels/slider-handle.svg" alt="slider-arrow")
       div.parallels--mobile__title
         h4 #{terroirWine.headline}
         h3 #{terroirWine.subline} / <br> #{terroirTea.subline}
@@ -15,7 +23,15 @@ section.parallels--mobile(ng-init="parallelsModalOpen = false")
         button(ng-click="parallelsModalOpen = true" class="button--primary--light") Learn more
 
     li.parallels--mobile__section
-      div.parallels__bg.parallels__bg--grapes--beige
+      div.parallels-bg.wipe
+        div.wipe__section.wipe__section--left
+          div.wipe__section-container
+            img(src="assets/images/parallels/beige/wine-grapes-beige.png")
+        div.wipe__section.wipe__section--right
+          div.wipe__section-container
+            img(src="assets/images/parallels/beige/tea-leaf-plant-beige.png")
+        div.wipe-slider
+          img.wipe-slider__handle(src="assets/images/parallels/slider-handle.svg" alt="slider-arrow")
       div.parallels--mobile__title
         h4 #{keyIngredientWine.headline}
         h3 #{keyIngredientWine.subline} / <br> #{keyIngredientTea.subline}
@@ -23,7 +39,15 @@ section.parallels--mobile(ng-init="parallelsModalOpen = false")
         button(ng-click="parallelsModalOpen2 = true" class="button--primary--light") Learn more
 
     li.parallels--mobile__section
-      div.parallels__bg.parallels__bg--barrel--beige
+      div.parallels-bg.wipe
+        div.wipe__section.wipe__section--left
+          div.wipe__section-container
+            img(src="assets/images/parallels/beige/wine-barrel-beige.png")
+        div.wipe__section.wipe__section--right
+          div.wipe__section-container
+            img(src="assets/images/parallels/beige/tea-leaves-racks-beige.png")
+        div.wipe-slider
+          img.wipe-slider__handle(src="assets/images/parallels/slider-handle.svg" alt="slider-arrow")
       div.parallels--mobile__title
         h4 #{techniqueWine.headline}
         h3 #{techniqueWine.subline} / <br> #{techniqueTea.subline}
