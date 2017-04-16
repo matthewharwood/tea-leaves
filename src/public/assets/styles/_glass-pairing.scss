@@ -109,6 +109,10 @@ $glass-pairing-section-padding: $mod-rhythm-4 * $px;
     @include inline-list();
     flex-direction: row;
   }
+
+  .button--primary {
+    width: 160px;
+  }
 }
 
 .explore-bar__item:first-child {
