@@ -19,13 +19,14 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  width: $container-default;
+  width: 90%;
   margin: 0 auto;
   padding: 72px 0;
 
   @include for-desktop-up() {
     padding: 0;
     height: 60%;
+    width: $container-default;
   }
 
   h1 {
