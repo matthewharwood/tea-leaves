@@ -104,6 +104,11 @@ $tastings-events-section-padding: $mod-rhythm-4 * $px;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.35);
   padding: 0;
+  z-index: -1;
+
+  &.active {
+    z-index: 999;
+  }
 
   @include for-tablet-landscape-up() {
     padding: 50px;

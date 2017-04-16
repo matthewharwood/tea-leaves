@@ -3,7 +3,7 @@ block link
   -var selected = 'Tasting';
 
 block body
-  section.tastings-events(ng-init="ac.selectedEvent = null")
+  section.tastings-events(ng-init="ac.selectedEvent = null").ng-cloak
     div.wrapper
       header
         h3.tastings-events__headline Tastings&mdash;
@@ -34,7 +34,7 @@ block body
               button.button--primary(ng-click="ac.selectedEvent = event")
                 | Event Details
 
-    section.tastings-event-modal-container.ng-cloak(ng-if="ac.selectedEvent")
+    section.tastings-event-modal-container(ng-if="ac.selectedEvent" ng-class="{'active': ac.selectedEvent}")
       div.tastings-event-modal
         div.tastings-event-modal__close-btn(ng-click="ac.selectedEvent = null")
           img(src="assets/images/tastings-events/icon_close-btn.png")
