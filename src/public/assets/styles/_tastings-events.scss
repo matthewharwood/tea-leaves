@@ -76,12 +76,12 @@ $tastings-events-section-padding: $mod-rhythm-4 * $px;
 
 .tastings-event__info__header--name,
 .tastings-event__info__header--date {
-  font-size: 32pt;
+  @extend %subline-font-size;
 }
 
 .tastings-event__info__header--date {
   flex-shrink: 0;
-  margin-left: 0px;
+  margin-left: 0;
 
   @include for-tablet-landscape-up() {
     margin-left: 15px;
@@ -140,8 +140,6 @@ $tastings-events-section-padding: $mod-rhythm-4 * $px;
 }
 
 .tastings-event-modal__header {
-  @extend %subline-font-size;
-
   border-bottom: 1px solid $black;
   padding: 10px 0;
 }
