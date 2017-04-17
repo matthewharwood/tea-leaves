@@ -27,16 +27,16 @@ gulp.task('html', function(){
 
 gulp.task('images', () => {
   let nSrc=0, nDes=0;
-  return gulp.src('dist/public/assets/images/**/*')
+  return gulp.src('dist/assets/images/**/*')
       .pipe(imagemin({
         progressive: true,
         svgoPlugins: [{removeViewBox: false}],
         use: [pngquant()]
       }))
-      .pipe(gulp.dest('dist/public/assets/images'))
+      .pipe(gulp.dest('dist/assets/images'))
       .on("data", function() { nDes+=1;})
       .on("finish", function() {
-          util.log("Results: dist/public/assets/images/**/*");
+          util.log("Results: dist/assets/images/**/*");
           util.log("# src files: ", nSrc);
           util.log("# dest files:", nDes);
       })
