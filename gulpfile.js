@@ -21,7 +21,7 @@ gulp.task('html', function(){
           util.log("Results: src/public/**/*.pug");
           util.log("# src files: ", nSrc);
           util.log("# dest files:", nDes);
-      }).on('change', browserSync.reload);;
+      }).on('change', browserSync.reload);
 
 });
 
