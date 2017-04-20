@@ -15,6 +15,7 @@ class ModalDirective implements ng.IDirective {
   public restrict: string = 'E';
   public scope: {[key: string]: string} = {
     opened: '=',
+    shouldClose: '=',
   };
   public template: string = `
     <div class="tea-modal__container" ng-if="vm.opened">

@@ -29,7 +29,7 @@ $tasting-table-setting-height-as-margin: 35%;
   padding: 0;
   margin: 0;
   background: $black;
-  z-index: $over-9000 + 10;
+  z-index: $over-9000 + 101;
   opacity: 1;
   transition: opacity 100ms !important;
 
@@ -46,7 +46,7 @@ $tasting-table-setting-height-as-margin: 35%;
   position: absolute;
   width: 100%;
   transition: opacity .5s;
-  z-index: $over-9000 + 2;
+  z-index: $over-9000 + 100;
 }
 
 .splash__logo {
@@ -387,12 +387,39 @@ $tasting-table-setting-height-as-margin: 35%;
 }
 
 
-.landing-cta__copy::after {
-  color: #fff;
-  position: absolute;
-  content: 'swipe';
-  font-family: $typeface-serif;
-  bottom: 0;
-  font-size: 12px;
-  opacity: .75;
+.landing-cta__copy {
+
+
+  &::after {
+    bottom: 0;
+    content: 'swipe';
+  }
+  &::before {
+    content: '';
+  }
+
+  &::after,
+  &::before {
+    color: #fff;
+    position: absolute;
+    font-family: $typeface-serif;
+    font-size: 12px;
+    opacity: .75;
+    filter: drop-shadow(1px, 1px, 1px, 0, $black);
+  }
+
+  @include for-desktop-up() {
+    img {
+      transform: scaleY(-1);
+    }
+
+    &::after {
+      content: '';
+    }
+
+    &::before {
+      top: 0;
+      content: 'scroll';
+    }
+  }
 }

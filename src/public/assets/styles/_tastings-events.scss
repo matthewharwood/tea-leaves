@@ -129,14 +129,13 @@ $tastings-events-section-padding: $mod-rhythm-4 * $px;
   position: relative;
   background-color: $white-off;
   color: $black;
-  padding: 20px 30px;
+  padding: 50px 30px 20px;
   pointer-events: all;
   max-width: 750px;
   width: 90%;
   margin: 115px auto 0;
 
   @include for-tablet-landscape-up() {
-    padding: 20px 30px;
     width: 60%;
   }
 }
@@ -181,4 +180,22 @@ $tastings-events-section-padding: $mod-rhythm-4 * $px;
 .tastings-event-modal__social-icon {
   display: inline-block;
   margin-left: 25px;
+}
+
+.tastings-event-modal__age-restriction {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 25px;
+
+  &::after {
+    display: inline-block;
+    content: 'Ages 21+';
+    font-size: 14px;
+    margin-left: 8px;
+  }
+
+  img {
+    height: 16px;
+  }
 }

@@ -8,6 +8,7 @@ export interface IModalScope extends ng.IScope {
 export class ModalDirectiveCtrl {
 
   public opened: boolean;
+  public shouldClose: boolean;
   private static $inject = ['$scope', '$element'];
 
   constructor(
@@ -16,13 +17,14 @@ export class ModalDirectiveCtrl {
     protected attr: ng.IAttributes,
   ) {
     this.opened = false;
+    this.shouldClose = true;
     this.scope = scope;
     this.update();
   }
 
   public update() {
     fastdom.measure(() => {
-      if (window.innerWidth > 1023 && this.opened) {
+      if (window.innerWidth > 1023 && this.opened && this.shouldClose) {
         this.close();
       }
     });
@@ -33,7 +35,6 @@ export class ModalDirectiveCtrl {
   }
 
   public close() {
-    console.log('CLOSING');
     this.opened = false;
     this.scope.opened = false;
     document.body.style.overflow = 'auto';

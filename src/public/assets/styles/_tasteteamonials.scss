@@ -145,12 +145,12 @@ $tasteteamonials-section-padding: $mod-rhythm-4 * $px;
     width: 30px;
     margin-left: 1px;
     cursor: pointer;
-    background-image: url('../images/tasteamonials/cta.png');
+    background-image: url('../images/tasteamonials/cta.svg');
     background-size: 99%;
     background-repeat: no-repeat;
 
     &:hover {
-      background-image: url('../images/tasteamonials/cta-hover.png');
+      background-image: url('../images/tasteamonials/cta-hover.svg');
       background-size: 99%;
       background-repeat: no-repeat;
     }

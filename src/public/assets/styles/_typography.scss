@@ -79,6 +79,10 @@ p {
   line-height: 1.4;
 
   @include for-tablet-landscape-up {
-    font-size: 16pt;
+    font-size: 16px;
   }
+}
+
+p.body-copy {
+  font-size: 16px;
 }

@@ -47,7 +47,7 @@ class MobileNavigationDirective implements ng.IDirective {
               </a>
             </li>
             <li class="side-name__item--mobile">
-              <a href="#" class="side-name__item--mobile__link">
+              <a href="http://www.tealeaves.com" target="_blank" class="side-name__item--mobile__link">
                 Shop Now
               </a>
             </li>

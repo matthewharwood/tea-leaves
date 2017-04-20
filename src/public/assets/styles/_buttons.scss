@@ -60,6 +60,14 @@
   &:hover {
     background-color: $black-off;
     color: $white-off;
+
+    a, a:visited {
+      color: $white-off;
+    }
+  }
+
+  a, a:visited {
+    color: $black-off;
   }
 }
 

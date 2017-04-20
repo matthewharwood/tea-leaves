@@ -16,7 +16,10 @@
   }
 
   @include for-desktop-up() {
+    font-family: $typeface-sans-serif;
+    text-transform: uppercase;
     transition: none;
+
     &.sticky-nav--hidden {
       transform: translate3d(0, 0, 0);
     }
@@ -41,6 +44,12 @@
 .main-nav__item {
   list-style: none;
   lost-column: 1/4;
+
+  @include for-desktop-up() {
+    &:last-child {
+      margin-right: 30px !important;
+    }
+  }
 }
 
 .main-nav__item__link {

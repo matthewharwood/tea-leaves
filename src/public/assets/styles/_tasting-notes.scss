@@ -51,6 +51,7 @@
   text-align: left;
 
   @include for-tablet-landscape-up() {
+    max-width: 500px;
     text-align: center;
   }
 }
@@ -100,8 +101,8 @@
 }
 
 .tasting-notes__copy {
-  font-size: 14px;
   font-family: $typeface-serif;
+  font-size: 12px;
 
   h3 {
     font-family: $typeface-sans-serif;
@@ -109,6 +110,8 @@
     font-size: 14px;
     margin-bottom: 24px;
     padding-top: 12px;
+    letter-spacing: 2px;
+    line-height: 20px;
   }
 }
 
@@ -141,6 +144,10 @@
 
   img {
     width: 50%;
+  }
+
+  .tasting-notes__note-image {
+    opacity: 1 !important;
   }
 
 
