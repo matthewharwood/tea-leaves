@@ -33,7 +33,8 @@ block body
           | With the philosophy of eclectic blending and an indomitably ever-curious spirit, TEALEAVES has gripped the hearts and minds of five-star hotels and Michelin Star chefs, worldwide, as their tea brand of choice for over two decades.
         p.about-us__tealeaves-copy-body
           | We keep only 1% of the tea leaves presented to us from the world’s highest grade gardens to ensure that we stay your cup of tea from generation to generation.
-        button.button--primary--light.about-us__tealeaves-copy-cta Learn more
+        button.button--primary.button--primary--light.about-us__tealeaves-copy-cta
+          a(href="http://tealeaves.com/about/") Learn more
 
     section.about-us__ultimate-expression
       img.about-us__ultimate-expression-image(src="/assets/images/about-us/Rudd1.jpg")
@@ -50,9 +51,17 @@ block body
           | Situated in the Napa Valley, Rudd Oakville Estate is driven by a singular mission-to produce the finest wine possible that fully expresses the estate’s singular terroir. A true multi-generational, family-owned estate, Rudd sits on some of Napa Valley’s most celebrated land. Screaming Eagle, Bond Estates, and Dalla Valle Vineyards are just a few of its notable neighbors.
         p.about-us__rudd-copy-body
           | From the dedicated team that farms the vineyards to the patient aging and thoughtful blending that occurs in the estate’s caves, Rudd brings meticulous craftsmanship to every step of the winemaking process. Through over two decades of close study, the team at Rudd has become intimately familiar with the iconic red volcanic soils that produce its celebrated, distinctive wines.
-        button.button--primary--light.about-us__rudd-copy-cta Learn more
+        button.button--primary.button--primary--light.about-us__rudd-copy-cta
+          a(href="https://www.ruddwines.com/discover/") Learn more
       div.about-us__rudd-image-container
         img.about-us__rudd-image(src="/assets/images/about-us/Rudd2.png")
-        a.about-us__rudd-image-link(href="https://vimeo.com/121922093?autoplay=1" target="_blank")
+        a.about-us__rudd-image-link(ng-click="showTasteteaVideo = true; tasteteaVideoUrl='https://player.vimeo.com/video/121922093?autoplay=1&color=d2c0ac&title=0&byline=0&portrait=0'")
           div.about-us__rudd-image-link-cta(src="assets/images/tasteamonials/cta-white-off.svg")
           p Take a virtual tour of the estate
+
+  div.tasteteamonials_video-overlay.ng-cloak(ng-show="showTasteteaVideo" ng-click="showTasteteaVideo = false;")
+    div.tasteteamonials_video-close-btn
+      img(src="assets/images/tasteamonials/icon_close-btn.png")
+    div.tasteteamonials_video-overlay-container
+      div.tasteteamonials_video-overlay-inner-container
+        iframe(ng-if="showTasteteaVideo" ng-src="{{tasteteaVideoUrl}}" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen)

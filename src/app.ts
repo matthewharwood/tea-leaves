@@ -47,6 +47,7 @@ app.config(['$sceDelegateProvider', function ($sceDelegateProvider) {
     'https://player.vimeo.com/video/159517608?autoplay=1&color=d2c0ac&title=0&byline=0&portrait=0',
     'https://player.vimeo.com/video/124157232?autoplay=1&color=d2c0ac&title=0&byline=0&portrait=0',
     'https://player.vimeo.com/video/118042878?autoplay=1&color=d2c0ac&title=0&byline=0&portrait=0',
+    'https://player.vimeo.com/video/121922093?autoplay=1&color=d2c0ac&title=0&byline=0&portrait=0',
     'self',
   ]);
 }]);

@@ -17,7 +17,8 @@ export class ModalDirectiveCtrl {
     protected attr: ng.IAttributes,
   ) {
     this.opened = false;
-    this.shouldClose = true;
+    this.shouldClose = typeof this.shouldClose !== 'undefined' ?
+      this.shouldClose : true;
     this.scope = scope;
     this.update();
   }
