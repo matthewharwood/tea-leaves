@@ -1,3 +1,7 @@
+.no-decoration {
+  text-decoration: none;
+}
+
 .button--primary {
   font-family: $typeface-serif;
   text-align: center;
@@ -6,6 +10,7 @@
   padding: 8px 16px;
   background-color: transparent;
   transition: all 150ms ease-in-out-cubic;
+  text-decoration: none;
 
   a, a:visited {
     color: $white-off;
