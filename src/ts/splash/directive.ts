@@ -38,6 +38,7 @@ class SplashDirective implements ng.IDirective {
                 element[0].classList.add('splash--invisible');
                 setTimeout(() => {
                     element[0].style.display = 'none';
+                    document.body.style.overflow = 'visible';
                     scrollEvents.forEach((event) => {
                         angular.element(document).off(event, startFading);
                     });
@@ -46,8 +47,8 @@ class SplashDirective implements ng.IDirective {
         }
 
         if (document.body.scrollTop || document.scrollingElement.scrollTop) {
-            console.log('HIDING splash', document.body.scrollTop || document.scrollingElement.scrollTop);
             element[0].style.display = 'none';
+            document.body.style.overflow = 'visible';
         } else {
             $(document).ready(() => {
                 element[0].style.position = 'fixed';
