@@ -1,6 +1,6 @@
 .footer {
   background-color: $black-off;
-  color: $white;
+  color: $white-beige;
   display: flex;
   font-size: 12px;
   letter-spacing: 1px;
@@ -19,6 +19,7 @@
   a {
     display: inline-block;
     margin: 0 5px;
+    cursor: pointer;
 
     &:first-of-type {
       margin-left: 0;

@@ -371,9 +371,18 @@ $tasting-table-setting-height-as-margin: 35%;
       //animation: bounceAnimation 3s infinite;
       cursor: pointer;
       width: 40px;
+      position: absolute;
+      left: 50%;
+      top: -40px;
+      margin-left: -20px;
+
+      @include for-desktop-up() {
+        top: -30px;
+      }
     }
   }
 }
+
 
 .landing__box-container.waypoint.waypoint--active ~ .landing-cta {
   opacity: 1;
@@ -392,6 +401,8 @@ $tasting-table-setting-height-as-margin: 35%;
 
   &::after {
     bottom: 0;
+    left:50%;
+    margin-left:-13px;
     content: 'swipe';
   }
   &::before {
@@ -420,6 +431,8 @@ $tasting-table-setting-height-as-margin: 35%;
     &::before {
       top: 0;
       content: 'scroll';
+      left:50%;
+      margin-left:-13px;
     }
   }
 }
