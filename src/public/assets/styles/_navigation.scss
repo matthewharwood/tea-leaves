@@ -53,24 +53,27 @@
 }
 
 .main-nav__item__link {
-  color: $white;
+  color: $white-beige;
   text-decoration: none;
+  font-size: 13px;
+  letter-spacing: 1px;
+  cursor: pointer;
 
   &:hover {
-    color: darken($white, 10%);
+    color: $white;
     border-bottom: 1px solid #fff;
   }
 
   &:active {
-    color: darken($white, 25%);
+    color: darken($white-beige, 25%);
   }
 
   &:visited {
-    color: $white;
+    color: $white-beige;
   }
 
   &.selected {
-    border-bottom: 1px solid #fff;
+    border-bottom: 1px solid $white-beige;
   }
 }
 
