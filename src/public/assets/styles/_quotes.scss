@@ -2,11 +2,12 @@ $quote-min-height: 200 * 1px;
 
 .quotes {
   color: $white-off;
-  padding-top: 3%;
+  padding-top: 105%;
   position: relative;
 
   @include for-desktop-up() {
     background: transparent;
+    padding-top: 3%;
   }
 
   .wrapper {
@@ -20,11 +21,7 @@ $quote-min-height: 200 * 1px;
 }
 
 .quotes__carousel {
-  @extend %flex-center-xy;
-  flex: 1;
-  flex-direction: column;
   height: auto;
-  justify-content: space-between;
   position: relative;
   width: 100%;
 }
@@ -32,10 +29,14 @@ $quote-min-height: 200 * 1px;
 .quotes__carousel-item {
   list-style: none;
   opacity: 1;
-  position: absolute;
   text-align: center;
   transition: opacity 0.5s;
   transition-delay: 0.5s;
+
+  &:nth-child(2) {
+    position: absolute;
+    top: 0;
+  }
 
   &,
   &.ng-hide {
@@ -61,18 +62,14 @@ $quote-min-height: 200 * 1px;
 }
 
 .quotes__carousel-controller {
-  bottom: 0;
   flex: 1;
   font-size: 20px;
   height: auto;
-  margin: -5px;
-  position: absolute;
+  margin: 10px auto 0;
   text-align: center;
-  top: 70%;
 
   @include for-desktop-up() {
-    margin: 0;
-    top: auto;
+    margin: -10px auto 0;
   }
 }
 
