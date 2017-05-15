@@ -11,14 +11,12 @@ export class ModalDirectiveCtrl {
   public shouldClose: boolean;
   private static $inject = ['$scope', '$element'];
 
-  constructor(
-    protected scope: IModalScope,
-    protected element: ng.IAugmentedJQuery,
-    protected attr: ng.IAttributes,
-  ) {
+  constructor(protected scope: IModalScope,
+              protected element: ng.IAugmentedJQuery,
+              protected attr: ng.IAttributes,) {
     this.opened = false;
     this.shouldClose = typeof this.shouldClose !== 'undefined' ?
-      this.shouldClose : true;
+        this.shouldClose : true;
     this.scope = scope;
     this.update();
   }
@@ -35,10 +33,17 @@ export class ModalDirectiveCtrl {
     });
   }
 
+  public open() {
+    console.log('open');
+    if (this.shouldClose !== false) {
+      this.scope.$root.$emit('bodyScroll', this.opened);
+    }
+  }
+
   public close() {
     this.opened = false;
     this.scope.opened = false;
-    document.body.style.overflow = 'auto';
+    this.scope.$root.$emit('bodyScroll', this.opened);
   }
 
 }

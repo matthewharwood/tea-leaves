@@ -18,7 +18,7 @@ class ModalDirective implements ng.IDirective {
     shouldClose: '=',
   };
   public template: string = `
-    <div class="tea-modal__container" ng-if="vm.opened">
+    <div class="tea-modal__container" ng-if="vm.opened" ng-init="vm.open();">
       <div class="tea-modal">
         <div class="tea-modal__close-btn" ng-click="vm.close();">
           <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 36 36">

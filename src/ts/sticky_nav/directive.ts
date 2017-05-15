@@ -60,11 +60,15 @@ function update(element: HTMLElement, prevState: IStickyState = {
             return;
         }
         fastdom.mutate(() => {
+          if($('body').hasClass('no-scroll')){
+            element.classList.remove('sticky-nav--hidden');
+          } else {
             if (currentState.translateDirection >= 0) {
                 element.classList.remove('sticky-nav--hidden');
             } else {
                 element.classList.add('sticky-nav--hidden');
             }
+          }
             // const initialAdjustment =
             //     SPEED * currentState.translateDirection + currentY;
             // const cappedAdjustment =

@@ -163,6 +163,10 @@ mobile-navigation {
   overflow: auto;
   right: 0;
 
+  @include for-tablet-portrait-up() {
+    width: 50%;
+  }
+
   &.open {
     pointer-events: all;
   }
@@ -205,4 +209,12 @@ mobile-navigation {
   a {
     font-size: 24px;
   }
+}
+
+.close-button {
+  position: fixed;
+  right: 10px;
+  width: 50px;
+  font-size: 16px;
+  z-index:999999;
 }
