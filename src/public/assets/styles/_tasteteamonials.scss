@@ -55,8 +55,12 @@ $tasteteamonials-section-padding: $mod-rhythm-4 * $px;
 }
 
 .tasteteamonial_pair .tasteteamonial {
+  margin: 0;
   width: 80%;
-  margin: 0 10%;
+
+  @include for-tablet-landscape-up() {
+    margin: 0 10%;
+  }
 
   &:first-child {
     margin-bottom: 30px;
