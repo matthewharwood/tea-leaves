@@ -65,6 +65,15 @@ $subline-font-size: $mod-rhythm-2 * $px;
 }
 
 .french-oak__content {
+
+  .button--primary {
+    font-family: Hoefler Titling A,Hoefler Titling B,serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 10pt;
+    line-height: 1.4;
+  }
+
   @include for-desktop-up(){
     lost-offset: 2/5;
     lost-column: 3/5 0;

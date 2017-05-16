@@ -98,6 +98,13 @@
   @include for-desktop-up() {
     font-size: 26pt;
   }
+
+  span {
+    margin-left: -20px;
+    &.bump {
+      margin-left: -25px;
+    }
+  }
 }
 
 .tasting-notes__copy {
@@ -178,7 +185,7 @@
   figcaption {
     max-width: 170px;
     top: 55%;
-    left: 55%;
+    left: 65%;
   }
 
   @include for-desktop-up() {
@@ -250,7 +257,7 @@
     }
 
     figcaption {
-      left: 65%;
+      left: 69%;
       width: 35%;
     }
   }
@@ -277,10 +284,10 @@
   @include for-desktop-up() {
     order: 6;
     width: 33%;
-    margin-top: 0%;
+    margin-top: 0;
 
     figcaption {
-      bottom: 40%;
+      bottom: 32%;
     }
   }
 }

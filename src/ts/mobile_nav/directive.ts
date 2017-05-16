@@ -38,12 +38,12 @@ class MobileNavigationDirective implements ng.IDirective {
             </li>
             <li class="side-name__item--mobile">
                 <a href="about" class="side-name__item--mobile__link">
-                  About Us
+                  About
                 </a>
             </li>
             <li class="side-name__item--mobile">
               <a href="tasting" class="side-name__item--mobile__link">
-                Tasting
+                Tastings
               </a>
             </li>
             <li class="side-name__item--mobile">
@@ -88,7 +88,10 @@ class MobileNavigationDirective implements ng.IDirective {
               </a>
             </li>
           </ul>
-          <ul class="inline-list side-name__list--social">
+        
+        </div>
+        <div class="mobile-social-links">
+            <ul class="inline-list side-name__list--social">
             <li class="side-name__item--mobile">
               <a href="/" class="side-name__item--mobile__link">
                 <figure>
@@ -128,7 +131,7 @@ class MobileNavigationDirective implements ng.IDirective {
           <ul class="inline-list side-name__list--final">
             <li class="side-name__item--mobile"><a href="http://www.tealeaves.com" class="side-name__item--mobile__link">TEALEAVES.COM</a></li>
           </ul>
-        </div>
+          </div>
       </div>
     </div>
    `;

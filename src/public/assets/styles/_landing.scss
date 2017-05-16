@@ -187,16 +187,20 @@ $tasting-table-setting-height-as-margin: 35%;
   width: 100%;
 }
 
+.landing__bg-linear-fade-top {
+  position: absolute;
+  top: 0;
+  bottom: 80%;
+  background: linear-gradient(to top, rgba($black, 0) 60%, $black 100%);
+  width: 100%;
+}
+
 .landing__mobile-fade-target {
   position: absolute;
   top: 100%;
   left: 0;
   height: 100%;
   width: 100%;
-
-  &.waypoint--active + .landing__box-bottom-mobile {
-    opacity: 0;
-  }
 }
 
 .landing__mobile-switch-target {
@@ -217,34 +221,6 @@ $tasting-table-setting-height-as-margin: 35%;
   }
 }
 
-.landing__box-bottom-mobile {
-  @extend %flex-center-xy;
-  background: $black;
-  position: fixed;
-  width: 100%;
-  left: 0;
-  height: 300%;
-  opacity: 1;
-  pointer-events: none;
-  top: -100%;
-  z-index: $over-9000 - 1;
-
-  &.waypoint--running {
-    transition: opacity .5s;
-  }
-
-  img {
-    display: block;
-    width: 50%;
-    height: auto;
-    max-width: 50vh;
-  }
-
-  @include for-desktop-up() {
-    display: none;
-  }
-}
-
 .landing__container {
   @extend %flex-center-xy;
   height: 50%;
@@ -255,12 +231,13 @@ $tasting-table-setting-height-as-margin: 35%;
 .landing__mobile-tasting-table {
   background: url(../../assets/images/home-page/full-scroll-desktop.jpg);
   background-repeat: no-repeat;
-  background-size: 100% auto;
-  background-position: left top;
-  padding-top: 290%;
+  background-size: 260% auto;
+  background-position: 48.75% top;
+  margin-top: -100%;
+  padding-top: calc(100% * 5567/1920);
   pointer-events: none;
   position: fixed;
-  top: 0;
+  top: 50%;
   width: 100%;
 
   &.landing__mobile-tasting-table--fixed {
@@ -269,7 +246,7 @@ $tasting-table-setting-height-as-margin: 35%;
 
   &.landing__mobile-tasting-table--scrollable {
     opacity: 0;
-    margin-top: $tasting-table-setting-height-as-margin;
+    margin-top: 0;
     position: absolute;
     top: 100%;
   }
@@ -289,7 +266,6 @@ $tasting-table-setting-height-as-margin: 35%;
 
 .landing__box {
   width: 50%;
-  max-width: 50vh;
 
   @include for-desktop-up() {
     width: 100%;
@@ -352,7 +328,6 @@ $tasting-table-setting-height-as-margin: 35%;
   z-index: $over-9000 + 15;
 
   .landing-cta__copy-container {
-    max-width: 50vh;
     padding-top: 64%;
     position: relative;
     width: 50%;
@@ -397,14 +372,11 @@ $tasting-table-setting-height-as-margin: 35%;
 
 
 .landing-cta__copy {
-
-
   &::after {
     bottom: 0;
-    left:50%;
-    margin-left:-13px;
-    content: 'swipe';
+    content: 'swipe up';
   }
+
   &::before {
     content: '';
   }

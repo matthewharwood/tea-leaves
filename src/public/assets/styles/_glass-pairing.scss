@@ -10,6 +10,11 @@ $glass-pairing-section-padding: $mod-rhythm-4 * $px;
     lost-center: $container-default;
     padding: $glass-pairing-section-padding 0;
     position: relative;
+    width: 90%;
+
+    @include for-default-desktop-up() {
+      width: 80%;
+    }
   }
 }
 
@@ -46,8 +51,8 @@ $glass-pairing-section-padding: $mod-rhythm-4 * $px;
   }
 
   blockquote {
-    @extend %quote-typography;
     p {
+      font-size: responsive 16px 36px;
       line-height: 1.2;
     }
   }
@@ -67,7 +72,7 @@ $glass-pairing-section-padding: $mod-rhythm-4 * $px;
 .glass-pairing__wine {
   position: absolute;
   bottom: -160px;
-  right: 0;
+  right: -113px;
 }
 
 .explore-bar {
