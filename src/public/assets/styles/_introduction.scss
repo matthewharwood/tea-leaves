@@ -1,5 +1,14 @@
 .introduction {
   @include full-bleed();
+  min-height: 0;
+
+  @include for-tablet-portrait-up() {
+    margin-bottom: 50px;
+  }
+
+  @include for-tablet-landscape-up() {
+    margin-bottom: 0;
+  }
 
   color: $white-off;
   display: flex;
@@ -9,6 +18,7 @@
   z-index: 10;
 
   @include for-desktop-up() {
+    min-height: 100%;
     height: auto;
     width: auto;
     padding: 0 0 3% 0;
@@ -133,6 +143,17 @@
   max-width: 450px;
   opacity: 0;
   transition: opacity 1s;
+
+  figure {
+    max-width: 450px;
+  }
+
+  @include for-tablet-portrait-up() {
+    max-width: none;
+  }
+  @include for-tablet-landscape-up() {
+    max-width: 450px;
+  }
 
   p {
     &:not(:first-of-type) {
