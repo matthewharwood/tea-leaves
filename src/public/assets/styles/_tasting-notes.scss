@@ -38,6 +38,7 @@
 }
 
 .tasting-notes__headline {
+  white-space: nowrap;
   @extend %headline-font-size;
 
   text-align: left;
@@ -51,6 +52,13 @@
   margin: ($text-margin-default * $pi) auto 0;
   max-width: 420px;
   text-align: left;
+
+  p {
+    display: inline;
+    @include for-tablet-landscape-up() {
+      display: block;
+    }
+  }
 
   @include for-tablet-landscape-up() {
     max-width: 500px;
