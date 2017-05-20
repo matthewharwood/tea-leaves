@@ -7,14 +7,14 @@ $quote-min-height: 200 * 1px;
 
   @include for-desktop-up() {
     background: transparent;
-    padding-top: 3%;
+    padding-top: 1.5%;
   }
 
   .wrapper {
     @extend %flex-center-xy;
     flex-direction: column;
     height: $quote-min-height;
-    margin: 36px 0;
+    margin: 18px 0 36px;
     position: relative;
     lost-center: 980px;
   }
