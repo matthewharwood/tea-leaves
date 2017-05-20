@@ -291,13 +291,19 @@
   margin-top: 25%;
 
   img {
+    position: relative;
+    left: -20px;
     width: 68%;
   }
 
   figcaption {
     max-width: 170px;
     bottom: 15%;
-    left: 60%;
+    left: 50%;
+
+    @include for-tablet-landscape-up() {
+      left: 60%;
+    }
   }
 
   @include for-desktop-up() {
@@ -331,7 +337,11 @@
   figcaption {
     max-width: 170px;
     bottom: 45%;
-    right: -45%;
+    right: -95%;
+
+    @include for-tablet-landscape-up() {
+      right: -45%;
+    }
   }
 
   @include for-desktop-up() {
