@@ -22,15 +22,15 @@ block body
             div.tastings-event__info__header
               h2.tastings-event__info__header--name
                 span(ng-if="event.name") {{ event.name }}
-                span(ng-if="!event.name") TBD
+                span(ng-if="!event.name") Tbd
               h2.tastings-event__info__header--date
                 span(ng-if="event.date") Date: {{ event.date }}
-                span(ng-if="!event.date") Date: TBD
+                span(ng-if="!event.date") Date: Tbd
             div.tastings-event__info__content
               p(ng-if="event.venue") Venue: {{ event.venue }}
-              p(ng-if="!event.venue") Venue: TBD
+              p(ng-if="!event.venue") Venue: Tbd
               p(ng-if="event.location") Location: {{ event.location }}
-              p(ng-if="!event.location") Location: TBD
+              p(ng-if="!event.location") Location: Tbd
               button.button--primary(ng-click="ac.selectedEvent = event")
                 | Event Details
 
@@ -46,22 +46,22 @@ block body
           img(src="assets/images/tastings-events/logo_tealeaves-rudd-riedel_black.png" alt="TEALEAVES x RUDD x Riedel" ng-if="ac.selectedEvent.withRiedel")
         div.tastings-event-modal__header
           h2(ng-if="ac.selectedEvent.name") {{ ac.selectedEvent.name }}
-          h2(ng-if="!ac.selectedEvent.name") TBD
+          h2(ng-if="!ac.selectedEvent.name") Tbd
         div.tastings-event-modal__content
           div.tastings-event-modal__info
             h6 Date and Time:
             div(ng-if="ac.selectedEvent.date") {{ ac.selectedEvent.date }}
-            div(ng-if="!ac.selectedEvent.date") TBD
+            div(ng-if="!ac.selectedEvent.date") Tbd
           div.tastings-event-modal__info
             h6 Venue:
             div(ng-if="ac.selectedEvent.venue") {{ ac.selectedEvent.venue }}
-            div(ng-if="!ac.selectedEvent.venue") TBD
+            div(ng-if="!ac.selectedEvent.venue") Tbd
           div.tastings-event-modal__info
             h6 Details:
-            div TBD
+            div Tbd
           div.tastings-event-modal__info
             h6 More Info:
-            div TBD
+            div Tbd
         div.tastings-event-modal__footer
 
 
