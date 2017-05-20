@@ -375,6 +375,7 @@ $tasting-table-setting-height-as-margin: 35%;
   &::after {
     bottom: 0;
     content: 'swipe up';
+    margin-left:-19px;
   }
 
   &::before {
