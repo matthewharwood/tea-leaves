@@ -43,9 +43,9 @@
 
 .main-nav__item {
   list-style: none;
-  lost-column: 1/4;
 
   @include for-desktop-up() {
+    lost-column: 1/4;
     &:last-child {
       margin-right: 30px !important;
     }
@@ -104,8 +104,10 @@ mobile-navigation {
     text-align: center;
     line-height: 31px;
     display: flex;
+    width: auto;
     justify-content: flex-end;
     padding-right: 16px;
+    padding-left: 16px;
     align-items: center;
     list-style-type: none;
   }
