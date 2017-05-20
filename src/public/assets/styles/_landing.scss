@@ -372,6 +372,8 @@ $tasting-table-setting-height-as-margin: 35%;
 
 
 .landing-cta__copy {
+  filter: drop-shadow(1px 1px 1px #000);
+  
   &::after {
     left: 0;
     bottom: 0;
@@ -391,7 +393,6 @@ $tasting-table-setting-height-as-margin: 35%;
     font-family: $typeface-serif;
     font-size: 12px;
     opacity: .75;
-    filter: drop-shadow(1px, 1px, 1px, 0, $black);
   }
 
   @include for-desktop-up() {
