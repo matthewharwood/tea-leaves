@@ -166,10 +166,6 @@ mobile-navigation {
   overflow: auto;
   right: 0;
 
-  @include for-tablet-portrait-up() {
-    width: 50%;
-  }
-
   &.open {
     pointer-events: all;
   }
