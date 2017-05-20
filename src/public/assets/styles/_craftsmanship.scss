@@ -31,7 +31,7 @@
 
 .craftsmanship__header {
   width: 100%;
-
+  
   @include for-desktop-up() {
     lost-column: 1/2 0;
     padding-bottom: 100px;
