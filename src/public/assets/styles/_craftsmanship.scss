@@ -31,10 +31,10 @@
 
 .craftsmanship__header {
   width: 100%;
-  padding-bottom: 100px;
 
   @include for-desktop-up() {
     lost-column: 1/2 0;
+    padding-bottom: 100px;
   }
 }
 .craftsmanship__main {
@@ -53,9 +53,13 @@
   }
 }
 .craftsmanship__headline {
-  font-size: responsive 45px 118px;
-  font-range: $tabletLandscape $bigDesktop;
+  @extend %headline-font-size;
   line-height: 1;
+
+  @include for-desktop-up() {
+    font-size: responsive 45px 118px;
+    font-range: $tabletLandscape $bigDesktop;
+  }
 }
 
 .craftsmanship__para {
