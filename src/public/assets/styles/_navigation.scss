@@ -197,7 +197,7 @@ mobile-navigation {
 .side-name__item--mobile {
   padding: 16px 0;
 
-  a{
+  a {
     color: $white;
     text-decoration: none;
     font-family: $typeface-serif;
@@ -214,6 +214,12 @@ mobile-navigation {
     &:visited {
       color: $white;
     }
+  }
+
+  img {
+    width: 32px;
+    margin-top: -6px;
+    margin-left: 12px;
   }
 }
 

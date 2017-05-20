@@ -48,7 +48,7 @@ class MobileNavigationDirective implements ng.IDirective {
             </li>
             <li class="side-name__item--mobile">
               <a href="http://www.tealeaves.com/rudd-cabernet-french-oak" target="_blank" class="side-name__item--mobile__link">
-                Shop Now
+                Shop Now <img src="assets/images/shop/external.svg">
               </a>
             </li>
           </ul>
