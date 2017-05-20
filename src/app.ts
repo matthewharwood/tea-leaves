@@ -63,6 +63,16 @@ app.controller('appCtrl', ['$rootScope', '$scope',
       vm.bodyScroll = msg;
     });
 
+    vm.selectedEvent = null;
+
+    vm.$watch('selectedEvent', function() {
+      if (vm.selectedEvent) {
+        document.body.style.overflow = 'hidden';
+      } else {
+        document.body.style.overflow = 'initial';
+      }
+    });
+
     vm.events = [
       {
         name: 'Tea & Wine Tasting With Riedel Glass',
