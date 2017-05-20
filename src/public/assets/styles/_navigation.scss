@@ -7,7 +7,7 @@
   background: $black;
   height: 50px;
   top: 0;
-  z-index: $over-9000 + 25;
+  z-index: 112000024;
   transform: translate3d(0, 0, 0);
   transition: transform .2s;
 
@@ -114,7 +114,7 @@ mobile-navigation {
 }
 
 .side-name__bg--mobile {
-  height: 100vh;
+  height: calc(100vh - 50px);
   position: fixed;
   right: 0;
   background: rgba(0,0,0,.5);
@@ -160,7 +160,7 @@ mobile-navigation {
 .side-name__container--mobile {
   width: 100%;
   background: $black;
-  height: 100vh;
+  height: calc(100vh - 50px);
   padding-bottom: 6px;
   pointer-events: none;
   position: fixed;

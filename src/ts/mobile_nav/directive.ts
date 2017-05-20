@@ -21,7 +21,7 @@ class MobileNavigationDirective implements ng.IDirective {
       <li ng-click="vm.toggle()" 
         class="main-nav__item" ng-switch="vm.getOpen()">
         <p ng-switch-when="false">&#9776;</p>
-        <p ng-switch-when="true">&#10006;</p>
+        <p ng-switch-when="true">&#10799;</p>
       </li>
     </ul>
 
