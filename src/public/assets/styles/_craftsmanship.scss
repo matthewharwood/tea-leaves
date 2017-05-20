@@ -31,7 +31,11 @@
 
 .craftsmanship__header {
   width: 100%;
-  padding-bottom: 100px;
+  padding-bottom: 25px;
+
+  @include for-tablet-landscape-up() {
+    padding-bottom: 100px;
+  }
 
   @include for-desktop-up() {
     lost-column: 1/2 0;
