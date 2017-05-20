@@ -373,9 +373,11 @@ $tasting-table-setting-height-as-margin: 35%;
 
 .landing-cta__copy {
   &::after {
+    left: 0;
     bottom: 0;
     content: 'swipe up';
-    margin-left:-19px;
+    width: 100%;
+    text-align: center;
   }
 
   &::before {
