@@ -325,7 +325,7 @@ $tasting-table-setting-height-as-margin: 35%;
   opacity: 0;
   pointer-events: none;
   transition: opacity .25s;
-  z-index: $over-9000 + 15;
+  z-index: 99999999;
 
   .landing-cta__copy-container {
     padding-top: 64%;

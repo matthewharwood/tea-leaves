@@ -1,6 +1,6 @@
 import * as angular from "angular";
 
-const QUOTE_DELAY_TIME = 8000;
+const QUOTE_DELAY_TIME = 8500;
 
 class QuotesDirective implements ng.IDirective {
     public static instance(): ng.IDirective {

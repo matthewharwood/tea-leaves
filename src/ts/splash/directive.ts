@@ -1,7 +1,7 @@
 import * as angular from "angular";
 
 const SPLASH_ANIM_TIME = 500;
-const SPLASH_DELAY_TIME = 2000;
+const SPLASH_DELAY_TIME = 5000;
 
 class SplashDirective implements ng.IDirective {
     public static instance(): ng.IDirective {
@@ -17,7 +17,9 @@ class SplashDirective implements ng.IDirective {
     ): void {
 
         function eatEvent(event) {
-            event.preventDefault();
+            if (event) {
+                event.preventDefault();
+            }
         }
 
         let isFading = false;
@@ -30,8 +32,9 @@ class SplashDirective implements ng.IDirective {
             'keydown',
         ];
 
+        setTimeout(startFading, SPLASH_DELAY_TIME);
+
         function startFading(event) {
-            console.log('STARTING FADING SPLASH', event);
             eatEvent(event);
             if (!isFading) {
                 isFading = true;

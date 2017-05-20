@@ -42,7 +42,7 @@ class MobileNavigationDirective implements ng.IDirective {
                 </a>
             </li>
             <li class="side-name__item--mobile">
-              <a href="tasting" class="side-name__item--mobile__link">
+              <a href="tastings" class="side-name__item--mobile__link">
                 Tastings
               </a>
             </li>

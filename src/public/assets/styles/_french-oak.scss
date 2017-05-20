@@ -103,6 +103,7 @@ $subline-font-size: $mod-rhythm-2 * $px;
 }
 .french-oak__headline {
   @extend %headline-font-size;
+  margin-top: 20px;
 }
 
 .french-oak__subline {
