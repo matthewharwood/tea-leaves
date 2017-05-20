@@ -71,8 +71,9 @@ $glass-pairing-section-padding: $mod-rhythm-4 * $px;
 
 .glass-pairing__wine {
   position: absolute;
-  bottom: -160px;
+  bottom: -142px;
   right: -113px;
+  max-width: 130%;
 }
 
 .explore-bar {
