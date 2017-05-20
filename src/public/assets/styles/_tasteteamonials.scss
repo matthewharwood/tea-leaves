@@ -51,12 +51,13 @@ $tasteteamonials-section-padding: $mod-rhythm-4 * $px;
   }
 }
 .tasteteamonial_pair {
-  padding: 0 48px;
 }
 
 .tasteteamonial_pair .tasteteamonial {
   margin: 0;
   width: 80%;
+  margin-left: auto;
+  margin-right: auto;
 
   @include for-tablet-landscape-up() {
     margin: 0 10%;
