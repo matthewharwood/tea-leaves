@@ -7,12 +7,14 @@
 }
 
 .tasting-notes__intro {
+  margin-bottom: -42px;
   .wrapper {
     margin: 0 auto;
     width: 80%;
   }
 
   @include for-tablet-landscape-up() {
+    margin-bottom: 0;
     .wrapper {
       width: 90%;
     }
@@ -60,7 +62,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  margin: 42px 0;
+  margin: 42px 0 0;
 
   @include for-tablet-landscape-up() {
     flex-direction: row;
@@ -100,6 +102,9 @@
   }
 
   span {
+    display: inline-flex;
+    align-items: flex-end;
+    height: 31px;
     margin-left: -20px;
     &.bump {
       margin-left: -25px;
@@ -112,13 +117,19 @@
   font-size: 12px;
 
   h3 {
+    display: inline-flex;
+    align-items: flex-end;
     font-family: $typeface-sans-serif;
     text-transform: uppercase;
     font-size: 14px;
     margin-bottom: 24px;
-    padding-top: 12px;
+    height: 31px;
     letter-spacing: 2px;
     line-height: 20px;
+
+    @include for-desktop-up() {
+      margin-top: 3px;
+    }
   }
 }
 
