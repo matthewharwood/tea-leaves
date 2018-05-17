@@ -23,14 +23,12 @@ block body
               h2.tastings-event__info__header--name
                 span(ng-if="event.name") {{ event.name }}
                 span(ng-if="!event.name") Tbd
-              h2.tastings-event__info__header--date
-                span(ng-if="event.date") Date: {{ event.date }}
-                span(ng-if="!event.date") Date: Tbd
             div.tastings-event__info__content
               p(ng-if="event.venue") Venue: {{ event.venue }}
               p(ng-if="!event.venue") Venue: Tbd
               p(ng-if="event.location") Location: {{ event.location }}
               p(ng-if="!event.location") Location: Tbd
+              p(ng-if="event.date") Date: {{ event.date}}
               button.button--primary(ng-click="ac.selectedEvent = event")
                 | Event Details
 
@@ -58,10 +56,13 @@ block body
             div(ng-if="!ac.selectedEvent.venue") Tbd
           div.tastings-event-modal__info
             h6 Details:
-            div Tbd
+            ul.details-list
+              li Tradition meets innovation with TEALEAVES x Rudd Cabernet French Oak Barrel Aged Tea: precious white tea leaves scented with jasmine blossoms in the Imperial method, aged in a French Oak Barrel – the same that once housed the 2010 Rudd Oakville Estate vintage.
+              li Members will have the opportunity to taste the innovative blend while TEALEAVES’ CEO, LANA SUTHERLAND, reveals the design inspiration and methodology behind combining techniques and ingredients from the Old World, New World, and Ancient World, accompanied by a discussion on craftsmanship by Rudd Oakville Estate within the world of wine and a tasting of their Cabernet Sauvignon
+              li Experience the nuances of wine and the scented tea, alongside a tea cocktail featuring the BarrelAgedTEALEAVES Rudd blend.
           div.tastings-event-modal__info
             h6 More Info:
-            div Tbd
+            a(class="more" href="https://2018.sfdesignweek.org/events/barrelaged-tealeaves-tasting/" target="_BLANK") link
         div.tastings-event-modal__footer
 
 
